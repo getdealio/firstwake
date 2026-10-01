@@ -1,0 +1,8 @@
+# FIRSTWAKE static site: the landing page (/) and the game (/play/) are public.
+User-agent: *
+Allow: /
+
+# Once the site has a permanent address, a sitemap line can be added here, for example:
+# Sitemap: https://YOUR-ADDRESS/sitemap.xml
+# Note: crawlers only read robots.txt at the root of a host. When the site is deployed under a sub-path
+# (for example https://USER.github.io/firstwake/), this file is not consulted there.

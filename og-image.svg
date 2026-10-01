@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <title>FIRSTWAKE: The Unwritten Frontier. Playable prototype, early combat and world slice.</title>
+  <!-- Original social preview image for FIRSTWAKE. All shapes are drawn here; no external art or fonts. -->
+  <defs>
+    <linearGradient id="og-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E0F13"/>
+      <stop offset="1" stop-color="#1A1C22"/>
+    </linearGradient>
+    <radialGradient id="og-glow" cx=".78" cy=".2" r=".6">
+      <stop offset="0" stop-color="#D8B25A" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#D8B25A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="og-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0B0C11"/>
+      <stop offset=".5" stop-color="#17172A"/>
+      <stop offset=".78" stop-color="#3A2C2C"/>
+      <stop offset="1" stop-color="#6A4B2A"/>
+    </linearGradient>
+    <radialGradient id="og-sun">
+      <stop offset="0" stop-color="#ECC872" stop-opacity=".55"/>
+      <stop offset=".4" stop-color="#D8B25A" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#D8B25A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="og-lamp">
+      <stop offset="0" stop-color="#FFD68C" stop-opacity=".85"/>
+      <stop offset=".25" stop-color="#ECC872" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#ECC872" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="og-panel">
+      <rect x="760" y="70" width="380" height="490" rx="18"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#og-bg)"/>
+  <rect width="1200" height="630" fill="url(#og-glow)"/>
+
+  <!-- sigil -->
+  <g transform="translate(80 70) scale(1.6)">
+    <path d="M32 6 58 32 32 58 6 32Z" fill="none" stroke="#D8B25A" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M32 16c6 9 9 15 9 21a9 9 0 0 1-18 0c0-6 3-12 9-21Z" fill="#E9E1CF"/>
+    <path d="M32 30c3 4 4 6 4 8.5a4 4 0 0 1-8 0c0-2.5 1-4.5 4-8.5Z" fill="#D8B25A"/>
+  </g>
+
+  <!-- title block -->
+  <g font-family="Georgia, 'Palatino Linotype', 'Book Antiqua', Palatino, serif">
+    <text x="78" y="300" font-size="88" letter-spacing="8" fill="#E9E1CF">FIRSTWAKE</text>
+    <text x="82" y="360" font-size="40" font-style="italic" letter-spacing="2" fill="#D8B25A">The Unwritten Frontier</text>
+  </g>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif">
+    <rect x="80" y="404" width="610" height="54" rx="27" fill="none" stroke="#D8B25A" stroke-width="2"/>
+    <path d="M108 425 116 431 108 437 100 431Z" fill="#D8B25A"/>
+    <text x="130" y="439" font-size="24" font-weight="600" fill="#ECC872">Playable prototype — early combat &amp; world slice</text>
+    <text x="80" y="518" font-size="26" fill="#BDB4A1">Open-world co-op action RPG · runs in your browser</text>
+    <text x="80" y="556" font-size="26" fill="#BDB4A1">Solo or with one friend · free, no sign-up</text>
+  </g>
+
+  <!-- landscape panel (same scene as the landing page) -->
+  <g clip-path="url(#og-panel)">
+    <svg x="760" y="70" width="380" height="490" viewBox="0 0 560 420" preserveAspectRatio="xMidYMid slice">
+      <rect width="560" height="420" fill="url(#og-sky)"/>
+      <g fill="#E9E1CF">
+        <circle cx="214" cy="28" r="1.6" opacity=".45"/><circle cx="300" cy="40" r="1.2" opacity=".4"/>
+        <circle cx="430" cy="22" r="1.4" opacity=".35"/><circle cx="250" cy="110" r="1" opacity=".3"/>
+      </g>
+      <circle cx="372" cy="262" r="130" fill="url(#og-sun)"/>
+      <g fill="#D8B25A" font-family="Georgia, 'Palatino Linotype', serif">
+        <text x="300" y="70" font-size="22" opacity=".55">S</text>
+        <text x="352" y="104" font-size="16" opacity=".4">M</text>
+        <text x="420" y="58" font-size="20" opacity=".5">R</text>
+        <text x="250" y="132" font-size="15" opacity=".35">O</text>
+        <text x="388" y="160" font-size="18" opacity=".45">N</text>
+        <text x="200" y="88" font-size="13" opacity=".3">V</text>
+      </g>
+      <path d="M0 300c60-20 120-32 190-24 60 7 100-14 150-18 60-4 120 12 220 4v158H0Z" fill="#1C1B28"/>
+      <path d="M250 312c50-10 80-62 122-66 42-4 68 50 148 66v108H250Z" fill="#14141C"/>
+      <path d="M250 312c50-10 80-62 122-66 42-4 68 50 148 66" fill="none" stroke="#D8B25A" stroke-opacity=".28" stroke-width="1.5"/>
+      <g fill="#101017">
+        <path d="M330 248v-50h4v-5h3v5h3v-5h3v5h3v50Z"/>
+        <path d="M346 248v-22h4v-4h4v4h4v-4h4v4h4v-4h4v4h4v-4h4v4h4v-4h4v4h4v22Z"/>
+        <path d="M394 248l2-42 6 3 3-5 5 4 2 40Z"/>
+      </g>
+      <rect x="366" y="236" width="8" height="12" rx="4" fill="#ECC872" opacity=".7"/>
+      <path d="M0 330c40-12 90-18 150-12 50 5 80 18 130 22v80H0Z" fill="#121219"/>
+      <g fill="#0F0F15">
+        <path d="M150 322 162 290l12 32Z"/><path d="M170 326 180 302l10 24Z"/>
+      </g>
+      <path d="M470 420c-20-40 10-70-20-94-20-14-5-26-20-34" fill="none" stroke="#C9B48A" stroke-opacity=".3" stroke-width="3"/>
+      <path d="M120 420c50-40 110-48 160-70 40-16 60-50 86-88" fill="none" stroke="#E9E1CF" stroke-opacity=".14" stroke-width="5" stroke-linecap="round"/>
+      <path d="M0 372c80-12 160-6 240 8s180 8 320-4v44H0Z" fill="#0E0F13"/>
+      <circle cx="232" cy="336" r="44" fill="url(#og-lamp)"/>
+      <path d="M216 392v-70M216 326h16" stroke="#2B2D36" stroke-width="4" stroke-linecap="round"/>
+      <path d="M224 328h16l-8-8Z" fill="#2B2D36"/>
+      <rect x="226" y="328" width="12" height="16" rx="2" fill="#ECC872"/>
+    </svg>
+  </g>
+  <rect x="760" y="70" width="380" height="490" rx="18" fill="none" stroke="#343842" stroke-width="2"/>
+</svg>

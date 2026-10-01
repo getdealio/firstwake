@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FIRSTWAKE: The Unwritten Frontier (playable prototype)</title>
+  <meta name="description" content="FIRSTWAKE is an original open-world action RPG prototype that runs in your browser. Explore a connected slice of the Crownless Reach alone or with one friend. Free, with no sign-up and no purchases.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0E0F13">
+  <link rel="icon" href="https://getdealio.github.io/firstwake/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FIRSTWAKE">
+  <meta property="og:title" content="FIRSTWAKE: The Unwritten Frontier">
+  <meta property="og:description" content="Playable prototype: an early combat and world slice of an original open-world co-op action RPG that runs in your browser.">
+  <meta property="og:image" content="https://getdealio.github.io/firstwake/og-image.svg">
+  <meta property="og:image:type" content="image/svg+xml">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The FIRSTWAKE sigil, a gold diamond around a lantern flame, beside the title and the words Playable prototype.">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="module" crossorigin src="https://getdealio.github.io/firstwake/assets/site-Dq3aH-Wi.js"></script>
+  <link rel="modulepreload" crossorigin href="https://getdealio.github.io/firstwake/assets/records-yrssXULl.js">
+  <link rel="stylesheet" crossorigin href="https://getdealio.github.io/firstwake/assets/site-CjrL2TF4.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="#top">
+        <svg class="sigil" viewBox="0 0 64 64" width="30" height="30" aria-hidden="true" focusable="false">
+          <path d="M32 6 58 32 32 58 6 32Z" fill="none" stroke="#D8B25A" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M32 16c6 9 9 15 9 21a9 9 0 0 1-18 0c0-6 3-12 9-21Z" fill="#E9E1CF"/>
+          <path d="M32 30c3 4 4 6 4 8.5a4 4 0 0 1-8 0c0-2.5 1-4.5 4-8.5Z" fill="#D8B25A"/>
+        </svg>
+        <span class="brand-name">FIRSTWAKE</span>
+      </a>
+      <nav class="site-nav" aria-label="Sections">
+        <ul>
+          <li><a href="#in-this-build">In this build</a></li>
+          <li><a href="#controls">Controls</a></li>
+          <li><a href="#coop">Co-op</a></li>
+          <li><a href="#saves">Saves</a></li>
+          <li><a href="#status">Test status</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+          <li><a href="#credits">Credits</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-primary btn-compact" href="./play/">Play</a>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="prototype-label"><span class="label-mark" aria-hidden="true"></span>Playable prototype — early combat &amp; world slice</p>
+          <h1 id="hero-title"><span class="hero-wordmark">FIRSTWAKE</span> <span class="hero-subtitle">The Unwritten Frontier</span></h1>
+          <p class="tagline">An original open-world action RPG that runs in your browser. Walk out of Sable Crossing, learn to read the Brass Penitent's tells, and explore a connected slice of the Crownless Reach, alone or with one friend.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary btn-large" href="./play/">Play in your browser</a>
+            <a class="btn btn-ghost" href="#coop">How co-op works</a>
+          </div>
+          <p class="fine-print">Free, with no sign-up, no download and no purchases. Best in a desktop browser with WebGL2, using a keyboard and mouse or a gamepad.</p>
+          <section class="readiness" aria-labelledby="readiness-title">
+            <h2 id="readiness-title" class="readiness-title">Your browser</h2>
+            <ul id="readiness" class="check-list" aria-live="polite">
+              <li class="check" data-state="info"><span class="check-glyph" aria-hidden="true">i</span><span class="check-text">The game needs JavaScript and WebGL2. Checking this browser…</span></li>
+            </ul>
+          </section>
+        </div>
+
+        <figure class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 560 420" focusable="false" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="fw-sky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#0B0C11"/>
+                <stop offset=".5" stop-color="#17172A"/>
+                <stop offset=".78" stop-color="#3A2C2C"/>
+                <stop offset="1" stop-color="#6A4B2A"/>
+              </linearGradient>
+              <radialGradient id="fw-sun">
+                <stop offset="0" stop-color="#ECC872" stop-opacity=".55"/>
+                <stop offset=".4" stop-color="#D8B25A" stop-opacity=".18"/>
+                <stop offset="1" stop-color="#D8B25A" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="fw-lamp">
+                <stop offset="0" stop-color="#FFD68C" stop-opacity=".85"/>
+                <stop offset=".25" stop-color="#ECC872" stop-opacity=".3"/>
+                <stop offset="1" stop-color="#ECC872" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect width="560" height="420" fill="url(#fw-sky)"/>
+            <g fill="#E9E1CF">
+              <circle cx="48" cy="40" r="1.2" opacity=".5"/><circle cx="132" cy="72" r="1" opacity=".35"/>
+              <circle cx="214" cy="28" r="1.3" opacity=".45"/><circle cx="478" cy="52" r="1" opacity=".4"/>
+              <circle cx="528" cy="110" r="1.2" opacity=".3"/><circle cx="96" cy="128" r=".9" opacity=".3"/>
+            </g>
+            <circle cx="372" cy="262" r="130" fill="url(#fw-sun)"/>
+            <g class="glyphs" fill="#D8B25A" font-family="Georgia, 'Palatino Linotype', serif">
+              <text class="glyph" x="300" y="70" font-size="22" style="--o:.55;animation-delay:-2s">S</text>
+              <text class="glyph" x="352" y="104" font-size="16" style="--o:.4;animation-delay:-7s">M</text>
+              <text class="glyph" x="420" y="58" font-size="20" style="--o:.5;animation-delay:-11s">R</text>
+              <text class="glyph" x="462" y="132" font-size="14" style="--o:.35;animation-delay:-4s">A</text>
+              <text class="glyph" x="250" y="132" font-size="15" style="--o:.35;animation-delay:-9s">O</text>
+              <text class="glyph" x="388" y="160" font-size="18" style="--o:.45;animation-delay:-13s">N</text>
+              <text class="glyph" x="500" y="90" font-size="17" style="--o:.4;animation-delay:-5.5s">E</text>
+              <text class="glyph" x="200" y="88" font-size="13" style="--o:.3;animation-delay:-1s">V</text>
+            </g>
+            <path d="M0 300c60-20 120-32 190-24 60 7 100-14 150-18 60-4 120 12 220 4v158H0Z" fill="#1C1B28"/>
+            <path d="M250 312c50-10 80-62 122-66 42-4 68 50 148 66v108H250Z" fill="#14141C"/>
+            <path d="M250 312c50-10 80-62 122-66 42-4 68 50 148 66" fill="none" stroke="#D8B25A" stroke-opacity=".28" stroke-width="1.5"/>
+            <g fill="#101017">
+              <path d="M330 248v-50h4v-5h3v5h3v-5h3v5h3v50Z"/>
+              <path d="M346 248v-22h4v-4h4v4h4v-4h4v4h4v-4h4v4h4v-4h4v4h4v-4h4v4h4v22Z"/>
+              <path d="M394 248l2-42 6 3 3-5 5 4 2 40Z"/>
+            </g>
+            <rect x="366" y="236" width="8" height="12" rx="4" fill="#ECC872" opacity=".7"/>
+            <path d="M0 330c40-12 90-18 150-12 50 5 80 18 130 22v80H0Z" fill="#121219"/>
+            <g fill="#0F0F15">
+              <path d="M24 324 36 288l12 36Z"/><path d="M44 322 58 276l14 46Z"/><path d="M70 326 80 298l10 28Z"/>
+              <path d="M150 322 162 290l12 32Z"/><path d="M170 326 180 302l10 24Z"/>
+            </g>
+            <path d="M470 420c-20-40 10-70-20-94-20-14-5-26-20-34" fill="none" stroke="#C9B48A" stroke-opacity=".3" stroke-width="3"/>
+            <path d="M120 420c50-40 110-48 160-70 40-16 60-50 86-88" fill="none" stroke="#E9E1CF" stroke-opacity=".14" stroke-width="5" stroke-linecap="round"/>
+            <path d="M0 372c80-12 160-6 240 8s180 8 320-4v44H0Z" fill="#0E0F13"/>
+            <circle cx="108" cy="332" r="48" fill="url(#fw-lamp)"/>
+            <path d="M92 392v-74M92 322h16" stroke="#2B2D36" stroke-width="4" stroke-linecap="round"/>
+            <path d="M100 324h16l-8-8Z" fill="#2B2D36"/>
+            <rect x="102" y="324" width="12" height="16" rx="2" fill="#ECC872"/>
+          </svg>
+          <figcaption class="visually-hidden">Dusk over the Misremembered Keep, with a lantern at the roadside and glowing letters drifting down: the Namefall.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="in-this-build" aria-labelledby="build-title">
+      <div class="wrap">
+        <h2 id="build-title">In this build</h2>
+        <p class="lede">Everything listed here is in the current prototype. The art is temporary: low-poly characters, creatures and buildings generated in code, not finished models. What has been tested so far is listed under <a href="#status">Test status</a>.</p>
+        <ul class="cards">
+          <li class="card">
+            <h3>A connected region</h3>
+            <p>Sable Crossing, the Red Orchard, Margin Wood, the Misremembered Keep with three ways in, the Rootcellar Nine cave, Lantern Ford and its Memory Forge, and the Namefall Scar. They form one streamed, walkable map about 768 meters across, with roads, a river, a day and night cycle, and weather: clear, overcast, rain and the Namefall.</p>
+          </li>
+          <li class="card">
+            <h3>Third-person action</h3>
+            <p>Sprint, jump, dodge through attacks, guard with a perfect-guard window, and lock on. Health, stamina, Focus and posture all matter. Break an enemy's posture and you get exactly one riposte.</p>
+          </li>
+          <li class="card">
+            <h3>Two weapons, one technique</h3>
+            <p>The Crossing Blade has a three-hit light chain and a heavy strike. The Ironweather Longrifle has six rounds, aimed fire and a braced shot. Gravity Chamber makes a space heavy: enemies inside slow down, their wind-ups stretch out, and they lose posture faster.</p>
+          </li>
+          <li class="card">
+            <h3>Enemies that warn you</h3>
+            <p>The Brass Penitent (Censer Sweep, Penitent's Lunge, Toll of Judgement), its elite captain Quillcrown at the Scar, and packs of Margin Wolves that bite, pounce and fall back. Every attack draws a telegraph on the ground first: <span class="tell tell-amber">amber</span> can be guarded, <span class="tell tell-red">red</span> must be dodged.</p>
+          </li>
+          <li class="card">
+            <h3>Bloodlines and origins</h3>
+            <p>A free Fate Draw with its odds published before you draw. The prototype pool holds the three bloodlines whose gift and drawback are fully playable: Stonewake, Stormbound and Aetherial. Three origins (Wayfarer, Oathbound and Seeker) change how people treat you, what you notice, and what comes after you. Rarity is not power.</p>
+          </li>
+          <li class="card">
+            <h3>People who remember</h3>
+            <p>Mara Venn and Orrin Vale remember what you say. Keep or break a promise to Mara. Earn her tip about the cellar or find the torn map yourself: either way opens the Nine Door. Your personal Chronicle records what happened to you, and the realm's Chronicle records what happened to everyone.</p>
+          </li>
+          <li class="card">
+            <h3>Co-op for two</h3>
+            <p>Host a realm and share a code with one friend. The host's browser runs the world; each of you keeps your own character, choices and loot.</p>
+          </li>
+          <li class="card">
+            <h3>Local saves</h3>
+            <p>Progress is saved in this browser, with rolling backups and recovery from damaged saves. Export a save file to carry it to another device.</p>
+          </li>
+          <li class="card">
+            <h3>Readable and adjustable</h3>
+            <p>Remappable keys, reduced motion and flashing, a camera-shake slider, high-contrast and deuteranopia telegraph colors, text and subtitle scaling, speaker labels, and on-screen cues for sounds.</p>
+          </li>
+        </ul>
+        <div class="not-yet">
+          <h3>Not in this build</h3>
+          <p>The other eighteen Fate Draw bloodlines, the other five origins, Wakesmithing at the Memory Forge, signature techniques and synthesis, branching story chains, a death penalty, finished character models, and tested phone and tablet support. See the <a href="#roadmap">roadmap</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="controls" aria-labelledby="controls-title">
+      <div class="wrap">
+        <h2 id="controls-title">Controls</h2>
+        <p class="lede">Click the game to capture the mouse; press <kbd>Esc</kbd> to release it and open the menu. Keyboard and mouse bindings can be changed in <strong>Settings → Controls</strong>. The gamepad layout is fixed in this version.</p>
+        <div class="controls-grid">
+          <div class="table-scroll">
+            <table class="controls">
+              <caption>Keyboard and mouse (defaults)</caption>
+              <thead><tr><th scope="col">Action</th><th scope="col">Default</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Move</th><td><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd></td></tr>
+                <tr><th scope="row">Look and aim</th><td>Mouse</td></tr>
+                <tr><th scope="row">Sprint</th><td><kbd>Left Shift</kbd></td></tr>
+                <tr><th scope="row">Jump</th><td><kbd>Space</kbd></td></tr>
+                <tr><th scope="row">Dodge</th><td><kbd>Q</kbd> or <kbd>Left Alt</kbd></td></tr>
+                <tr><th scope="row">Light attack / fire</th><td>Left mouse button</td></tr>
+                <tr><th scope="row">Heavy attack / braced shot</th><td><kbd>R</kbd></td></tr>
+                <tr><th scope="row">Guard</th><td>Right mouse button</td></tr>
+                <tr><th scope="row">Technique (Gravity Chamber)</th><td><kbd>E</kbd></td></tr>
+                <tr><th scope="row">Reload</th><td><kbd>V</kbd></td></tr>
+                <tr><th scope="row">Interact / talk</th><td><kbd>F</kbd></td></tr>
+                <tr><th scope="row">Lock on</th><td>Middle mouse button or <kbd>T</kbd></td></tr>
+                <tr><th scope="row">Next / previous target</th><td><kbd>X</kbd> / <kbd>Z</kbd>, or the mouse wheel while locked</td></tr>
+                <tr><th scope="row">Swap weapon</th><td><kbd>C</kbd></td></tr>
+                <tr><th scope="row">Map</th><td><kbd>M</kbd></td></tr>
+                <tr><th scope="row">Chronicle</th><td><kbd>J</kbd></td></tr>
+                <tr><th scope="row">Quick chat</th><td><kbd>B</kbd></td></tr>
+                <tr><th scope="row">Control hints</th><td><kbd>H</kbd></td></tr>
+                <tr><th scope="row">Menu</th><td><kbd>Esc</kbd></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <div class="table-scroll">
+              <table class="controls">
+                <caption>Gamepad (standard layout)</caption>
+                <thead><tr><th scope="col">Action</th><th scope="col">Button</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Move / look</th><td>Left stick / right stick</td></tr>
+                  <tr><th scope="row">Jump</th><td>A</td></tr>
+                  <tr><th scope="row">Dodge</th><td>B</td></tr>
+                  <tr><th scope="row">Interact / talk</th><td>X</td></tr>
+                  <tr><th scope="row">Technique</th><td>Y</td></tr>
+                  <tr><th scope="row">Light attack / fire</th><td>RB</td></tr>
+                  <tr><th scope="row">Heavy attack / braced shot</th><td>RT</td></tr>
+                  <tr><th scope="row">Guard</th><td>LB</td></tr>
+                  <tr><th scope="row">Lock on</th><td>R3 (press the right stick)</td></tr>
+                  <tr><th scope="row">Next / previous target</th><td>Flick the right stick while locked</td></tr>
+                  <tr><th scope="row">Sprint (toggle)</th><td>L3 (press the left stick)</td></tr>
+                  <tr><th scope="row">Quick chat</th><td>D-pad up</td></tr>
+                  <tr><th scope="row">Swap weapon</th><td>D-pad down</td></tr>
+                  <tr><th scope="row">Reload</th><td>D-pad left</td></tr>
+                  <tr><th scope="row">Menu / map</th><td>Start / Back</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="note">Button names follow the Xbox layout. On a PlayStation controller: A = Cross, B = Circle, X = Square, Y = Triangle, LB/RB = L1/R1, RT = R2, Back = Share or Create, Start = Options. The Chronicle and control hints open from the menu.</p>
+            <div class="callout" role="note">
+              <h3>Touch <span class="tag">Experimental</span></h3>
+              <p>A virtual stick on the left, action buttons on the right, and dragging on the right half of the screen to look. Button size is adjustable in Settings. Touch has not been tested on real phones or tablets yet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="coop" aria-labelledby="coop-title">
+      <div class="wrap two-col">
+        <div>
+          <h2 id="coop-title">How co-op works</h2>
+          <ol class="steps">
+            <li><strong>Host.</strong> One player picks <em>Host</em> on the title screen. The game opens their realm and shows an invite code like <code>FW-7KQ2-M9XD-R4TB-WN3C</code>.</li>
+            <li><strong>Share the code</strong> with one friend, any way you like.</li>
+            <li><strong>Join.</strong> The friend picks <em>Join</em>, chooses their own character and enters the code.</li>
+            <li><strong>Play.</strong> You share the same world, enemies, weather and time of day. Each of you keeps your own character, choices, loot and Chronicle.</li>
+          </ol>
+        </div>
+        <div>
+          <h3 class="subhead">Good to know</h3>
+          <ul class="facts">
+            <li><strong>Two players:</strong> the host and one friend.</li>
+            <li><strong>The host's tab must stay open.</strong> The host's browser runs the world. If the host switches away from the tab, the game pauses for both of you; if the host closes it, the session ends. There is no host migration.</li>
+            <li><strong>Dropped connections:</strong> if the friend's connection drops, the game keeps trying to reconnect them to the same character for 60 seconds.</li>
+            <li><strong>How the connection is made:</strong> the free PeerJS signaling service introduces the two browsers, then game traffic flows directly between them over WebRTC. When a direct link is impossible, PeerJS's free public relay is tried. It is best-effort and not guaranteed.</li>
+            <li><strong>Which networks work:</strong> testing starts with two windows on one PC, then two devices on one home network. Across the internet it depends on both networks: strict firewalls at workplaces and schools, and some mobile carriers, can block it. Results are listed under <a href="#status">Test status</a>.</li>
+            <li><strong>Trust:</strong> the host's browser is the referee and saves can be edited, so co-op is for friends. It is not built for rankings, trading or anti-cheat.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="saves" aria-labelledby="saves-title">
+      <div class="wrap">
+        <h2 id="saves-title">Saves</h2>
+        <ul class="cards cards-compact">
+          <li class="card">
+            <h3>They stay in this browser</h3>
+            <p>Saves live in this browser on this device. Nothing is uploaded, and there are no accounts or cloud sync.</p>
+          </li>
+          <li class="card">
+            <h3>Moving to another device</h3>
+            <p>Open <strong>Import / Export</strong> from the menu to download a save file, then import it on the other device or browser. Import shows what it will change and asks before overwriting anything.</p>
+          </li>
+          <li class="card">
+            <h3>Backups and recovery</h3>
+            <p>Each save keeps five rolling backups. If a save is damaged, the game sets the damaged copy aside and restores the newest good backup, and it tells you when it does.</p>
+          </li>
+          <li class="card">
+            <h3>What can erase them</h3>
+            <p>Clearing this site's data, some browser clean-up tools, private or incognito windows, and browsers that remove data from sites you have not visited for a while (Safari can do this after 7 days). The game asks the browser to keep its storage when it can, but an exported save file is the only copy you fully control.</p>
+          </li>
+        </ul>
+        <p class="note">In co-op the host's browser keeps the realm (the shared world and its history), and each player's browser keeps their own character.</p>
+      </div>
+    </section>
+
+    <section class="section" id="status" aria-labelledby="status-title">
+      <div class="wrap">
+        <h2 id="status-title">Test status</h2>
+        <p class="lede">What has been checked, and on what. Testing on one PC is reported separately from internet play with a friend. Last reviewed <time id="status-updated" datetime="2026-10-01">2026-10-01</time>.</p>
+        <ul id="status-list" class="status-list"></ul>
+        <p id="status-fallback" class="note">The test status list needs JavaScript. So does the game itself.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="roadmap" aria-labelledby="roadmap-title">
+      <div class="wrap">
+        <h2 id="roadmap-title">Roadmap <span class="tag tag-future">Future: not in this build</span></h2>
+        <p class="lede">This is where FIRSTWAKE is headed. None of it is playable yet, there are no dates, and the order may change. The Crownless Reach gets deeper before any new region is added.</p>
+        <ol class="roadmap">
+          <li><h3>Identity</h3><p>Signature techniques that grow from how you actually fight, chosen evolutions, deeper NPC memory, Fate Marks and technique synthesis.</p></li>
+          <li><h3>Branching stories</h3><p>Story chains with shared and personal consequences, including a rare scenario with several ways to find it and resolve it.</p></li>
+          <li><h3>Wakesmithing</h3><p>Forging at the Memory Forge: material choices, provenance, burdens, repairs and relics that evolve.</p></li>
+          <li><h3>A wider Fate Draw</h3><p>More of the 21 drawable bloodlines, more origins, more weapon families and techniques, and secret bloodlines earned through play.</p></li>
+          <li><h3>Presentation</h3><p>Finished rigged characters and animation, richer scenery and music, performance measured on more hardware, and tested gamepad and mobile support.</p></li>
+        </ol>
+        <p class="note">Public servers, rankings, trading and global first-discovery records would need trusted online services. They are not part of this private co-op version.</p>
+      </div>
+    </section>
+
+    <section class="section" id="credits" aria-labelledby="credits-title">
+      <div class="wrap">
+        <h2 id="credits-title">Credits and licenses</h2>
+        <div class="credits-text">
+          <p>FIRSTWAKE's world, characters, story and game design are original. All art is generated in code and all sound is synthesized live in the browser: the game ships no third-party art, models, textures, fonts, music or sound files.</p>
+          <p>No AI service runs while you play. Every rule and every piece of content is local to the game.</p>
+          <p>Network services are used only when you host or join co-op: the PeerJS cloud signaling server, Google's public STUN server, and PeerJS's free TURN relay.</p>
+          <p><strong>Privacy:</strong> this page sets no cookies and has no analytics or trackers. The game stores its saves on your device.</p>
+        </div>
+        <div class="table-scroll credits-table">
+          <table class="credits">
+            <caption>Open-source software</caption>
+            <thead><tr><th scope="col">Package</th><th scope="col">Used for</th><th scope="col">License</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Babylon.js 9.28.0</th><td>3D engine</td><td>Apache-2.0</td></tr>
+              <tr><th scope="row">PeerJS 1.5.5</th><td>Co-op connections (loaded only when you host or join)</td><td>MIT</td></tr>
+              <tr><th scope="row">webrtc-adapter 9.0.6</th><td>Bundled with PeerJS</td><td>BSD-3-Clause</td></tr>
+              <tr><th scope="row">sdp 3.2.2</th><td>Bundled with PeerJS</td><td>MIT</td></tr>
+              <tr><th scope="row">eventemitter3 4.0.7</th><td>Bundled with PeerJS</td><td>MIT</td></tr>
+              <tr><th scope="row">peerjs-js-binarypack 2.1.0</th><td>Bundled with PeerJS</td><td>MIT</td></tr>
+              <tr><th scope="row">@msgpack/msgpack 2.8.0</th><td>Bundled with PeerJS</td><td>ISC</td></tr>
+              <tr><th scope="row">idb 8.0.3</th><td>Local saves</td><td>ISC</td></tr>
+              <tr><th scope="row">Vite 8.3.1, Rolldown 1.2.12</th><td>Building the site (small runtime helpers ship with it)</td><td>MIT</td></tr>
+              <tr><th scope="row">TypeScript 7.0.2</th><td>Type checking (not shipped)</td><td>Apache-2.0</td></tr>
+              <tr><th scope="row">Vitest 5.0.3</th><td>Testing (not shipped)</td><td>MIT</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">Full license texts and notices: <a href="./third-party-notices.txt">third-party-notices.txt</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <p>FIRSTWAKE · playable prototype · build <span data-build-id>firstwake-web-0.1.0</span> · content <span data-content-version>web-0.1</span></p>
+      <p><a href="./play/">Play in your browser</a> · <a href="#top">Back to top</a></p>
+    </div>
+  </footer>
+</body>
+</html>
