@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Multiplayer · FIRSTWAKE</title>
+  <meta name="description" content="Play FIRSTWAKE with friends in your browser: host a realm, send an invite link or code, and join with your own character. Parties of up to 4 players are new and still being tested.">
+  <meta property="og:title" content="FIRSTWAKE multiplayer: join a friend's realm">
+  <meta property="og:description" content="Host a realm in your browser and invite friends with a link or a code. Parties of up to 4 are new and tested on one PC.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0E0F13">
+  <link rel="icon" href="https://getdealio.github.io/firstwake/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FIRSTWAKE">
+  <meta property="og:image" content="https://getdealio.github.io/firstwake/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The FIRSTWAKE sigil, a gold diamond around a lantern flame, beside the title and the words Playable prototype.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://getdealio.github.io/firstwake/multiplayer/">
+  <meta property="og:url" content="https://getdealio.github.io/firstwake/multiplayer/">
+  <script type="module" crossorigin src="https://getdealio.github.io/firstwake/assets/multiplayer-BFhLPaDl.js"></script>
+  <link rel="modulepreload" crossorigin href="https://getdealio.github.io/firstwake/assets/records-DHu-5ibZ.js">
+  <link rel="modulepreload" crossorigin href="https://getdealio.github.io/firstwake/assets/readiness-DRB7xixW.js">
+  <link rel="modulepreload" crossorigin href="https://getdealio.github.io/firstwake/assets/inviteCode-B6zGDofw.js">
+  <link rel="stylesheet" crossorigin href="https://getdealio.github.io/firstwake/assets/site-AzgKkvZe.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="wrap header-row">
+      <a class="brand" href="../"><svg class="sigil" viewBox="0 0 64 64" width="30" height="30" aria-hidden="true" focusable="false"><path d="M32 6 58 32 32 58 6 32Z" fill="none" stroke="#D8B25A" stroke-width="4" stroke-linejoin="round"/><path d="M32 16c6 9 9 15 9 21a9 9 0 0 1-18 0c0-6 3-12 9-21Z" fill="#E9E1CF"/><path d="M32 30c3 4 4 6 4 8.5a4 4 0 0 1-8 0c0-2.5 1-4.5 4-8.5Z" fill="#D8B25A"/></svg><span class="brand-name">FIRSTWAKE</span><span class="visually-hidden"> home</span></a>
+      <nav class="site-nav" aria-label="Site">
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><a href="../how-to-play/">How to play</a></li>
+          <li><a href="../multiplayer/" aria-current="page">Multiplayer</a></li>
+          <li><a href="../world/">World</a></li>
+          <li><a href="../updates/">Updates</a></li>
+          <li><a href="../status/">Status</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-primary btn-compact" href="../play/">Play</a>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="page-intro" aria-labelledby="page-title">
+      <div class="wrap">
+        <h1 id="page-title">Multiplayer</h1>
+        <p class="lede">One player hosts a realm in their browser and up to 3 friends join it, each with their own character. <span class="tag tag-new">New: tested on one PC</span></p>
+        <p class="note">Parties of up to 4 players and one-click invite links are new in this build. A party of four and invite links passed a test in four browser windows on one PC; separate devices and networks have not been tried yet. The <a href="../status/">test status</a> page tracks both.</p>
+      </div>
+    </section>
+
+    <section class="section" id="join" aria-labelledby="join-title">
+      <div class="wrap two-col">
+        <div>
+          <h2 id="join-title">Join a friend</h2>
+          <p>Paste the invite link your host sent you, or type their invite code. The game opens and asks which character to bring. Nothing connects until you click <em>Join</em>.</p>
+          <form class="join-form" id="join-form" action="../play/" method="get">
+            <label class="field-label" for="join-code">Invite link or code</label>
+            <div class="join-row">
+              <input class="field" id="join-code" name="join" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="4096" required aria-describedby="join-hint join-error">
+              <button class="btn btn-primary" type="submit">Open the invite</button>
+            </div>
+            <p class="field-hint" id="join-hint">A code looks like <code>FW-7KQ2-M9XD-R4TB-WN3C</code>. Capital letters, spaces and dashes do not matter.</p>
+            <noscript><p class="field-hint" id="join-noscript">The game needs JavaScript. Turn it on, then paste the link or the code and press Open the invite.</p></noscript>
+            <p class="field-error" id="join-error" role="alert"></p>
+          </form>
+        </div>
+        <div>
+          <section class="readiness" aria-labelledby="readiness-title">
+            <h2 id="readiness-title" class="readiness-title">Your browser</h2>
+            <ul id="readiness" class="check-list" aria-live="polite">
+              <li class="check" data-state="info"><span class="check-glyph" aria-hidden="true">i</span><span class="check-text">The game needs JavaScript and WebGL2.<span class="js-only"> Checking this browser…</span></span></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="how-it-works" aria-labelledby="how-title">
+      <div class="wrap two-col">
+        <div>
+          <h2 id="how-title">How co-op works</h2>
+          <ol class="steps">
+            <li><strong>Host.</strong> On the title screen, pick your character and choose <em>Host co-op</em>. The game opens your realm and shows an invite link and a code like <code>FW-7KQ2-M9XD-R4TB-WN3C</code>.</li>
+            <li><strong>Invite.</strong> Copy the invite link, or the code, and send it to up to 3 friends any way you like.</li>
+            <li><strong>Join.</strong> Each friend opens the link, pastes it into the box above, or chooses <em>Join a friend</em> on the title screen. They pick a character, or create one, and click <em>Join</em>.</li>
+            <li><strong>Play.</strong> You share the same world, enemies, weather and time of day. Each of you keeps your own character, choices, loot and Chronicle.</li>
+          </ol>
+        </div>
+        <div>
+          <h3 class="subhead">Good to know</h3>
+          <ul class="facts">
+            <li><strong>Party size:</strong> up to 4 players, the host and 3 guests. If a guest's connection drops, the game keeps their place and tries to reconnect them to the same character for 60 seconds.</li>
+            <li><strong>The host's tab must stay open and visible.</strong> The host's browser runs the world. If the host switches away from the tab, the game pauses for everyone; if the host closes it, the session ends. There is no host migration.</li>
+            <li><strong>The host carries the party.</strong> Every guest connects to the host only, so each extra guest adds to the host's upload and processing. The host's co-op panel shows <em>slow link</em> when a guest's connection falls behind.</li>
+            <li id="who-can-join"><strong>Who can join:</strong> anyone with the invite link or the code, while the realm is open to guests. The host can <em>Remove</em> a player: they are disconnected and can't rejoin with that character during this session, but anyone who still has the link can join again, even with another character. To stop that, the host chooses <em>New invite link</em> in the co-op panel: the old link and code stop working at once, players who are connected stay, and only people who get the new link can join. <em>Close to guests</em> disconnects every guest and lets no one in until the host opens the realm again.</li>
+            <li><strong>Trust:</strong> the host's browser is the referee and saves can be edited, so co-op is for friends. It is not built for rankings, trading or anti-cheat.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="connection" aria-labelledby="connection-title">
+      <div class="wrap two-col">
+        <div>
+          <h2 id="connection-title">Connections, honestly</h2>
+          <ul class="facts">
+            <li><strong>How the connection is made:</strong> the free PeerJS signaling service introduces each guest's browser to the host's, then game traffic flows directly between them over WebRTC. When a direct link is impossible, PeerJS's free public relay is tried. It is best-effort and not guaranteed.</li>
+            <li><strong>Which networks work:</strong> a party of four in four windows on one PC has been tested. Two devices on one home network, and play across the internet, have not been tested yet. Strict firewalls at workplaces and schools, and some mobile carriers, can block a connection.</li>
+            <li><strong>Copying links:</strong> browsers only allow copying to the clipboard on secure (HTTPS) pages. If copying fails, the game selects the link so you can copy it yourself.</li>
+          </ul>
+        </div>
+        <div id="privacy">
+          <h2 id="privacy-title">Privacy</h2>
+          <p><strong>Joining connects your browser directly to the host's browser, so each side can see the other's IP address, as in any peer-to-peer game.</strong> Guests connect only to the host, not to each other. The PeerJS signaling server, and the relay when it is used, also see your IP address, as any such service does. Only open invite links from people you know.</p>
+          <p>Other players see your character's name, look and bloodline, and what you do in the shared world. The host's browser keeps the shared realm; your own browser keeps your character. There are no accounts, and this site sets no cookies and has no analytics.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="quick-chat" aria-labelledby="quick-chat-title">
+      <div class="wrap">
+        <h2 id="quick-chat-title">Talking in the game</h2>
+        <p class="lede">Co-op uses approved quick-chat phrases instead of free text: press <kbd>B</kbd>, or D-pad up on a gamepad, or the <em>Chat</em> button on touch.</p>
+        <ul class="phrases">
+            <li>Over here!</li>
+            <li>Need help!</li>
+            <li>Follow me.</li>
+            <li>Wait here.</li>
+            <li>Ready when you are.</li>
+            <li>Careful — unguardable!</li>
+            <li>Good save!</li>
+            <li>Thank you.</li>
+          </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <p>FIRSTWAKE · playable prototype · build <span data-build-id>firstwake-web-0.1.0</span> · content <span data-content-version>web-0.1</span></p>
+      <p class="footer-links"><a href="../play/">Play in your browser</a> · <a href="../status/">Test status</a> · <a href="../#credits">Credits and licenses</a> · <a href="#top">Back to top</a></p>
+      <p class="footer-privacy">This site sets no cookies and has no analytics or trackers. The game keeps its saves in your browser.</p>
+    </div>
+  </footer>
+</body>
+</html>

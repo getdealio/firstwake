@@ -1,4 +1,5 @@
-# FIRSTWAKE static site: the landing page (/) and the game (/play/) are public.
+# FIRSTWAKE static site: the website pages (/, how-to-play/, multiplayer/, world/, updates/, status/) and the game
+# (play/) are public. The 404 page asks not to be indexed.
 User-agent: *
 Allow: /
 

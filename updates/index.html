@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Updates · FIRSTWAKE</title>
+  <meta name="description" content="The FIRSTWAKE devlog: what changed in the browser prototype and when, plus the roadmap of what is planned but not playable yet.">
+  <meta property="og:title" content="FIRSTWAKE updates and roadmap">
+  <meta property="og:description" content="What changed in the FIRSTWAKE browser prototype and when, and what is planned next.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0E0F13">
+  <link rel="icon" href="https://getdealio.github.io/firstwake/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FIRSTWAKE">
+  <meta property="og:image" content="https://getdealio.github.io/firstwake/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The FIRSTWAKE sigil, a gold diamond around a lantern flame, beside the title and the words Playable prototype.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://getdealio.github.io/firstwake/updates/">
+  <meta property="og:url" content="https://getdealio.github.io/firstwake/updates/">
+  <link rel="stylesheet" crossorigin href="https://getdealio.github.io/firstwake/assets/site-AzgKkvZe.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="wrap header-row">
+      <a class="brand" href="../"><svg class="sigil" viewBox="0 0 64 64" width="30" height="30" aria-hidden="true" focusable="false"><path d="M32 6 58 32 32 58 6 32Z" fill="none" stroke="#D8B25A" stroke-width="4" stroke-linejoin="round"/><path d="M32 16c6 9 9 15 9 21a9 9 0 0 1-18 0c0-6 3-12 9-21Z" fill="#E9E1CF"/><path d="M32 30c3 4 4 6 4 8.5a4 4 0 0 1-8 0c0-2.5 1-4.5 4-8.5Z" fill="#D8B25A"/></svg><span class="brand-name">FIRSTWAKE</span><span class="visually-hidden"> home</span></a>
+      <nav class="site-nav" aria-label="Site">
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><a href="../how-to-play/">How to play</a></li>
+          <li><a href="../multiplayer/">Multiplayer</a></li>
+          <li><a href="../world/">World</a></li>
+          <li><a href="../updates/" aria-current="page">Updates</a></li>
+          <li><a href="../status/">Status</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-primary btn-compact" href="../play/">Play</a>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="page-intro" aria-labelledby="page-title">
+      <div class="wrap">
+        <h1 id="page-title">Updates</h1>
+        <p class="lede">What changed and when, newest first. What has actually been tested is on the <a href="../status/">test status</a> page.</p>
+      </div>
+    </section>
+
+    <section class="section" id="devlog" aria-labelledby="devlog-title">
+      <div class="wrap">
+        <h2 id="devlog-title" class="visually-hidden">Devlog</h2>
+        <ol class="devlog">
+          <li class="devlog-entry" id="parties-of-four">
+            <p class="devlog-date"><time datetime="2026-10-01">2026-10-01</time></p>
+            <h3>Parties of four, invite links and this website <span class="tag tag-new">New: tested on one PC</span></h3>
+            <p>Up to 4 players can now share a realm: the host and 3 guests. The host gets a one-click invite link next to the code, a friend who opens the link joins after choosing a character, and the host can remove a player and make a <a href="../multiplayer/#who-can-join">new invite link</a> so the old one stops working. Enemies that fight a bigger party have more health and posture.</p>
+            <p>The single landing page grew into this small website, with a <a href="../multiplayer/#join">join box</a> for invite links and codes. A party of four (the host and three guests) then passed a test in four browser windows on one PC over a real connection: joining from an invite link, a fight, Remove and New invite link. Separate devices and networks are still to be tried.</p>
+          </li>
+          <li class="devlog-entry" id="live">
+            <p class="devlog-date"><time datetime="2026-10-01">2026-10-01</time></p>
+            <h3>Live on a free address</h3>
+            <p>FIRSTWAKE went live on its free GitHub Pages address after a full code review. Every confirmed finding was fixed, and the game was checked again in Chrome with a real mouse and keyboard: solo play, saves, and two-player co-op over the live address.</p>
+          </li>
+          <li class="devlog-entry" id="browser-pivot">
+            <p class="devlog-date"><time datetime="2026-09-30">2026-09-30</time></p>
+            <h3>The browser pivot</h3>
+            <p>FIRSTWAKE became a standalone game that runs in the browser, with no download and no account. An earlier prototype was paused, and its combat tuning and rules carried over to the new version: TypeScript and Babylon.js for the world, peer-to-peer co-op, and saves kept in your own browser.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="roadmap" aria-labelledby="roadmap-title">
+      <div class="wrap">
+        <h2 id="roadmap-title">Roadmap <span class="tag tag-future">Future: not in this build</span></h2>
+        <p class="lede">This is where FIRSTWAKE is headed. None of it is playable yet, there are no dates, and the order may change. The Crownless Reach gets deeper before any new region is added.</p>
+        <ol class="roadmap">
+          <li><h3>Identity</h3><p>Signature techniques that grow from how you actually fight, chosen evolutions, deeper NPC memory, Fate Marks and technique synthesis.</p></li>
+          <li><h3>Branching stories</h3><p>Story chains with shared and personal consequences, including a rare scenario with several ways to find it and resolve it.</p></li>
+          <li><h3>Wakesmithing</h3><p>Forging at the Memory Forge: material choices, provenance, burdens, repairs and relics that evolve.</p></li>
+          <li><h3>A wider Fate Draw</h3><p>More of the 21 drawable bloodlines, more origins, more weapon families and techniques, and secret bloodlines earned through play.</p></li>
+          <li><h3>Presentation</h3><p>Finished rigged characters and animation, richer scenery and music, performance measured on more hardware, and tested gamepad and mobile support.</p></li>
+        </ol>
+        <p class="note">Public servers, a lobby for finding strangers, an always-on shared world, rankings, trading and global first-discovery records would all need trusted online services. They are not part of this private co-op version.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <p>FIRSTWAKE · playable prototype · build <span data-build-id>firstwake-web-0.1.0</span> · content <span data-content-version>web-0.1</span></p>
+      <p class="footer-links"><a href="../play/">Play in your browser</a> · <a href="../status/">Test status</a> · <a href="../#credits">Credits and licenses</a> · <a href="#top">Back to top</a></p>
+      <p class="footer-privacy">This site sets no cookies and has no analytics or trackers. The game keeps its saves in your browser.</p>
+    </div>
+  </footer>
+</body>
+</html>

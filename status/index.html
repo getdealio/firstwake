@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test status · FIRSTWAKE</title>
+  <meta name="description" content="What has been tested in the FIRSTWAKE browser prototype, on what hardware and networks, and what has not been tested yet. Local tests and internet play are reported separately.">
+  <meta property="og:title" content="FIRSTWAKE test status">
+  <meta property="og:description" content="An honest list of what has been checked in the FIRSTWAKE browser prototype, and what has not.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0E0F13">
+  <link rel="icon" href="https://getdealio.github.io/firstwake/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FIRSTWAKE">
+  <meta property="og:image" content="https://getdealio.github.io/firstwake/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The FIRSTWAKE sigil, a gold diamond around a lantern flame, beside the title and the words Playable prototype.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://getdealio.github.io/firstwake/status/">
+  <meta property="og:url" content="https://getdealio.github.io/firstwake/status/">
+  <link rel="stylesheet" crossorigin href="https://getdealio.github.io/firstwake/assets/site-AzgKkvZe.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="wrap header-row">
+      <a class="brand" href="../"><svg class="sigil" viewBox="0 0 64 64" width="30" height="30" aria-hidden="true" focusable="false"><path d="M32 6 58 32 32 58 6 32Z" fill="none" stroke="#D8B25A" stroke-width="4" stroke-linejoin="round"/><path d="M32 16c6 9 9 15 9 21a9 9 0 0 1-18 0c0-6 3-12 9-21Z" fill="#E9E1CF"/><path d="M32 30c3 4 4 6 4 8.5a4 4 0 0 1-8 0c0-2.5 1-4.5 4-8.5Z" fill="#D8B25A"/></svg><span class="brand-name">FIRSTWAKE</span><span class="visually-hidden"> home</span></a>
+      <nav class="site-nav" aria-label="Site">
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><a href="../how-to-play/">How to play</a></li>
+          <li><a href="../multiplayer/">Multiplayer</a></li>
+          <li><a href="../world/">World</a></li>
+          <li><a href="../updates/">Updates</a></li>
+          <li><a href="../status/" aria-current="page">Status</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-primary btn-compact" href="../play/">Play</a>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="page-intro" aria-labelledby="page-title">
+      <div class="wrap">
+        <h1 id="page-title">Test status</h1>
+        <p class="lede">What has been checked, and on what. Testing on one PC is reported separately from internet play with friends, and nothing is marked verified until it has been seen working. Last reviewed <time id="status-updated" datetime="2026-10-01">2026-10-01</time>.</p>
+      </div>
+    </section>
+
+    <section class="section" id="status" aria-labelledby="status-title">
+      <div class="wrap">
+        <h2 id="status-title" class="visually-hidden">Checks</h2>
+        <ul id="status-list" class="status-list">
+        <li class="status" data-status="verified" id="status-suite">
+          <span class="badge"><span class="badge-glyph" aria-hidden="true">✓</span>Verified</span>
+          <div class="status-body"><p class="status-area">Automated checks (type check, test suite, production build)</p><p class="status-note">Type check, 1,346 automated tests and the production build all pass for the parties-of-four release. That includes a party-of-four test with the real game rules and a bandwidth ceiling test. <time class="status-date" datetime="2026-10-01">(checked 2026-10-01)</time></p></div>
+        </li>
+        <li class="status" data-status="verified" id="status-solo-baseline">
+          <span class="badge"><span class="badge-glyph" aria-hidden="true">✓</span>Verified</span>
+          <div class="status-body"><p class="status-area">Solo play in desktop Chrome on the baseline PC (Windows 11, GTX 1650)</p><p class="status-note">Character creation, walking the village, Training Post and Brass Penitent fights, death and respawn, Mara&#39;s conversation and promise, and attacking with a real mouse click all worked. The full walk to the forge and the clue are still checked by script, not by hand. <time class="status-date" datetime="2026-10-01">(checked 2026-10-01)</time></p></div>
+        </li>
+        <li class="status" data-status="verified" id="status-save-reload">
+          <span class="badge"><span class="badge-glyph" aria-hidden="true">✓</span>Verified</span>
+          <div class="status-body"><p class="status-area">Save, reload and continue</p><p class="status-note">Save, reload and Continue kept flags, trust, inventory and deaths, and a defeated enemy stayed defeated. Export/import on another browser profile is covered by tests, not yet by hand. <time class="status-date" datetime="2026-10-01">(checked 2026-10-01)</time></p></div>
+        </li>
+        <li class="status" data-status="verified" id="status-coop-same-pc">
+          <span class="badge"><span class="badge-glyph" aria-hidden="true">✓</span>Verified</span>
+          <div class="status-body"><p class="status-area">Co-op: two browser windows on one PC, real PeerJS connection</p><p class="status-note">Two Chrome tabs over a real PeerJS connection agreed on positions and on sword and rifle damage in both directions; a guest that refreshed its page rejoined as the same player with its progress. <time class="status-date" datetime="2026-10-01">(checked 2026-10-01)</time></p></div>
+        </li>
+        <li class="status" data-status="verified" id="status-coop-party">
+          <span class="badge"><span class="badge-glyph" aria-hidden="true">✓</span>Verified</span>
+          <div class="status-body"><p class="status-area">Parties of four: the host and three guests in separate browser windows, real PeerJS connection</p><p class="status-note">Four Chrome tabs on one PC over a real PeerJS connection. All four agreed on every position and on enemy health through a four-player fight with party scaling. Remove and New invite link worked without dropping anyone else. Four separate devices have not been tried yet. <time class="status-date" datetime="2026-10-01">(checked 2026-10-01)</time></p></div>
+        </li>
+        <li class="status" data-status="verified" id="status-invite-link">
+          <span class="badge"><span class="badge-glyph" aria-hidden="true">✓</span>Verified</span>
+          <div class="status-body"><p class="status-area">Invite links: opening a host&#39;s link, choosing a character and joining with one click</p><p class="status-note">A link pasted into the website&#39;s join box opened the game with an invitation card. Nothing connected until a character was picked and Join was clicked, and then the player joined the host&#39;s realm. Done with real clicks in Chrome on one PC. <time class="status-date" datetime="2026-10-01">(checked 2026-10-01)</time></p></div>
+        </li>
+        <li class="status" data-status="verified" id="status-site-pages">
+          <span class="badge"><span class="badge-glyph" aria-hidden="true">✓</span>Verified</span>
+          <div class="status-body"><p class="status-area">Website pages load without errors, fit phone and desktop screens, and every link works</p><p class="status-note">Every page loaded in Chrome with zero console errors, the right navigation and no sideways scrolling. Automated tests check every link and page heading on each build. <time class="status-date" datetime="2026-10-01">(checked 2026-10-01)</time></p></div>
+        </li>
+        <li class="status" data-status="not-tested" id="status-coop-lan">
+          <span class="badge"><span class="badge-glyph" aria-hidden="true">–</span>Not tested</span>
+          <div class="status-body"><p class="status-area">Co-op: two devices on one home network</p><p class="status-note">The same-PC test has passed; this needs two devices on one network.</p></div>
+        </li>
+        <li class="status" data-status="not-tested" id="status-coop-internet">
+          <span class="badge"><span class="badge-glyph" aria-hidden="true">–</span>Not tested</span>
+          <div class="status-body"><p class="status-area">Co-op: two different networks over the internet</p><p class="status-note">Needs a real session with a friend on another network. Results depend on both networks.</p></div>
+        </li>
+        <li class="status" data-status="pending" id="status-performance">
+          <span class="badge"><span class="badge-glyph" aria-hidden="true">◷</span>Not yet verified</span>
+          <div class="status-body"><p class="status-area">Frame rate on the baseline PC</p><p class="status-note">CPU time per frame while hosting was 5.7 ms median (7.3 ms p90) at medium quality, which leaves room for 60 FPS. The on-screen frame rate in a visible window has not been measured yet. <time class="status-date" datetime="2026-10-01">(checked 2026-10-01)</time></p></div>
+        </li>
+        <li class="status" data-status="not-tested" id="status-gamepad">
+          <span class="badge"><span class="badge-glyph" aria-hidden="true">–</span>Not tested</span>
+          <div class="status-body"><p class="status-area">Gamepad (standard mapping)</p><p class="status-note">Supported in code; not yet tried with a physical controller.</p></div>
+        </li>
+        <li class="status" data-status="not-tested" id="status-touch">
+          <span class="badge"><span class="badge-glyph" aria-hidden="true">–</span>Not tested</span>
+          <div class="status-body"><p class="status-area">Touch controls on phones and tablets</p><p class="status-note">Experimental. Not tested on real devices.</p></div>
+        </li>
+        <li class="status" data-status="not-tested" id="status-other-browsers">
+          <span class="badge"><span class="badge-glyph" aria-hidden="true">–</span>Not tested</span>
+          <div class="status-body"><p class="status-area">Firefox, Safari and Edge</p><p class="status-note">Development and testing use Chrome.</p></div>
+        </li>
+      </ul>
+        <dl class="legend">
+          <div data-status="verified"><dt><span class="badge-glyph" aria-hidden="true">✓</span> Verified</dt><dd>Seen working, with the date it was checked.</dd></div>
+          <div data-status="pending"><dt><span class="badge-glyph" aria-hidden="true">◷</span> Not yet verified</dt><dd>Partly checked; the note says what is still missing.</dd></div>
+          <div data-status="not-tested"><dt><span class="badge-glyph" aria-hidden="true">–</span> Not tested</dt><dd>Not tried yet.</dd></div>
+          <div data-status="issue"><dt><span class="badge-glyph" aria-hidden="true">!</span> Known issue</dt><dd>Tried, and something is wrong.</dd></div>
+        </dl>
+        <p class="note">This list is built into the page from the project's test records each time the site is published.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <p>FIRSTWAKE · playable prototype · build <span data-build-id>firstwake-web-0.1.0</span> · content <span data-content-version>web-0.1</span></p>
+      <p class="footer-links"><a href="../play/">Play in your browser</a> · <a href="../status/">Test status</a> · <a href="../#credits">Credits and licenses</a> · <a href="#top">Back to top</a></p>
+      <p class="footer-privacy">This site sets no cookies and has no analytics or trackers. The game keeps its saves in your browser.</p>
+    </div>
+  </footer>
+</body>
+</html>
