@@ -1,0 +1,1 @@
+import{n as e}from"./instancedMesh.pure-BSWRKw7t.js";e();

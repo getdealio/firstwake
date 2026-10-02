@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- FIRSTWAKE HUD technique bezel (original, in-repo): an aged brass ring with an engraved inner cut, twelve hour
+       ticks and a diamond at the top. Drawn over the technique ring; the centre stays clear for the glyph. -->
+  <defs>
+    <linearGradient id="g" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="64" y2="64">
+      <stop offset="0" stop-color="#f2dca4"/>
+      <stop offset=".45" stop-color="#bf964c"/>
+      <stop offset="1" stop-color="#674b21"/>
+    </linearGradient>
+    <path id="t" d="M32 4.9v2.1"/>
+  </defs>
+  <g fill="none">
+    <circle cx="32" cy="32" r="30.8" stroke="url(#g)" stroke-width="2.4"/>
+    <circle cx="32" cy="32" r="28.9" stroke="#120d07" stroke-opacity=".6"/>
+    <circle cx="32" cy="32" r="27.7" stroke="#d8b46a" stroke-opacity=".2" stroke-width=".8"/>
+    <g stroke="#d6b36b" stroke-opacity=".55" stroke-width="1.1" stroke-linecap="round">
+      <use href="#t"/>
+      <use href="#t" transform="rotate(30 32 32)"/>
+      <use href="#t" transform="rotate(60 32 32)"/>
+      <use href="#t" transform="rotate(90 32 32)"/>
+      <use href="#t" transform="rotate(120 32 32)"/>
+      <use href="#t" transform="rotate(150 32 32)"/>
+      <use href="#t" transform="rotate(180 32 32)"/>
+      <use href="#t" transform="rotate(210 32 32)"/>
+      <use href="#t" transform="rotate(240 32 32)"/>
+      <use href="#t" transform="rotate(270 32 32)"/>
+      <use href="#t" transform="rotate(300 32 32)"/>
+      <use href="#t" transform="rotate(330 32 32)"/>
+    </g>
+  </g>
+  <path d="M32 .6 34 3.1 32 5.6 30 3.1Z" fill="url(#g)" stroke="#1d150b" stroke-width=".6"/>
+</svg>

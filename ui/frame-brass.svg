@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <!-- FIRSTWAKE HUD panel frame (original, in-repo). 9-slice: border-image-slice 16. Aged engraved brass:
+       an outer brass rule with a dark cut inside it, and a bracket, an inner echo line and a rivet at each corner.
+       Lit from the top-left, so the brass darkens toward the bottom-right. -->
+  <defs>
+    <linearGradient id="g" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="48" y2="48">
+      <stop offset="0" stop-color="#f2dca4"/>
+      <stop offset=".38" stop-color="#c39a4f"/>
+      <stop offset="1" stop-color="#6e5125"/>
+    </linearGradient>
+  </defs>
+  <g fill="none">
+    <rect x=".5" y=".5" width="47" height="47" stroke="#9a7838" stroke-opacity=".8"/>
+    <rect x="2.5" y="2.5" width="43" height="43" stroke="#120d07" stroke-opacity=".55"/>
+    <rect x="3.5" y="3.5" width="41" height="41" stroke="#d8b46a" stroke-opacity=".16"/>
+    <g stroke="url(#g)" stroke-width="2">
+      <path d="M1 13V1h12"/>
+      <path d="M35 1h12v12"/>
+      <path d="M47 35v12H35"/>
+      <path d="M13 47H1V35"/>
+    </g>
+    <g stroke="#d6b36b" stroke-opacity=".38">
+      <path d="M4.5 11V4.5H11"/>
+      <path d="M37 4.5h6.5V11"/>
+      <path d="M43.5 37v6.5H37"/>
+      <path d="M11 43.5H4.5V37"/>
+    </g>
+  </g>
+  <g fill="url(#g)" stroke="#1d150b" stroke-width=".6">
+    <path d="M7.5 5.6 9.4 7.5 7.5 9.4 5.6 7.5Z"/>
+    <path d="M40.5 5.6 42.4 7.5 40.5 9.4 38.6 7.5Z"/>
+    <path d="M40.5 38.6 42.4 40.5 40.5 42.4 38.6 40.5Z"/>
+    <path d="M7.5 38.6 9.4 40.5 7.5 42.4 5.6 40.5Z"/>
+  </g>
+</svg>

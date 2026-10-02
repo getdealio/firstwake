@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="8" height="16" viewBox="0 0 8 16" preserveAspectRatio="none">
+  <!-- FIRSTWAKE HUD bar end-cap (original, in-repo): a brass ferrule pointing left; the right cap is the same image
+       mirrored in CSS. Stretched to the bar's height. -->
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0d79b"/>
+      <stop offset=".5" stop-color="#b18a43"/>
+      <stop offset="1" stop-color="#5f4520"/>
+    </linearGradient>
+  </defs>
+  <path d="M.6 8 3.6 1.2h4v13.6h-4Z" fill="url(#g)" stroke="#20170b" stroke-width=".7" stroke-linejoin="round"/>
+  <path d="M5.4 3.4v9.2" stroke="#2a1f10" stroke-opacity=".55" stroke-width=".6"/>
+</svg>

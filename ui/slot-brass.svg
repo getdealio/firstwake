@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <!-- FIRSTWAKE HUD item slot (original, in-repo). 9-slice: border-image-slice 12. A recessed square in aged brass:
+       outer rule, a dark cut along the top/left and a faint highlight along the bottom/right, chamfer notches. -->
+  <defs>
+    <linearGradient id="g" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="40" y2="40">
+      <stop offset="0" stop-color="#f0d89e"/>
+      <stop offset=".45" stop-color="#b78f47"/>
+      <stop offset="1" stop-color="#6a4e23"/>
+    </linearGradient>
+  </defs>
+  <g fill="none">
+    <rect x=".75" y=".75" width="38.5" height="38.5" stroke="url(#g)" stroke-width="1.5"/>
+    <path d="M2.5 37.5V2.5h35" stroke="#0d0905" stroke-opacity=".7"/>
+    <path d="M3 37.5h34.5V3" stroke="#d9b56a" stroke-opacity=".24"/>
+    <g stroke="url(#g)" stroke-width="1.4" stroke-linecap="round">
+      <path d="M1.2 7 7 1.2"/>
+      <path d="M33 1.2 38.8 7"/>
+      <path d="M38.8 33 33 38.8"/>
+      <path d="M7 38.8 1.2 33"/>
+    </g>
+  </g>
+</svg>
