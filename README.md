@@ -6,4 +6,4 @@ Website: https://getdealio.github.io/firstwake/ (how to play, multiplayer, the w
 This repository holds only the compiled static files that browsers download. The source code is kept elsewhere.
 It is a playable prototype: art, animation and audio are temporary, and saves stay in your browser (use Import / Export to move them).
 
-Deployed from source 2cc4ed8.
+Deployed from source 3a8188a.
