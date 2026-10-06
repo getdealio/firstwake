@@ -1,4 +1,4 @@
-import{o as e}from"./skeleton-BFEMU-7H.js";import{n as t,o as n,t as r}from"./math.vector.pure-C-n9L2U4.js";import{F as i,G as a,J as o,Mt as s,R as c,Tt as l,U as u,a as d,i as f,j as p,k as m,n as h,q as g,z as _}from"./play-DYy8bHpa.js";var v=`FwActorRecolor`,y=Object.freeze({green:{axis:[-.5,1,-.5],lumWeight:0,lo:.12,hi:.3},leather:{axis:[1,0,-1],lumWeight:0,lo:.7,hi:1.1},dark:{axis:[0,0,0],lumWeight:-1,lo:-.09,hi:-.04},all:{axis:[0,0,0],lumWeight:0,lo:-1,hi:-.5}}),b=`
+import{o as e}from"./skeleton-BFEMU-7H.js";import{n as t,o as n,t as r}from"./math.vector.pure-C-n9L2U4.js";import{F as i,G as a,J as o,Mt as s,R as c,Tt as l,U as u,a as d,i as f,j as p,k as m,n as h,q as g,z as _}from"./play-ohFyuVS9.js";var v=`FwActorRecolor`,y=Object.freeze({green:{axis:[-.5,1,-.5],lumWeight:0,lo:.12,hi:.3},leather:{axis:[1,0,-1],lumWeight:0,lo:.7,hi:1.1},dark:{axis:[0,0,0],lumWeight:-1,lo:-.09,hi:-.04},all:{axis:[0,0,0],lumWeight:0,lo:-1,hi:-.5}}),b=`
 #ifdef FWRECOLOR
 float fwRecolorKey(vec3 c, float lum, vec4 key, vec3 range) {
   return smoothstep(range.x, range.y, dot(c, key.xyz) / (lum + 0.02) + key.w * lum);
