@@ -1,0 +1,535 @@
+{
+ "pack": "hum_core",
+ "family": "hum",
+ "description": "The humanoid test character's animation set (animation architecture v2 §5): every locomotion and combat clip of the player humanoid, under stable semantic names. Built from approved CC0 sources by scripts/art/blender/anim_pack.py.",
+ "file": "assets/anim/hum_core.glb",
+ "bytes": 709280,
+ "sha256": "c55edc50cd13fd178217fafb04ed84b5ec4a2dbd650b518669e49bd74a3437c2",
+ "rig": "ual-mannequin",
+ "joints": 65,
+ "fps": 30,
+ "restChannelsRemoved": 4515,
+ "restRebasedMaxDeg": 0.1117,
+ "validator": {
+  "errors": 0,
+  "warnings": 0
+ },
+ "licences": {
+  "UAL1": {
+   "title": "Universal Animation Library (Standard)",
+   "author": "Quaternius",
+   "licence": "CC0 1.0",
+   "url": "https://quaternius.com/packs/universalanimationlibrary.html"
+  },
+  "UAL2": {
+   "title": "Universal Animation Library 2 (Standard)",
+   "author": "Quaternius",
+   "licence": "CC0 1.0",
+   "url": "https://quaternius.com/packs/universalanimationlibrary2.html"
+  }
+ },
+ "clips": {
+  "hum.loco.idle": {
+   "duration": 2.5,
+   "loop": true,
+   "source": {
+    "lib": "UAL1",
+    "clip": "Idle_Loop"
+   },
+   "fidelityDeg": {
+    "blender": 0.0337,
+    "resampled": 0.0343
+   }
+  },
+  "hum.loco.idleAlert": {
+   "duration": 1.6667,
+   "loop": true,
+   "source": {
+    "lib": "UAL1",
+    "clip": "Sword_Idle"
+   },
+   "fidelityDeg": {
+    "blender": 0.0369,
+    "resampled": 0.0369
+   }
+  },
+  "hum.loco.idleInjured": {
+   "duration": 2.5,
+   "loop": true,
+   "source": {
+    "lib": "UAL1",
+    "clip": "Idle_Loop"
+   },
+   "offsets": {
+    "spine_01": [
+     7,
+     2,
+     0
+    ],
+    "spine_02": [
+     8,
+     2,
+     3
+    ],
+    "spine_03": [
+     6,
+     1,
+     3
+    ],
+    "neck_01": [
+     -6,
+     0,
+     0
+    ],
+    "Head": [
+     -4,
+     -2,
+     0
+    ],
+    "clavicle_l": [
+     6,
+     0,
+     6
+    ],
+    "upperarm_l": [
+     10,
+     0,
+     14
+    ],
+    "lowerarm_l": [
+     0,
+     0,
+     18
+    ]
+   },
+   "note": "Idle_Loop hunched over the left side, the left arm drawn in to the ribs (a guarded, wounded stance)"
+  },
+  "hum.loco.walk": {
+   "duration": 1.3333,
+   "loop": true,
+   "source": {
+    "lib": "UAL1",
+    "clip": "Walk_Loop"
+   },
+   "fidelityDeg": {
+    "blender": 0.0329,
+    "resampled": 0.0329
+   }
+  },
+  "hum.loco.jog": {
+   "duration": 0.9333,
+   "loop": true,
+   "source": {
+    "lib": "UAL1",
+    "clip": "Jog_Fwd_Loop"
+   },
+   "fidelityDeg": {
+    "blender": 0.0336,
+    "resampled": 0.0336
+   }
+  },
+  "hum.loco.sprint": {
+   "duration": 0.6667,
+   "loop": true,
+   "source": {
+    "lib": "UAL1",
+    "clip": "Sprint_Loop"
+   },
+   "fidelityDeg": {
+    "blender": 0.0344,
+    "resampled": 0.0344
+   }
+  },
+  "hum.loco.jumpTakeoff": {
+   "duration": 1.3333,
+   "loop": false,
+   "source": {
+    "lib": "UAL1",
+    "clip": "Jump_Start"
+   },
+   "fidelityDeg": {
+    "blender": 0.03,
+    "resampled": 0.0328
+   }
+  },
+  "hum.loco.fall": {
+   "duration": 2.5,
+   "loop": true,
+   "source": {
+    "lib": "UAL1",
+    "clip": "Jump_Loop"
+   },
+   "fidelityDeg": {
+    "blender": 0.0399,
+    "resampled": 0.1029
+   }
+  },
+  "hum.loco.landLight": {
+   "duration": 1.2667,
+   "loop": false,
+   "source": {
+    "lib": "UAL1",
+    "clip": "Jump_Land"
+   },
+   "fidelityDeg": {
+    "blender": 0.035,
+    "resampled": 0.035
+   }
+  },
+  "hum.loco.landHeavy": {
+   "duration": 1.2667,
+   "loop": false,
+   "source": {
+    "lib": "UAL2",
+    "clip": "NinjaJump_Land"
+   },
+   "fidelityDeg": {
+    "blender": 0.0375,
+    "resampled": 0.0375
+   }
+  },
+  "hum.loco.crouchIdle": {
+   "duration": 2.9333,
+   "loop": true,
+   "source": {
+    "lib": "UAL1",
+    "clip": "Crouch_Idle_Loop"
+   },
+   "fidelityDeg": {
+    "blender": 0.0331,
+    "resampled": 0.2328
+   }
+  },
+  "hum.loco.crouchMove": {
+   "duration": 2,
+   "loop": true,
+   "source": {
+    "lib": "UAL1",
+    "clip": "Crouch_Fwd_Loop"
+   },
+   "fidelityDeg": {
+    "blender": 0.041,
+    "resampled": 0.0451
+   }
+  },
+  "hum.loco.mantle": {
+   "duration": 0.6667,
+   "loop": false,
+   "source": {
+    "lib": "UAL2",
+    "clip": "ClimbUp_1m"
+   },
+   "fidelityDeg": {
+    "blender": 0.0409,
+    "resampled": 0.0409
+   }
+  },
+  "hum.loco.interact": {
+   "duration": 0.8333,
+   "loop": false,
+   "source": {
+    "lib": "UAL1",
+    "clip": "PickUp_Table"
+   },
+   "fidelityDeg": {
+    "blender": 0.0466,
+    "resampled": 0.0466
+   }
+  },
+  "hum.combat.sword.light1": {
+   "duration": 0.8333,
+   "loop": false,
+   "source": {
+    "lib": "UAL2",
+    "clip": "Sword_Regular_A"
+   },
+   "then": {
+    "lib": "UAL2",
+    "clip": "Sword_Regular_A_Rec",
+    "to": 0.4
+   },
+   "markers": {
+    "attackActiveStart": 0.167,
+    "impactMoment": 0.167,
+    "attackActiveEnd": 0.3,
+    "recoveryEnd": 0.833
+   }
+  },
+  "hum.combat.sword.light2": {
+   "duration": 0.9333,
+   "loop": false,
+   "source": {
+    "lib": "UAL2",
+    "clip": "Sword_Regular_B"
+   },
+   "then": {
+    "lib": "UAL2",
+    "clip": "Sword_Regular_B_Rec",
+    "to": 0.4
+   },
+   "markers": {
+    "attackActiveStart": 0.2,
+    "impactMoment": 0.2,
+    "attackActiveEnd": 0.3,
+    "recoveryEnd": 0.933
+   }
+  },
+  "hum.combat.sword.light3": {
+   "duration": 1.1333,
+   "loop": false,
+   "source": {
+    "lib": "UAL2",
+    "clip": "Sword_Regular_C",
+    "from": 0.25,
+    "to": 1.4
+   },
+   "markers": {
+    "attackActiveStart": 0.35,
+    "impactMoment": 0.35,
+    "attackActiveEnd": 0.45,
+    "recoveryEnd": 1.15
+   },
+   "fidelityDeg": {
+    "blender": 0.03,
+    "resampled": 0.03
+   }
+  },
+  "hum.combat.sword.heavy": {
+   "duration": 0.8333,
+   "loop": false,
+   "source": {
+    "lib": "UAL2",
+    "clip": "Sword_Heavy_Combo",
+    "to": 0.85
+   },
+   "markers": {
+    "attackActiveStart": 0.35,
+    "impactMoment": 0.35,
+    "attackActiveEnd": 0.53,
+    "recoveryEnd": 0.85
+   },
+   "fidelityDeg": {
+    "blender": 0.0354,
+    "resampled": 0.0354
+   }
+  },
+  "hum.combat.sword.charged": {
+   "duration": 1.5333,
+   "loop": false,
+   "source": {
+    "lib": "UAL1",
+    "clip": "Sword_Attack"
+   },
+   "note": "lab only: no charged attack in the sim",
+   "fidelityDeg": {
+    "blender": 0.03,
+    "resampled": 0.0315
+   }
+  },
+  "hum.combat.sword.sprintAttack": {
+   "duration": 1.5667,
+   "loop": false,
+   "source": {
+    "lib": "UAL2",
+    "clip": "Sword_Dash"
+   },
+   "note": "lab only: no sprint attack in the sim",
+   "fidelityDeg": {
+    "blender": 0.0315,
+    "resampled": 0.0315
+   }
+  },
+  "hum.combat.guard": {
+   "duration": 0.2,
+   "loop": false,
+   "source": {
+    "lib": "UAL2",
+    "clip": "Sword_Block"
+   },
+   "freeze": 0.3,
+   "freezeSeconds": 0.2
+  },
+  "hum.combat.rifle.aim": {
+   "duration": 0.2,
+   "loop": false,
+   "source": {
+    "lib": "UAL1",
+    "clip": "Pistol_Aim_Neutral"
+   },
+   "freeze": 0,
+   "freezeSeconds": 0.2
+  },
+  "hum.combat.rifle.fire": {
+   "duration": 0.6333,
+   "loop": false,
+   "source": {
+    "lib": "UAL1",
+    "clip": "Pistol_Shoot"
+   },
+   "fidelityDeg": {
+    "blender": 0.0312,
+    "resampled": 0.0312
+   }
+  },
+  "hum.combat.rifle.bracedShot": {
+   "duration": 0.2,
+   "loop": false,
+   "source": {
+    "lib": "UAL1",
+    "clip": "Pistol_Aim_Neutral"
+   },
+   "freeze": 0,
+   "freezeSeconds": 0.2,
+   "legs": {
+    "lib": "UAL1",
+    "clip": "Crouch_Idle_Loop",
+    "at": 0
+   }
+  },
+  "hum.combat.rifle.reload": {
+   "duration": 1.6667,
+   "loop": false,
+   "source": {
+    "lib": "UAL1",
+    "clip": "Pistol_Reload"
+   },
+   "fidelityDeg": {
+    "blender": 0.0312,
+    "resampled": 0.0312
+   }
+  },
+  "hum.combat.cast": {
+   "duration": 1.0333,
+   "loop": false,
+   "source": {
+    "lib": "UAL1",
+    "clip": "Spell_Simple_Enter"
+   },
+   "then": {
+    "lib": "UAL1",
+    "clip": "Spell_Simple_Shoot"
+   }
+  },
+  "hum.combat.dodge": {
+   "duration": 1,
+   "loop": false,
+   "source": {
+    "lib": "UAL1",
+    "clip": "Roll",
+    "to": 1
+   },
+   "markers": {
+    "attackActiveStart": 0.05,
+    "impactMoment": 0.05,
+    "attackActiveEnd": 0.75,
+    "recoveryEnd": 1
+   },
+   "fidelityDeg": {
+    "blender": 0.0397,
+    "resampled": 0.0397
+   }
+  },
+  "hum.combat.swapToRifle": {
+   "duration": 0.2333,
+   "loop": false,
+   "source": {
+    "lib": "UAL2",
+    "clip": "OverhandThrow",
+    "to": 0.25
+   },
+   "fidelityDeg": {
+    "blender": 0.0352,
+    "resampled": 0.0352
+   }
+  },
+  "hum.combat.swapToSword": {
+   "duration": 0.4,
+   "loop": false,
+   "source": {
+    "lib": "UAL1",
+    "clip": "PickUp_Table",
+    "to": 0.42
+   },
+   "fidelityDeg": {
+    "blender": 0.0466,
+    "resampled": 0.0466
+   }
+  },
+  "hum.react.hitChest": {
+   "duration": 0.3333,
+   "loop": false,
+   "source": {
+    "lib": "UAL1",
+    "clip": "Hit_Chest"
+   },
+   "fidelityDeg": {
+    "blender": 0.0444,
+    "resampled": 0.0444
+   }
+  },
+  "hum.react.hitHeavy": {
+   "duration": 0.8333,
+   "loop": false,
+   "source": {
+    "lib": "UAL2",
+    "clip": "Hit_Knockback"
+   },
+   "note": "lab only: no hit-lock state in the sim",
+   "fidelityDeg": {
+    "blender": 0.0341,
+    "resampled": 0.0341
+   }
+  },
+  "hum.react.postureBreak": {
+   "duration": 0.2333,
+   "loop": false,
+   "source": {
+    "lib": "UAL2",
+    "clip": "Idle_Shield_Break",
+    "to": 0.25
+   },
+   "fidelityDeg": {
+    "blender": 0.0369,
+    "resampled": 0.0369
+   }
+  },
+  "hum.react.knockdown": {
+   "duration": 1.6,
+   "loop": false,
+   "source": {
+    "lib": "UAL1",
+    "clip": "Death01",
+    "to": 1.6
+   },
+   "note": "lab only: no knockdown in the sim",
+   "fidelityDeg": {
+    "blender": 0.0311,
+    "resampled": 0.0311
+   }
+  },
+  "hum.react.recover": {
+   "duration": 1.5333,
+   "loop": false,
+   "source": {
+    "lib": "UAL2",
+    "clip": "LayToIdle"
+   },
+   "fidelityDeg": {
+    "blender": 0.0337,
+    "resampled": 0.0509
+   }
+  },
+  "hum.react.death": {
+   "duration": 2.4,
+   "loop": false,
+   "source": {
+    "lib": "UAL1",
+    "clip": "Death01"
+   },
+   "fidelityDeg": {
+    "blender": 0.0311,
+    "resampled": 0.0311
+   }
+  }
+ }
+}
