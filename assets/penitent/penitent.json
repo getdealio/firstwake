@@ -20,7 +20,7 @@
   "Load each file with loadAssetContainer; skip the loader's __root__ (it only converts glTF to Babylon's left-handed space) and parent each node listed in `nodes` to the body's joint TransformNode named `bone` (glTF joints are TransformNodes under the body's own __root__). A single-material node loads as a Mesh; a multi-material one (gauntlets, vambraces, faulds, tassets, cuirass rivets) as a node whose children are the per-material meshes: parent that node. tests/assets/penitent.test.ts proves this recipe in Babylon against Male_Peasant.glb.",
   "Set node.position = attach.position, node.rotationQuaternion = attach.rotation (x, y, z, w), node.scaling = attach.scale. Values are in glTF space, the space joint TransformNodes live in. attach.rotation = inverse(bone rest world rotation), so the piece lands exactly where it was modelled at rest and then follows the bone.",
   "Every piece follows its bone rigidly; the actor's root scale (2.52 m Penitent) applies through the skeleton, so pieces need no scale of their own.",
-  "Alternative with 4 draw calls instead of 24 (each multi-material piece loads as one mesh per material): penitent_armour_skinned.glb holds the same pieces as one skinned mesh per material bound to the regular-male bind pose (every vertex weight 1.0 to its piece's bone); bind it to the body's skeleton like the outfit accessories.",
+  "Alternative with 4 draw calls instead of one per piece and material: penitent_armour_skinned.glb holds the same pieces as one skinned mesh per material bound to the regular-male bind pose (every vertex weight 1.0 to its piece's bone, or to its node's own bone where the piece lists nodeBones: the finger plates curl with the fingers); bind it to the body's skeleton like the outfit accessories.",
   "Materials come from the GLB (PBRMaterial): call applyLightBudget on each; the mist plugin attaches automatically. All are doubleSided (thin plates, open lames).",
   "Fallback: if any file fails to load, keep the procedural Penitent (render/actors/penitent.ts); nothing here is required for gameplay."
  ],
@@ -30,23 +30,31 @@
  },
  "materials": {
   "penitent_brass": {
-   "role": "aged engraved brass",
-   "baseColor": "texture (aged brass #8c6a32 with olive tarnish and grime in the engraving) x COLOR_0 (baked AO + worn edges)",
-   "metallic": "texture B 0.5-0.88",
-   "roughness": "texture G 0.36-0.75",
-   "normal": "engraved trim sheet (rolled lips, fractured-name glyph band, scrollwork, hammered field)"
+   "role": "the armour trim sheet: weathered tarnished brass edges and trims around blackened ruined steel fields; hammered brass on the bell parts (helm, pauldron domes, censer pot)",
+   "baseColor": "texture by Blender v band: worn brass lip #b08d4f (v < 0.04), tarnished brass trim A #6b5328 (0.04-0.25) and trim B #4a3a1f (0.48-0.90) with sparse olive in the hollows, blackened steel field ~linear (0.030, 0.030, 0.032) mottled, pitted and scratched (0.25-0.47), hammered brass field #6b5328 (0.905-0.995); grime and ash in the hollows; x COLOR_0 (baked AO, worn edges, soot)",
+   "metallic": "texture B: 0.90 brass, 0.75 steel field, 0-0.25 in the hollows",
+   "roughness": "texture G: 0.30 worn lip, 0.38-0.50 brass, 0.55-0.90 steel field (soot), 0.85-0.95 grime and ash",
+   "normal": "engraved trim sheet (rolled lips, fractured-name glyph band, scrollwork, pitted and dented steel field, hammered brass field)",
+   "albedoMeanLinearLum": 0.0647,
+   "albedoBands": {
+    "lip": 0.297,
+    "trimA": 0.09,
+    "field": 0.028,
+    "trimB": 0.045,
+    "brassField": 0.084
+   }
   },
   "penitent_steel": {
-   "role": "dark steel at the joints (couters, knuckles, rivets, buckle) and the chain",
+   "role": "blackened steel at the joints (couters, knuckles, rivets, buckle) and the chain",
    "baseColorFactor": [
-    0.15,
-    0.152,
-    0.16
+    0.06,
+    0.06,
+    0.065
    ],
    "shares": "brass ORM + normal"
   },
   "penitent_cloth": {
-   "role": "dark ink tabard with a faded brass sigil of fractured names around a bell",
+   "role": "ash-embedded charcoal cloth (#2b2a29) with a faded brass sigil of fractured names around a bell and a charred hem; a stitched leather strip at v 0.90-1.0 (the belt)",
    "roughness": 0.92,
    "metallic": 0
   },
@@ -87,6 +95,20 @@
   ],
   "halfArcDeg": 54
  },
+ "skinMask": {
+  "path": "assets/penitent/tex/penitent_armour_mask.jpg",
+  "channels": {
+   "r": "crack",
+   "g": "seam",
+   "b": "reserved"
+  },
+  "uv": "TEXCOORD_0 of penitent_brass and penitent_steel (the trim sheet); load with invertY false, gammaSpace false",
+  "stats": {
+   "rMean": 0.0287,
+   "gMean": 0.1554,
+   "bMax": 0.0275
+  }
+ },
  "pieces": [
   {
    "id": "helm",
@@ -94,13 +116,16 @@
    "bone": "Head",
    "nodes": [
     "penitent_helm",
-    "penitent_eye_slit"
+    "penitent_eye_slit",
+    "penitent_helm_grille",
+    "penitent_helm_crest"
    ],
    "materials": [
     "penitent_brass",
-    "penitent_eye_slit"
+    "penitent_eye_slit",
+    "penitent_steel"
    ],
-   "triangles": 1948,
+   "triangles": 2402,
    "attach": {
     "position": [
      0,
@@ -170,7 +195,7 @@
      0.999895
     ]
    },
-   "note": "bell-shaped great helm with a crown loop; the eye slit glow is the separate node penitent_eye_slit (own material) for the tell tint"
+   "note": "bell-shaped great helm with a crown loop; the eye slit glow is the separate node penitent_eye_slit (own material) for the tell tint; penitent_helm_grille = 7 vertical steel bars over the slit (0, +-16, +-32, +-48 deg; no horizontal bar); penitent_helm_crest = a pierced brass comb on the midline from the brow over the dome to the back, split around the crown loop, within radius 0.152 of the lathe axis (glTF x 0, z +0.004) at y 1.8205-1.8555 (the Captain's crown band)"
   },
   {
    "id": "gorget",
@@ -342,12 +367,14 @@
    "file": "assets/penitent/penitent_pauldron_l.glb",
    "bone": "upperarm_l",
    "nodes": [
-    "penitent_pauldron_l"
+    "penitent_pauldron_l",
+    "penitent_rerebrace_l"
    ],
    "materials": [
-    "penitent_brass"
+    "penitent_brass",
+    "penitent_steel"
    ],
-   "triangles": 618,
+   "triangles": 854,
    "attach": {
     "position": [
      0,
@@ -437,19 +464,21 @@
      1
     ]
    },
-   "note": "domed cap + three lames, designed with the upper arm lowered 62 deg (the gameplay idle); at the T-pose rest it tilts up, which no clip shows"
+   "note": "domed cap (radius 0.185) with two small steel spikes + three lames, designed with the upper arm lowered 62 deg (the gameplay idle); at the T-pose rest it tilts up, which no clip shows; penitent_rerebrace_l = the upper-arm tube under the lames"
   },
   {
    "id": "pauldron_r",
    "file": "assets/penitent/penitent_pauldron_r.glb",
    "bone": "upperarm_r",
    "nodes": [
-    "penitent_pauldron_r"
+    "penitent_pauldron_r",
+    "penitent_rerebrace_r"
    ],
    "materials": [
-    "penitent_brass"
+    "penitent_brass",
+    "penitent_steel"
    ],
-   "triangles": 618,
+   "triangles": 854,
    "attach": {
     "position": [
      0,
@@ -539,7 +568,7 @@
      1
     ]
    },
-   "note": "mirror of pauldron_l"
+   "note": "mirror of pauldron_l (penitent_rerebrace_r)"
   },
   {
    "id": "vambrace_l",
@@ -552,7 +581,7 @@
     "penitent_brass",
     "penitent_steel"
    ],
-   "triangles": 356,
+   "triangles": 448,
    "attach": {
     "position": [
      0,
@@ -622,20 +651,21 @@
      0.707019
     ]
    },
-   "note": "forearm tube with a steel elbow cop (couter) on lowerarm"
+   "note": "forearm tube with a steel elbow cop (couter) and its fluted wing on lowerarm"
   },
   {
    "id": "vambrace_r",
    "file": "assets/penitent/penitent_vambrace_r.glb",
    "bone": "lowerarm_r",
    "nodes": [
-    "penitent_vambrace_r"
+    "penitent_vambrace_r",
+    "penitent_chain_coil_r"
    ],
    "materials": [
     "penitent_brass",
     "penitent_steel"
    ],
-   "triangles": 356,
+   "triangles": 628,
    "attach": {
     "position": [
      0,
@@ -705,20 +735,50 @@
      0.707019
     ]
    },
-   "note": "mirror of vambrace_l"
+   "note": "mirror of vambrace_l; penitent_chain_coil_r = the reserve chain (two wraps round the forearm and a hanging loop, steel)"
   },
   {
    "id": "gauntlet_l",
    "file": "assets/penitent/penitent_gauntlet_l.glb",
    "bone": "hand_l",
    "nodes": [
-    "penitent_gauntlet_l"
+    "penitent_gauntlet_l",
+    "penitent_gauntlet_l_f_index_01_l",
+    "penitent_gauntlet_l_f_index_02_l",
+    "penitent_gauntlet_l_f_index_03_l",
+    "penitent_gauntlet_l_f_middle_01_l",
+    "penitent_gauntlet_l_f_middle_02_l",
+    "penitent_gauntlet_l_f_middle_03_l",
+    "penitent_gauntlet_l_f_ring_01_l",
+    "penitent_gauntlet_l_f_ring_02_l",
+    "penitent_gauntlet_l_f_ring_03_l",
+    "penitent_gauntlet_l_f_pinky_01_l",
+    "penitent_gauntlet_l_f_pinky_02_l",
+    "penitent_gauntlet_l_f_pinky_03_l",
+    "penitent_gauntlet_l_f_thumb_02_l",
+    "penitent_gauntlet_l_f_thumb_03_l"
    ],
+   "nodeBones": {
+    "penitent_gauntlet_l_f_index_01_l": "index_01_l",
+    "penitent_gauntlet_l_f_index_02_l": "index_02_l",
+    "penitent_gauntlet_l_f_index_03_l": "index_03_l",
+    "penitent_gauntlet_l_f_middle_01_l": "middle_01_l",
+    "penitent_gauntlet_l_f_middle_02_l": "middle_02_l",
+    "penitent_gauntlet_l_f_middle_03_l": "middle_03_l",
+    "penitent_gauntlet_l_f_ring_01_l": "ring_01_l",
+    "penitent_gauntlet_l_f_ring_02_l": "ring_02_l",
+    "penitent_gauntlet_l_f_ring_03_l": "ring_03_l",
+    "penitent_gauntlet_l_f_pinky_01_l": "pinky_01_l",
+    "penitent_gauntlet_l_f_pinky_02_l": "pinky_02_l",
+    "penitent_gauntlet_l_f_pinky_03_l": "pinky_03_l",
+    "penitent_gauntlet_l_f_thumb_02_l": "thumb_02_l",
+    "penitent_gauntlet_l_f_thumb_03_l": "thumb_03_l"
+   },
    "materials": [
     "penitent_brass",
     "penitent_steel"
    ],
-   "triangles": 376,
+   "triangles": 768,
    "attach": {
     "position": [
      0,
@@ -788,20 +848,50 @@
      0.707107
     ]
    },
-   "note": "cuff + back-of-hand plate + steel knuckle guard; fingers stay the body's (they curl in clips)"
+   "note": "flared cuff + back-of-hand plate + steel knuckle guard; 14 finger plates penitent_gauntlet_l_f_<bone> (nodeBones: each rides its finger bone in the skinned armour; this rigid file keeps them on hand_l, so they do not curl here)"
   },
   {
    "id": "gauntlet_r",
    "file": "assets/penitent/penitent_gauntlet_r.glb",
    "bone": "hand_r",
    "nodes": [
-    "penitent_gauntlet_r"
+    "penitent_gauntlet_r",
+    "penitent_gauntlet_r_f_index_01_r",
+    "penitent_gauntlet_r_f_index_02_r",
+    "penitent_gauntlet_r_f_index_03_r",
+    "penitent_gauntlet_r_f_middle_01_r",
+    "penitent_gauntlet_r_f_middle_02_r",
+    "penitent_gauntlet_r_f_middle_03_r",
+    "penitent_gauntlet_r_f_ring_01_r",
+    "penitent_gauntlet_r_f_ring_02_r",
+    "penitent_gauntlet_r_f_ring_03_r",
+    "penitent_gauntlet_r_f_pinky_01_r",
+    "penitent_gauntlet_r_f_pinky_02_r",
+    "penitent_gauntlet_r_f_pinky_03_r",
+    "penitent_gauntlet_r_f_thumb_02_r",
+    "penitent_gauntlet_r_f_thumb_03_r"
    ],
+   "nodeBones": {
+    "penitent_gauntlet_r_f_index_01_r": "index_01_r",
+    "penitent_gauntlet_r_f_index_02_r": "index_02_r",
+    "penitent_gauntlet_r_f_index_03_r": "index_03_r",
+    "penitent_gauntlet_r_f_middle_01_r": "middle_01_r",
+    "penitent_gauntlet_r_f_middle_02_r": "middle_02_r",
+    "penitent_gauntlet_r_f_middle_03_r": "middle_03_r",
+    "penitent_gauntlet_r_f_ring_01_r": "ring_01_r",
+    "penitent_gauntlet_r_f_ring_02_r": "ring_02_r",
+    "penitent_gauntlet_r_f_ring_03_r": "ring_03_r",
+    "penitent_gauntlet_r_f_pinky_01_r": "pinky_01_r",
+    "penitent_gauntlet_r_f_pinky_02_r": "pinky_02_r",
+    "penitent_gauntlet_r_f_pinky_03_r": "pinky_03_r",
+    "penitent_gauntlet_r_f_thumb_02_r": "thumb_02_r",
+    "penitent_gauntlet_r_f_thumb_03_r": "thumb_03_r"
+   },
    "materials": [
     "penitent_brass",
     "penitent_steel"
    ],
-   "triangles": 376,
+   "triangles": 768,
    "attach": {
     "position": [
      0,
@@ -871,20 +961,24 @@
      0.707107
     ]
    },
-   "note": "mirror of gauntlet_l; the right fist holds the censer chain's handle ring"
+   "note": "mirror of gauntlet_l (finger plates penitent_gauntlet_r_f_<bone>); the right fist holds the censer chain's handle ring"
   },
   {
    "id": "faulds",
    "file": "assets/penitent/penitent_faulds.glb",
    "bone": "pelvis",
    "nodes": [
-    "penitent_faulds"
+    "penitent_faulds",
+    "penitent_belt",
+    "penitent_belt_straps",
+    "penitent_apron"
    ],
    "materials": [
     "penitent_brass",
+    "penitent_cloth",
     "penitent_steel"
    ],
-   "triangles": 432,
+   "triangles": 694,
    "attach": {
     "position": [
      0,
@@ -954,7 +1048,7 @@
      0.989814
     ]
    },
-   "note": "two hip lames (the lower one open at the front), steel buckle"
+   "note": "two hip lames (the lower one open at the front); penitent_belt (leather, the steel buckle in front), penitent_belt_straps (3 straps with steel tips), penitent_apron (a short ragged back apron to ~0.80)"
   },
   {
    "id": "tasset_l",
@@ -1163,6 +1257,664 @@
    "note": "mirror of tasset_l"
   },
   {
+   "id": "cuisse_l",
+   "file": "assets/penitent/penitent_cuisse_l.glb",
+   "bone": "thigh_l",
+   "nodes": [
+    "penitent_cuisse_l"
+   ],
+   "materials": [
+    "penitent_brass",
+    "penitent_steel"
+   ],
+   "triangles": 314,
+   "attach": {
+    "position": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     -1,
+     0,
+     0,
+     -0.000117
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "attachByRig": {
+    "regular-male": {
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "rotation": [
+      -1,
+      0,
+      0,
+      -0.000117
+     ],
+     "scale": [
+      1,
+      1,
+      1
+     ]
+    },
+    "ubc-superhero-male": {
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "rotation": [
+      -1,
+      0,
+      0,
+      -0.000117
+     ],
+     "scale": [
+      1,
+      1,
+      1
+     ]
+    }
+   },
+   "boneRestWorld": {
+    "t": [
+     0.0906,
+     0.971202,
+     -0.035997
+    ],
+    "r": [
+     1,
+     0,
+     0,
+     -0.000117
+    ]
+   },
+   "note": "open thigh shell over the front and outside (az -110..+150 deg), z 0.90 -> 0.57 (lower at the knee's sides), a front ridge"
+  },
+  {
+   "id": "cuisse_r",
+   "file": "assets/penitent/penitent_cuisse_r.glb",
+   "bone": "thigh_r",
+   "nodes": [
+    "penitent_cuisse_r"
+   ],
+   "materials": [
+    "penitent_brass",
+    "penitent_steel"
+   ],
+   "triangles": 314,
+   "attach": {
+    "position": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     -1,
+     0,
+     0,
+     -0.000117
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "attachByRig": {
+    "regular-male": {
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "rotation": [
+      -1,
+      0,
+      0,
+      -0.000117
+     ],
+     "scale": [
+      1,
+      1,
+      1
+     ]
+    },
+    "ubc-superhero-male": {
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "rotation": [
+      -1,
+      0,
+      0,
+      -0.000117
+     ],
+     "scale": [
+      1,
+      1,
+      1
+     ]
+    }
+   },
+   "boneRestWorld": {
+    "t": [
+     -0.0906,
+     0.971202,
+     -0.035997
+    ],
+    "r": [
+     1,
+     0,
+     0,
+     -0.000117
+    ]
+   },
+   "note": "mirror of cuisse_l"
+  },
+  {
+   "id": "greave_l",
+   "file": "assets/penitent/penitent_greave_l.glb",
+   "bone": "calf_l",
+   "nodes": [
+    "penitent_greave_l"
+   ],
+   "materials": [
+    "penitent_brass"
+   ],
+   "triangles": 486,
+   "attach": {
+    "position": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     -0.998425,
+     0,
+     0,
+     -0.056106
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "attachByRig": {
+    "regular-male": {
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "rotation": [
+      -0.998425,
+      0,
+      0,
+      -0.056106
+     ],
+     "scale": [
+      1,
+      1,
+      1
+     ]
+    },
+    "ubc-superhero-male": {
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "rotation": [
+      -0.998425,
+      0,
+      0,
+      -0.056106
+     ],
+     "scale": [
+      1,
+      1,
+      1
+     ]
+    }
+   },
+   "boneRestWorld": {
+    "t": [
+     0.0906,
+     0.542402,
+     -0.036098
+    ],
+    "r": [
+     0.998425,
+     0,
+     0,
+     -0.056106
+    ]
+   },
+   "note": "knee cop with its outside wing (<= 0.025 proud of the knee) + a lame up over the cuisse's lower edge + the greave (front to z ~0.12, back to ~0.21), on calf"
+  },
+  {
+   "id": "greave_r",
+   "file": "assets/penitent/penitent_greave_r.glb",
+   "bone": "calf_r",
+   "nodes": [
+    "penitent_greave_r"
+   ],
+   "materials": [
+    "penitent_brass"
+   ],
+   "triangles": 486,
+   "attach": {
+    "position": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     -0.998425,
+     0,
+     0,
+     -0.056106
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "attachByRig": {
+    "regular-male": {
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "rotation": [
+      -0.998425,
+      0,
+      0,
+      -0.056106
+     ],
+     "scale": [
+      1,
+      1,
+      1
+     ]
+    },
+    "ubc-superhero-male": {
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "rotation": [
+      -0.998425,
+      0,
+      0,
+      -0.056106
+     ],
+     "scale": [
+      1,
+      1,
+      1
+     ]
+    }
+   },
+   "boneRestWorld": {
+    "t": [
+     -0.0906,
+     0.542402,
+     -0.036098
+    ],
+    "r": [
+     0.998425,
+     0,
+     0,
+     -0.056106
+    ]
+   },
+   "note": "mirror of greave_l"
+  },
+  {
+   "id": "sabaton_l",
+   "file": "assets/penitent/penitent_sabaton_l.glb",
+   "bone": "foot_l",
+   "nodes": [
+    "penitent_sabaton_l"
+   ],
+   "materials": [
+    "penitent_brass"
+   ],
+   "triangles": 240,
+   "attach": {
+    "position": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     -0.850946,
+     0,
+     0,
+     0.525252
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "attachByRig": {
+    "regular-male": {
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "rotation": [
+      -0.850946,
+      0,
+      0,
+      0.525252
+     ],
+     "scale": [
+      1,
+      1,
+      1
+     ]
+    },
+    "ubc-superhero-male": {
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "rotation": [
+      -0.850946,
+      0,
+      0,
+      0.525252
+     ],
+     "scale": [
+      1,
+      1,
+      1
+     ]
+    }
+   },
+   "boneRestWorld": {
+    "t": [
+     0.0906,
+     0.086501,
+     -0.087498
+    ],
+    "r": [
+     0.850946,
+     0,
+     0,
+     0.525252
+    ]
+   },
+   "note": "three overlapping lames over the instep (nothing below y 0.01), on foot"
+  },
+  {
+   "id": "sabaton_r",
+   "file": "assets/penitent/penitent_sabaton_r.glb",
+   "bone": "foot_r",
+   "nodes": [
+    "penitent_sabaton_r"
+   ],
+   "materials": [
+    "penitent_brass"
+   ],
+   "triangles": 240,
+   "attach": {
+    "position": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     -0.850946,
+     0,
+     0,
+     0.525252
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "attachByRig": {
+    "regular-male": {
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "rotation": [
+      -0.850946,
+      0,
+      0,
+      0.525252
+     ],
+     "scale": [
+      1,
+      1,
+      1
+     ]
+    },
+    "ubc-superhero-male": {
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "rotation": [
+      -0.850946,
+      0,
+      0,
+      0.525252
+     ],
+     "scale": [
+      1,
+      1,
+      1
+     ]
+    }
+   },
+   "boneRestWorld": {
+    "t": [
+     -0.0906,
+     0.086501,
+     -0.087498
+    ],
+    "r": [
+     0.850946,
+     0,
+     0,
+     0.525252
+    ]
+   },
+   "note": "mirror of sabaton_l"
+  },
+  {
+   "id": "toecap_l",
+   "file": "assets/penitent/penitent_toecap_l.glb",
+   "bone": "ball_l",
+   "nodes": [
+    "penitent_toecap_l"
+   ],
+   "materials": [
+    "penitent_brass"
+   ],
+   "triangles": 96,
+   "attach": {
+    "position": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0.707106,
+     0.707107,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "attachByRig": {
+    "regular-male": {
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "rotation": [
+      0,
+      0.707106,
+      0.707107,
+      0
+     ],
+     "scale": [
+      1,
+      1,
+      1
+     ]
+    },
+    "ubc-superhero-male": {
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "rotation": [
+      0,
+      -0.707106,
+      -0.707107,
+      0
+     ],
+     "scale": [
+      1,
+      1,
+      1
+     ]
+    }
+   },
+   "boneRestWorld": {
+    "t": [
+     0.0906,
+     0.015202,
+     0.054698
+    ],
+    "r": [
+     0,
+     -0.707106,
+     -0.707107,
+     0
+    ]
+   },
+   "note": "toe cap over the toes (nothing below y 0.01), on ball"
+  },
+  {
+   "id": "toecap_r",
+   "file": "assets/penitent/penitent_toecap_r.glb",
+   "bone": "ball_r",
+   "nodes": [
+    "penitent_toecap_r"
+   ],
+   "materials": [
+    "penitent_brass"
+   ],
+   "triangles": 96,
+   "attach": {
+    "position": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0.707106,
+     0.707107,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "attachByRig": {
+    "regular-male": {
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "rotation": [
+      0,
+      0.707106,
+      0.707107,
+      0
+     ],
+     "scale": [
+      1,
+      1,
+      1
+     ]
+    },
+    "ubc-superhero-male": {
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "rotation": [
+      0,
+      0.707106,
+      0.707107,
+      0
+     ],
+     "scale": [
+      1,
+      1,
+      1
+     ]
+    }
+   },
+   "boneRestWorld": {
+    "t": [
+     -0.0906,
+     0.015202,
+     0.054698
+    ],
+    "r": [
+     0,
+     -0.707106,
+     -0.707107,
+     0
+    ]
+   },
+   "note": "mirror of toecap_l"
+  },
+  {
    "id": "tabard_chest",
    "file": "assets/penitent/penitent_tabard_chest.glb",
    "bone": "spine_03",
@@ -1242,7 +1994,7 @@
      0.993595
     ]
    },
-   "note": "dark ink panels over the breast- and backplate, faded brass sigil (fractured names around a bell), ragged hem"
+   "note": "narrow ash cloth panels over the breast- and backplate, faded brass sigil (fractured names around a bell), charred ragged hem"
   },
   {
    "id": "tabard_skirt_l",
@@ -1251,10 +2003,32 @@
    "nodes": [
     "penitent_tabard_skirt_l"
    ],
+   "hemSamples": [
+    [
+     -0.0065,
+     -0.5219,
+     0.1868
+    ],
+    [
+     -0.0195,
+     -0.5234,
+     -0.1859
+    ],
+    [
+     0.1535,
+     -0.502,
+     -0.1067
+    ],
+    [
+     -0.0957,
+     -0.5071,
+     0.1606
+    ]
+   ],
    "materials": [
     "penitent_cloth"
    ],
-   "triangles": 192,
+   "triangles": 320,
    "attach": {
     "position": [
      0,
@@ -1344,7 +2118,7 @@
      1
     ]
    },
-   "note": "long ragged cloth half-skirt, rigid on the thigh so it swings with the leg; deep kneels lift it with the thigh (altAttach puts it on pelvis instead, at the cost of leg clipping)"
+   "note": "ragged cloth half-skirt to just below the knee (hemSamples), rigid on the thigh so it swings with the leg: a narrow front panel (with the right one: the front cloth between the knees) and a back panel round the back of the thigh; deep kneels lift it with the thigh (altAttach puts it on pelvis instead, at the cost of leg clipping)"
   },
   {
    "id": "tabard_skirt_r",
@@ -1356,7 +2130,7 @@
    "materials": [
     "penitent_cloth"
    ],
-   "triangles": 192,
+   "triangles": 320,
    "attach": {
     "position": [
      0,
@@ -1463,7 +2237,7 @@
    "penitent_cloth",
    "penitent_eye_slit"
   ],
-  "triangles": 7236,
+  "triangles": 12100,
   "note": "Same triangles as the rigid pieces (not counted twice in the budget). Bound to the regular-male bind pose; on ubc-superhero-male use the rigid pieces (or accept 2-3 cm offsets at the arms and thighs)."
  },
  "censer": {
@@ -1477,17 +2251,19 @@
    "heightNote": "lid top to mouth; the crown neck and top ring add about 0.08 m above",
    "mouthDiameterM": 0.3,
    "boundsY": [
-    -0.4,
+    -0.435,
     0.039
    ],
    "empties": {
     "center": "censerCenter",
     "smoke": "censerSmoke",
-    "mouth": "censerMouth"
+    "mouth": "censerMouth",
+    "finial": "censerFinial"
    },
+   "finialNote": "censerFinial: the clapper's tip, 0.435 m below the top ring (what strikes the ground); censerMouth stays the mouth plane (0.400)",
    "socket": "GLTF_PENITENT_SOCKETS.bladeTip names node 'censerPot' (its origin is the top ring); use 'censerCenter' (0.24 m below) for VFX at the pot's middle",
    "emberMaterial": "penitent_censer_ember",
-   "triangles": 1468
+   "triangles": 1996
   },
   "chain": {
    "file": "assets/penitent/penitent_censer_chain.glb",
@@ -1517,23 +2293,50 @@
    "lengthGripToPotRingM": 0.531,
    "lengthHandleCentreToPotRingM": 0.486,
    "note": "Links alternate 90 deg about Y. For the verlet rope (N=4) place link k at its rope point and orient it along the rope; chainPotHook marks where the pot's origin goes at rest.",
-   "triangles": 668
+   "triangles": 860
+  },
+  "extras": {
+   "file": "assets/penitent/penitent_censer_extras.glb",
+   "optional": true,
+   "hatchNode": "censerHatch",
+   "hatchHinge": [
+    0,
+    -0.205,
+    0.116
+   ],
+   "hatchOpenDeg": 70,
+   "hatchNote": "geometry relative to its hinge (the node translation, pot space, glTF); closed at rest; it opens about the hinge's local +X, the bottom edge moving to +Z (outward); covers the pot's front opening (azimuth -15..+15 deg, y -0.205..-0.275), single material penitent_brass",
+   "hatchTriangles": 96,
+   "linkLowNode": "chainLinkLow",
+   "linkLowNote": "a 4-sided low-poly link for the payout chain (centre origin, long axis +Y, linkLen/width as the chain's), penitent_steel",
+   "linkLowTriangles": 24,
+   "triangles": 120
   }
  },
  "budgets": {
   "triangles": {
-   "rigidSetAndCenser": 9372,
-   "armour": 7236,
-   "censer": 2136,
-   "max": 12000
+   "rigidSetAndCenser": 15076,
+   "armour": 12100,
+   "censer": 2976,
+   "max": 16000
   },
   "textures": {
-   "bytes": 140352,
+   "bytes": 222765,
    "max": 2097152,
    "maxEdge": 512
   }
  },
  "textures": [
+  {
+   "path": "assets/penitent/tex/penitent_armour_mask.jpg",
+   "width": 512,
+   "height": 512,
+   "format": "jpg",
+   "slot": "data",
+   "colorSpace": "linear",
+   "bytes": 37122,
+   "usage": "plugin-only (penitentSkinPlugin); no GLB references it"
+  },
   {
    "path": "assets/penitent/tex/penitent_brass_albedo.webp",
    "width": 512,
@@ -1541,7 +2344,7 @@
    "format": "webp",
    "slot": "color",
    "colorSpace": "srgb",
-   "bytes": 12986
+   "bytes": 14602
   },
   {
    "path": "assets/penitent/tex/penitent_brass_normal.jpg",
@@ -1550,7 +2353,7 @@
    "format": "jpg",
    "slot": "normal",
    "colorSpace": "linear",
-   "bytes": 73190
+   "bytes": 99577
   },
   {
    "path": "assets/penitent/tex/penitent_brass_orm.jpg",
@@ -1559,7 +2362,7 @@
    "format": "jpg",
    "slot": "data",
    "colorSpace": "linear",
-   "bytes": 49560
+   "bytes": 65206
   },
   {
    "path": "assets/penitent/tex/penitent_cloth_albedo.webp",
@@ -1568,16 +2371,16 @@
    "format": "webp",
    "slot": "color",
    "colorSpace": "srgb",
-   "bytes": 4616
+   "bytes": 6258
   }
  ],
  "files": [
   {
    "path": "assets/penitent/penitent_armour_skinned.glb",
    "kind": "penitent-armour-skinned",
-   "bytes": 139956,
-   "sha256": "840d7fa151fbcfa1957754040c4b76ebecc1547615d07bc018f19db7e0da2e21",
-   "triangles": 7236,
+   "bytes": 251868,
+   "sha256": "c0fa716dc7ff83f40f3505bcc6976b35e0885e2b42a0716b595db7fb57e90b3f",
+   "triangles": 12100,
    "validator": {
     "errors": 0,
     "warnings": 4
@@ -1586,9 +2389,20 @@
   {
    "path": "assets/penitent/penitent_censer_chain.glb",
    "kind": "penitent-censer",
-   "bytes": 11512,
-   "sha256": "0eecba466dfd898574d75c3e7cf1811cc58d1e930cda078ee99ff75a278264e9",
-   "triangles": 668,
+   "bytes": 15948,
+   "sha256": "29d9f9e1f6888421e2c0851bdb06682bcd14640a2287d7e57b02274bdce841c6",
+   "triangles": 860,
+   "validator": {
+    "errors": 0,
+    "warnings": 2
+   }
+  },
+  {
+   "path": "assets/penitent/penitent_censer_extras.glb",
+   "kind": "penitent-censer",
+   "bytes": 8052,
+   "sha256": "749da6643404ed76e68b9ce62148057acfb05026a28d7ee6071472ef08bffb27",
+   "triangles": 120,
    "validator": {
     "errors": 0,
     "warnings": 2
@@ -1597,9 +2411,9 @@
   {
    "path": "assets/penitent/penitent_censer_pot.glb",
    "kind": "penitent-censer",
-   "bytes": 26492,
-   "sha256": "46d6a65a192dd9a42a68fec4ea0ade7e6d0eed645ff366dd331cd10e4ec63c24",
-   "triangles": 1468,
+   "bytes": 45184,
+   "sha256": "eeb90494102fbfff752087365e70593819968e0d3491c7a63439c3dca897f3af",
+   "triangles": 1996,
    "validator": {
     "errors": 0,
     "warnings": 1
@@ -1608,9 +2422,31 @@
   {
    "path": "assets/penitent/penitent_cuirass.glb",
    "kind": "penitent-armour",
-   "bytes": 15080,
-   "sha256": "e0cb9350acd5c50bc89410d6d382695c9c8cd0b8b0cb85165d3b116191b94f4f",
+   "bytes": 18800,
+   "sha256": "36c858aec4f2278ca3f8a356890cd3a3760cc630317630ec422f0c6e283b10a9",
    "triangles": 684,
+   "validator": {
+    "errors": 0,
+    "warnings": 2
+   }
+  },
+  {
+   "path": "assets/penitent/penitent_cuisse_l.glb",
+   "kind": "penitent-armour",
+   "bytes": 11384,
+   "sha256": "b999eeb51e8e8cbb06abaaac98a401bf1e177c4a99191472982bf8ccf01cf495",
+   "triangles": 314,
+   "validator": {
+    "errors": 0,
+    "warnings": 2
+   }
+  },
+  {
+   "path": "assets/penitent/penitent_cuisse_r.glb",
+   "kind": "penitent-armour",
+   "bytes": 11468,
+   "sha256": "0aaa9da79c58c8eb984971173ba891c033b936a53da4dda08643ccf9f46610fa",
+   "triangles": 314,
    "validator": {
     "errors": 0,
     "warnings": 2
@@ -1619,42 +2455,64 @@
   {
    "path": "assets/penitent/penitent_faulds.glb",
    "kind": "penitent-armour",
-   "bytes": 13284,
-   "sha256": "be54d675492f38d7161d00e42a12e5a020b38787f00fbc99248c0119d2566eb0",
-   "triangles": 432,
+   "bytes": 28776,
+   "sha256": "39df660ca4cb26c8d8b0a5dcc89011bb2e315671670db5045b185528147f00e4",
+   "triangles": 694,
    "validator": {
     "errors": 0,
-    "warnings": 2
+    "warnings": 3
    }
   },
   {
    "path": "assets/penitent/penitent_gauntlet_l.glb",
    "kind": "penitent-armour",
-   "bytes": 12432,
-   "sha256": "3a3fc36214cb37d43e6d396275c14c7c9457dd5709ee2c860a689cb334ff024a",
-   "triangles": 376,
+   "bytes": 46884,
+   "sha256": "9b7a7fbbab0f4fcb761f8034817e75c41cc7b1a17193e795317c915a8ba9ec89",
+   "triangles": 768,
    "validator": {
     "errors": 0,
-    "warnings": 2
+    "warnings": 16
    }
   },
   {
    "path": "assets/penitent/penitent_gauntlet_r.glb",
    "kind": "penitent-armour",
-   "bytes": 12516,
-   "sha256": "5328516a48ddce2c4214b73c1350c6aa96a90a586e376a469ddf551be75c1d1d",
-   "triangles": 376,
+   "bytes": 46980,
+   "sha256": "8915cc10797faefcb7e3fb00800771a9eabe7d5818e1c4b6eca6c127b85695ed",
+   "triangles": 768,
    "validator": {
     "errors": 0,
-    "warnings": 2
+    "warnings": 16
    }
   },
   {
    "path": "assets/penitent/penitent_gorget.glb",
    "kind": "penitent-armour",
-   "bytes": 12360,
-   "sha256": "cb013ff5126ccba009f40b79ce03c217efc7ecef4e286d692747cb1708ebef80",
+   "bytes": 13532,
+   "sha256": "7762500eea413365c34fd15c427ef33c9c5c364818ef077b3bd1ea83b706de18",
    "triangles": 504,
+   "validator": {
+    "errors": 0,
+    "warnings": 1
+   }
+  },
+  {
+   "path": "assets/penitent/penitent_greave_l.glb",
+   "kind": "penitent-armour",
+   "bytes": 11772,
+   "sha256": "b26753120c7025542bf3bbb3d664540c0d5d57bc191e175499960d3cf16d47fd",
+   "triangles": 486,
+   "validator": {
+    "errors": 0,
+    "warnings": 1
+   }
+  },
+  {
+   "path": "assets/penitent/penitent_greave_r.glb",
+   "kind": "penitent-armour",
+   "bytes": 11688,
+   "sha256": "4660f8fb8801f4ad22e49735cb75ea1bd6b6822f92671f7964c40d330c5f4aec",
+   "triangles": 486,
    "validator": {
     "errors": 0,
     "warnings": 1
@@ -1663,31 +2521,53 @@
   {
    "path": "assets/penitent/penitent_helm.glb",
    "kind": "penitent-armour",
-   "bytes": 33484,
-   "sha256": "26d2f26901d39bd92e7c58c12c3e15e3092fdbc4d1dfce859c7780bb3ceea0f5",
-   "triangles": 1948,
+   "bytes": 49320,
+   "sha256": "085c358078ba90a0702e48cae842d3decd32a457bc2305697134eedb8ae06583",
+   "triangles": 2402,
    "validator": {
     "errors": 0,
-    "warnings": 1
+    "warnings": 3
    }
   },
   {
    "path": "assets/penitent/penitent_pauldron_l.glb",
    "kind": "penitent-armour",
-   "bytes": 14356,
-   "sha256": "0950b621dec756148af71e7bbe0fde770750ef0066dd41e22313bfaa0276f5e1",
-   "triangles": 618,
+   "bytes": 25308,
+   "sha256": "a7642c5f1c3d00c7678724cdaef1c8db9f8749b819c05c3d853e9180b2bf5c34",
+   "triangles": 854,
+   "validator": {
+    "errors": 0,
+    "warnings": 3
+   }
+  },
+  {
+   "path": "assets/penitent/penitent_pauldron_r.glb",
+   "kind": "penitent-armour",
+   "bytes": 25380,
+   "sha256": "e6c8cc9100893ea8efd337f52e1dea33b2195fe00fdc306fec5b45b11c9abbfb",
+   "triangles": 854,
+   "validator": {
+    "errors": 0,
+    "warnings": 3
+   }
+  },
+  {
+   "path": "assets/penitent/penitent_sabaton_l.glb",
+   "kind": "penitent-armour",
+   "bytes": 7984,
+   "sha256": "fff37003ac0e1b7241b8bd4bf532ddf41c06769d4002d41255b7cfcfeeee3ed4",
+   "triangles": 240,
    "validator": {
     "errors": 0,
     "warnings": 1
    }
   },
   {
-   "path": "assets/penitent/penitent_pauldron_r.glb",
+   "path": "assets/penitent/penitent_sabaton_r.glb",
    "kind": "penitent-armour",
-   "bytes": 14336,
-   "sha256": "9207fd01098d3ae49cce8adedb624cae87715f0da6cca0710a77d8bab722f6e0",
-   "triangles": 618,
+   "bytes": 7856,
+   "sha256": "a54e9f97416fbbc1b29cbdb057b231bd2d07fcff51279c716e97f3f3a72d360c",
+   "triangles": 240,
    "validator": {
     "errors": 0,
     "warnings": 1
@@ -1696,8 +2576,8 @@
   {
    "path": "assets/penitent/penitent_tabard_chest.glb",
    "kind": "penitent-armour",
-   "bytes": 5824,
-   "sha256": "d10652dfd20ffccced5c84aa5eb944439dff3aa6602a7bb0e1c238bbf3a885de",
+   "bytes": 5568,
+   "sha256": "fae45fec5730c93fbf505a5b3ba699ec47a2476b1525a4859687a1469726a1ad",
    "triangles": 216,
    "validator": {
     "errors": 0,
@@ -1707,9 +2587,9 @@
   {
    "path": "assets/penitent/penitent_tabard_skirt_l.glb",
    "kind": "penitent-armour",
-   "bytes": 5284,
-   "sha256": "c4e296cf3e8715cccc4ae40368f9675c2afd5709dda6d5c22c181c39203a84e9",
-   "triangles": 192,
+   "bytes": 7012,
+   "sha256": "d5eef777e5fc79e12b570833acab47e6fdaacb62d5757d003f48f1c6e4745844",
+   "triangles": 320,
    "validator": {
     "errors": 0,
     "warnings": 0
@@ -1718,9 +2598,9 @@
   {
    "path": "assets/penitent/penitent_tabard_skirt_r.glb",
    "kind": "penitent-armour",
-   "bytes": 5444,
-   "sha256": "e6076cc33f51c84047014d016e14f052469933c8f226dcff7788d41604901d73",
-   "triangles": 192,
+   "bytes": 7112,
+   "sha256": "937623aac6cf57593cac7115711a3d600a60156f509ca11d830aba1ffae17d9b",
+   "triangles": 320,
    "validator": {
     "errors": 0,
     "warnings": 0
@@ -1729,8 +2609,8 @@
   {
    "path": "assets/penitent/penitent_tasset_l.glb",
    "kind": "penitent-armour",
-   "bytes": 9228,
-   "sha256": "245694a108af1193d3ae2a57d7612ec594e08823716691bd774792b84b263df9",
+   "bytes": 9224,
+   "sha256": "c524221e3bd2affca5bc942a8b04f6b1dc7bd51c3b40b713eaa23a61df0ac925",
    "triangles": 184,
    "validator": {
     "errors": 0,
@@ -1741,7 +2621,7 @@
    "path": "assets/penitent/penitent_tasset_r.glb",
    "kind": "penitent-armour",
    "bytes": 9296,
-   "sha256": "04351d9af2a645dba1209d001a63ef9ffdcedee98b91a7eb02ae54fa1039bf1b",
+   "sha256": "b7f7a053f42ff8c7bcd14ee968a3606ce6dd5ab94ef9744f745b1fa884e42c77",
    "triangles": 184,
    "validator": {
     "errors": 0,
@@ -1749,11 +2629,33 @@
    }
   },
   {
+   "path": "assets/penitent/penitent_toecap_l.glb",
+   "kind": "penitent-armour",
+   "bytes": 4868,
+   "sha256": "3c083228d97d023aebf9031be11b92dd343e7807d591ed0b18ace620c1ca4f0a",
+   "triangles": 96,
+   "validator": {
+    "errors": 0,
+    "warnings": 1
+   }
+  },
+  {
+   "path": "assets/penitent/penitent_toecap_r.glb",
+   "kind": "penitent-armour",
+   "bytes": 4804,
+   "sha256": "3be09458b2144ae9be402abd484d53619d697ad02602df60dcbe57cc89664364",
+   "triangles": 96,
+   "validator": {
+    "errors": 0,
+    "warnings": 1
+   }
+  },
+  {
    "path": "assets/penitent/penitent_vambrace_l.glb",
    "kind": "penitent-armour",
-   "bytes": 11008,
-   "sha256": "06a5d5e2f62c18538ce84dd5f7e737035fe430cb5e8033a4d79949c17cbcbaec",
-   "triangles": 356,
+   "bytes": 13520,
+   "sha256": "5a74d5f1ae6c6c0ad1e2f1e8e3a43a44163885112a14cca226e8a0c3ca960f94",
+   "triangles": 448,
    "validator": {
     "errors": 0,
     "warnings": 2
@@ -1762,37 +2664,43 @@
   {
    "path": "assets/penitent/penitent_vambrace_r.glb",
    "kind": "penitent-armour",
-   "bytes": 11140,
-   "sha256": "ef4e9a61625cff7117152998a74a7e4b64fae6c3fa99a1a7a7f26d21da58e5dd",
-   "triangles": 356,
+   "bytes": 22876,
+   "sha256": "526a8f1b2c5a1ca4de245b47301082cc2f0e55e24f40291cde9b238c88075aae",
+   "triangles": 628,
    "validator": {
     "errors": 0,
-    "warnings": 2
+    "warnings": 3
    }
+  },
+  {
+   "path": "assets/penitent/tex/penitent_armour_mask.jpg",
+   "kind": "penitent-texture",
+   "bytes": 37122,
+   "sha256": "b13550888867adb59c166e477fbd325a5d73794fa5083939d8ba51c57438651e"
   },
   {
    "path": "assets/penitent/tex/penitent_brass_albedo.webp",
    "kind": "penitent-texture",
-   "bytes": 12986,
-   "sha256": "ea2f73f462301f653982bf6396d7f756435863dbe8fc6a6555cfce06487ccb1b"
+   "bytes": 14602,
+   "sha256": "bd9f9395bb053b314fd405cfd8049a22ae63997c3c618901b34531f191c527d3"
   },
   {
    "path": "assets/penitent/tex/penitent_brass_normal.jpg",
    "kind": "penitent-texture",
-   "bytes": 73190,
-   "sha256": "0173212488c53ffab86d2e52d4a7b6a6379330afb46975ca4ceafc9c483317ee"
+   "bytes": 99577,
+   "sha256": "90009b098c0326183c61b2a95a53ccf4ec5bb865d63b45d9001cdbcddce84cd3"
   },
   {
    "path": "assets/penitent/tex/penitent_brass_orm.jpg",
    "kind": "penitent-texture",
-   "bytes": 49560,
-   "sha256": "118360704f63ea28919e543d299f22a3b71ceea79a4b40a52cbf16826024d8e2"
+   "bytes": 65206,
+   "sha256": "d6fc180059cba45280c31263fbb622eafd0d664c81a6c043f109a7d746c3ff4a"
   },
   {
    "path": "assets/penitent/tex/penitent_cloth_albedo.webp",
    "kind": "penitent-texture",
-   "bytes": 4616,
-   "sha256": "7c7b4438e784056cf33decb1632788eeae6faa47d8f60c7777e9cb74cd0b802e"
+   "bytes": 6258,
+   "sha256": "95908e5b3f25bf781eb8666a3723db3ed22e157acac7381d3c21d184c46ddd1d"
   }
  ]
 }
