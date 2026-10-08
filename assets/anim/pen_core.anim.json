@@ -1,0 +1,348 @@
+{
+ "pack": "pen_core",
+ "family": "pen",
+ "description": "The Brass Penitent's animation set (Penitent P2, animation architecture v2 §4.1): its locomotion and the clips its runtime recipes compose (gltfPenitent PENITENT_CLIP_MAP, PENITENT_PHASE_TWO_CLIP_MAP, PENITENT_LOCOMOTION), baked offline one to one under stable semantic names. Built from approved CC0 sources by scripts/art/blender/anim_pack.py.",
+ "file": "assets/anim/pen_core.glb",
+ "bytes": 371316,
+ "sha256": "0274a429146f659a1cd7cc1d70725e5cf2b83c8dcc5394149ca68d1711663fd5",
+ "rig": "ual-mannequin",
+ "hipsPin": "clipStart",
+ "keyTimes": "exact",
+ "joints": 65,
+ "fps": 30,
+ "restChannelsRemoved": 2451,
+ "restRebasedMaxDeg": 0.1117,
+ "validator": {
+  "errors": 0,
+  "warnings": 0
+ },
+ "licences": {
+  "UAL1": {
+   "title": "Universal Animation Library (Standard)",
+   "author": "Quaternius",
+   "licence": "CC0 1.0",
+   "url": "https://quaternius.com/packs/universalanimationlibrary.html"
+  },
+  "UAL2": {
+   "title": "Universal Animation Library 2 (Standard)",
+   "author": "Quaternius",
+   "licence": "CC0 1.0",
+   "url": "https://quaternius.com/packs/universalanimationlibrary2.html"
+  }
+ },
+ "clips": {
+  "pen.loco.idle": {
+   "duration": 2.5,
+   "loop": true,
+   "source": {
+    "lib": "UAL1",
+    "clip": "Idle_Loop"
+   },
+   "note": "PENITENT_LOCOMOTION.idle",
+   "fidelityDeg": {
+    "blender": 0.0337,
+    "resampled": 0.0343
+   }
+  },
+  "pen.loco.patrol": {
+   "duration": 1.3333,
+   "loop": true,
+   "source": {
+    "lib": "UAL1",
+    "clip": "Walk_Loop"
+   },
+   "note": "PENITENT_LOCOMOTION.walk: the lumbering patrol stride",
+   "fidelityDeg": {
+    "blender": 0.0329,
+    "resampled": 0.0329
+   }
+  },
+  "pen.loco.chase": {
+   "duration": 0.9333,
+   "loop": true,
+   "source": {
+    "lib": "UAL1",
+    "clip": "Jog_Fwd_Loop"
+   },
+   "note": "PENITENT_LOCOMOTION.jog: the heavier chase",
+   "fidelityDeg": {
+    "blender": 0.0336,
+    "resampled": 0.0336
+   }
+  },
+  "pen.loco.censerDrag": {
+   "duration": 1.3333,
+   "loop": true,
+   "source": {
+    "lib": "UAL2",
+    "clip": "Zombie_Walk_Fwd_Loop"
+   },
+   "note": "the censer dragged on its chain (lab until the actor binds it)",
+   "fidelityDeg": {
+    "blender": 0.0357,
+    "resampled": 0.0357
+   }
+  },
+  "pen.loco.idleP2": {
+   "duration": 2.5,
+   "loop": true,
+   "source": {
+    "lib": "UAL2",
+    "clip": "Idle_Lantern_Loop"
+   },
+   "note": "phase two's idle: the censer held up like a lantern (lab until the actor binds it)",
+   "fidelityDeg": {
+    "blender": 0.0328,
+    "resampled": 0.0343
+   }
+  },
+  "pen.combat.censerSweep.windup": {
+   "duration": 0.22,
+   "loop": false,
+   "source": {
+    "lib": "UAL2",
+    "clip": "Sword_Heavy_Combo",
+    "from": 0,
+    "to": 0.22
+   },
+   "legs": {
+    "lib": "UAL2",
+    "clip": "Sword_Heavy_Combo",
+    "from": 0,
+    "at": 0.13,
+    "hipsYawScale": 0.35
+   },
+   "hipsYawScale": 0.35,
+   "note": "censerSweepWindup: the heavy combo's coil on its planted stance"
+  },
+  "pen.combat.censerSweep.strike": {
+   "duration": 0.64,
+   "loop": false,
+   "source": {
+    "lib": "UAL2",
+    "clip": "Sword_Heavy_Combo",
+    "from": 0.22,
+    "to": 0.86
+   },
+   "legs": {
+    "lib": "UAL2",
+    "clip": "Sword_Heavy_Combo",
+    "from": 0,
+    "at": 0.13,
+    "hipsYawScale": 0.35
+   },
+   "hipsYawScale": 0.35,
+   "markers": {
+    "attackActiveStart": 0.13,
+    "impactMoment": 0.13,
+    "attackActiveEnd": 0.31,
+    "recoveryEnd": 0.64
+   },
+   "note": "censerSweepStrike: the horizontal cut on the coil's planted stance"
+  },
+  "pen.combat.penitentLunge.windup": {
+   "duration": 0.47,
+   "loop": false,
+   "source": {
+    "lib": "UAL1",
+    "clip": "Fixing_Kneeling",
+    "to": 0.47
+   },
+   "note": "penitentLungeWindup: sinking to one knee",
+   "fidelityDeg": {
+    "blender": 0.0466,
+    "resampled": 0.0466
+   }
+  },
+  "pen.combat.penitentLunge.strike": {
+   "duration": 1.1,
+   "loop": false,
+   "source": {
+    "lib": "UAL2",
+    "clip": "Shield_Dash"
+   },
+   "hipsYawScale": 0.35,
+   "markers": {
+    "attackActiveStart": 0.08,
+    "impactMoment": 0.08,
+    "attackActiveEnd": 0.42,
+    "recoveryEnd": 1.1
+   },
+   "note": "penitentLungeStrike: the charge pose"
+  },
+  "pen.combat.tollOfJudgement.windup": {
+   "duration": 0.4,
+   "loop": false,
+   "source": {
+    "lib": "UAL2",
+    "clip": "Sword_Heavy_Combo",
+    "from": 2,
+    "to": 2.4
+   },
+   "legs": {
+    "lib": "UAL1",
+    "clip": "Idle_Loop",
+    "at": 0
+   },
+   "hipsYawScale": 0.35,
+   "note": "tollOfJudgementWindup: the heavy combo's third rise on standing legs"
+  },
+  "pen.combat.tollOfJudgement.strike": {
+   "duration": 1.8,
+   "loop": false,
+   "source": {
+    "lib": "UAL2",
+    "clip": "Sword_Heavy_Combo",
+    "from": 2.4,
+    "to": 4.2
+   },
+   "legs": {
+    "lib": "UAL2",
+    "clip": "Sword_Heavy_Combo",
+    "from": 2.4,
+    "at": 0.27,
+    "hipsYawScale": 0.35
+   },
+   "hipsYawScale": 0.35,
+   "markers": {
+    "attackActiveStart": 0.2,
+    "impactMoment": 0.2,
+    "attackActiveEnd": 0.4,
+    "recoveryEnd": 1.8
+   },
+   "note": "tollOfJudgementStrike: the slam on its planted stance"
+  },
+  "pen.react.postureBreak": {
+   "duration": 0.68,
+   "loop": false,
+   "source": {
+    "lib": "UAL2",
+    "clip": "Idle_Shield_Break",
+    "from": 0,
+    "to": 0.25
+   },
+   "then": {
+    "lib": "UAL1",
+    "clip": "Fixing_Kneeling",
+    "from": 0.2,
+    "to": 0.75,
+    "blend": 0.12
+   },
+   "note": "stagger (@penitentStagger): the recoil crossfaded into the kneel"
+  },
+  "pen.react.hitChest": {
+   "duration": 0.3333,
+   "loop": false,
+   "source": {
+    "lib": "UAL1",
+    "clip": "Hit_Chest"
+   },
+   "note": "hitReact: the non-directional flinch (additive)",
+   "fidelityDeg": {
+    "blender": 0.0444,
+    "resampled": 0.0444
+   }
+  },
+  "pen.react.death": {
+   "duration": 2.4,
+   "loop": false,
+   "source": {
+    "lib": "UAL1",
+    "clip": "Death01"
+   },
+   "note": "death: the face-up fall (C29 open)",
+   "fidelityDeg": {
+    "blender": 0.0311,
+    "resampled": 0.0311
+   }
+  },
+  "pen.combat.chainThrow.windup": {
+   "duration": 0.2,
+   "loop": false,
+   "source": {
+    "lib": "UAL2",
+    "clip": "Melee_Hook",
+    "from": 0,
+    "to": 0.2
+   },
+   "hipsYawScale": 0.35,
+   "note": "chainThrowWindup (phase two): the hook's coil"
+  },
+  "pen.combat.chainThrow.strike": {
+   "duration": 0.8667,
+   "loop": false,
+   "source": {
+    "lib": "UAL2",
+    "clip": "Melee_Hook",
+    "from": 0.2,
+    "to": 0.467
+   },
+   "then": {
+    "lib": "UAL2",
+    "clip": "Melee_Hook_Rec",
+    "hipsYawScale": 0.35,
+    "hipsContinue": true
+   },
+   "hipsYawScale": 0.35,
+   "markers": {
+    "attackActiveStart": 0.07,
+    "impactMoment": 0.07,
+    "attackActiveEnd": 0.267,
+    "recoveryEnd": 0.867
+   },
+   "note": "chainThrowStrike (phase two): the release, then the haul back (Melee_Hook_Rec)"
+  },
+  "pen.combat.ashRelease.windup": {
+   "duration": 1,
+   "loop": false,
+   "source": {
+    "lib": "UAL2",
+    "clip": "Idle_Lantern_Loop",
+    "from": 0,
+    "to": 1
+   },
+   "note": "ashReleaseWindup (phase two): the censer hoisted to the chest",
+   "fidelityDeg": {
+    "blender": 0.03,
+    "resampled": 0.0359
+   }
+  },
+  "pen.combat.ashRelease.strike": {
+   "duration": 1.2,
+   "loop": false,
+   "source": {
+    "lib": "UAL2",
+    "clip": "Farm_Watering",
+    "from": 0.3,
+    "to": 1.5
+   },
+   "markers": {
+    "attackActiveStart": 0.2,
+    "impactMoment": 0.2,
+    "attackActiveEnd": 0.4,
+    "recoveryEnd": 1.2
+   },
+   "note": "ashReleaseStrike (phase two): the forward pour",
+   "fidelityDeg": {
+    "blender": 0.0278,
+    "resampled": 0.0366
+   }
+  },
+  "pen.boss.phaseShift": {
+   "duration": 0.6,
+   "loop": false,
+   "source": {
+    "lib": "UAL2",
+    "clip": "Idle_Shield_Break",
+    "from": 0,
+    "to": 0.6
+   },
+   "legs": {
+    "lib": "UAL1",
+    "clip": "Idle_Loop",
+    "at": 0
+   },
+   "note": "phaseShift (phase two): the recoil over standing legs; the ignite and settle are layered on at runtime"
+  }
+ }
+}
