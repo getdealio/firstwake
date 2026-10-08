@@ -1,0 +1,847 @@
+{
+ "schema": 1,
+ "generator": "scripts/art/blender/wayfarer.mjs",
+ "provenance": "ORIGINAL garments and textures made in code by this project over CC0 Quaternius parts; docs/ASSET-PROVENANCE.md (wayfarer block)",
+ "pathsRelativeTo": "public/",
+ "space": "rest pose of the frame's rig, glTF model space (+Y up, the figure faces +Z, its left is +X), rig units",
+ "frames": {
+  "male": {
+   "file": "assets/wayfarer/Male_Wayfarer.glb",
+   "rig": "regular-male",
+   "skinFrom": "assets/characters/Male_Peasant.glb",
+   "triangles": 13972,
+   "meshes": [
+    {
+     "node": "Wayfarer_Tunic",
+     "materials": [
+      "MI_Wayfarer"
+     ],
+     "triangles": 2024
+    },
+    {
+     "node": "Wayfarer_Vest",
+     "materials": [
+      "MI_Wayfarer"
+     ],
+     "triangles": 1835
+    },
+    {
+     "node": "Wayfarer_Trousers",
+     "materials": [
+      "MI_Wayfarer"
+     ],
+     "triangles": 806
+    },
+    {
+     "node": "Wayfarer_Boots",
+     "materials": [
+      "MI_Wayfarer"
+     ],
+     "triangles": 2098
+    },
+    {
+     "node": "Wayfarer_Belt",
+     "materials": [
+      "MI_Wayfarer"
+     ],
+     "triangles": 1520
+    },
+    {
+     "node": "Wayfarer_Gloves",
+     "materials": [
+      "MI_Wayfarer"
+     ],
+     "triangles": 541
+    },
+    {
+     "node": "Wayfarer_Sleeves",
+     "materials": [
+      "MI_Wayfarer"
+     ],
+     "triangles": 1218
+    },
+    {
+     "node": "Wayfarer_Skin",
+     "materials": [
+      "MI_Regular_Male"
+     ],
+     "triangles": 3930
+    }
+   ],
+   "skinMaterials": {
+    "Wayfarer_Skin": "assets/characters/Male_Peasant.glb"
+   }
+  },
+  "female": {
+   "file": "assets/wayfarer/Female_Wayfarer.glb",
+   "rig": "female",
+   "skinFrom": "assets/characters/Female_Peasant.glb",
+   "triangles": 13913,
+   "meshes": [
+    {
+     "node": "Wayfarer_Tunic",
+     "materials": [
+      "MI_Wayfarer"
+     ],
+     "triangles": 2096
+    },
+    {
+     "node": "Wayfarer_Vest",
+     "materials": [
+      "MI_Wayfarer"
+     ],
+     "triangles": 1808
+    },
+    {
+     "node": "Wayfarer_Trousers",
+     "materials": [
+      "MI_Wayfarer"
+     ],
+     "triangles": 1012
+    },
+    {
+     "node": "Wayfarer_Boots",
+     "materials": [
+      "MI_Wayfarer"
+     ],
+     "triangles": 2098
+    },
+    {
+     "node": "Wayfarer_Belt",
+     "materials": [
+      "MI_Wayfarer"
+     ],
+     "triangles": 1520
+    },
+    {
+     "node": "Wayfarer_Gloves",
+     "materials": [
+      "MI_Wayfarer"
+     ],
+     "triangles": 543
+    },
+    {
+     "node": "Wayfarer_Sleeves",
+     "materials": [
+      "MI_Wayfarer"
+     ],
+     "triangles": 1218
+    },
+    {
+     "node": "Wayfarer_Skin",
+     "materials": [
+      "MI_Superhero_Female"
+     ],
+     "triangles": 3618
+    }
+   ],
+   "skinMaterials": {
+    "Wayfarer_Skin": "assets/characters/Superhero_Female_Head.glb"
+   }
+  }
+ },
+ "parts": {},
+ "material": "MI_Wayfarer",
+ "mask": {
+  "path": "assets/wayfarer/tex/T_Wayfarer_Mask.webp",
+  "channels": [
+   "cloth",
+   "accent",
+   "leather"
+  ],
+  "metal": "orm.b",
+  "refLum": {
+   "cloth": 0.07769,
+   "accent": 0.04292,
+   "leather": 0.04222,
+   "metal": 0.16455
+  },
+  "uv": "TEXCOORD_0 of MI_Wayfarer; R cloth (tunic 1.0, trousers 0.45), G accent (stitching, laces, straps), B leather (vest, belt, gloves, boots); exclusive; metal from the ORM texture's blue channel; lossless RGB, no alpha"
+ },
+ "sockets": {
+  "male": {
+   "head": {
+    "bone": "Head",
+    "position": [
+     0,
+     0.085399,
+     0.012532
+    ],
+    "rotation": [
+     -0.014485,
+     0,
+     0,
+     0.999895
+    ]
+   },
+   "chest": {
+    "bone": "spine_03",
+    "position": [
+     0,
+     -0.007992,
+     0.123752
+    ],
+    "rotation": [
+     0.113,
+     0,
+     0,
+     0.993595
+    ]
+   },
+   "upperArmL": {
+    "bone": "upperarm_l",
+    "position": [
+     -0.055001,
+     0.087889,
+     0.000005
+    ],
+    "rotation": [
+     0.010731,
+     -0.010673,
+     0.707025,
+     0.707027
+    ]
+   },
+   "upperArmR": {
+    "bone": "upperarm_r",
+    "position": [
+     0.055001,
+     0.087889,
+     0.000005
+    ],
+    "rotation": [
+     0.010731,
+     0.010673,
+     -0.707025,
+     0.707027
+    ]
+   },
+   "handL": {
+    "bone": "hand_l",
+    "position": [
+     0.021849,
+     0.06193,
+     0.00385
+    ],
+    "rotation": [
+     0,
+     -0.000001,
+     0.707106,
+     0.707107
+    ]
+   },
+   "handR": {
+    "bone": "hand_r",
+    "position": [
+     -0.021849,
+     0.06193,
+     0.00385
+    ],
+    "rotation": [
+     0,
+     0.000001,
+     -0.707106,
+     0.707107
+    ]
+   },
+   "shinL": {
+    "bone": "calf_l",
+    "position": [
+     0,
+     0.176794,
+     -0.059622
+    ],
+    "rotation": [
+     -0.998425,
+     0,
+     0,
+     -0.056106
+    ]
+   },
+   "shinR": {
+    "bone": "calf_r",
+    "position": [
+     0,
+     0.176794,
+     -0.059622
+    ],
+    "rotation": [
+     -0.998425,
+     0,
+     0,
+     -0.056106
+    ]
+   },
+   "back": {
+    "bone": "spine_03",
+    "position": [
+     0,
+     0.082465,
+     -0.17973
+    ],
+    "rotation": [
+     0.113,
+     0,
+     0,
+     0.993595
+    ]
+   },
+   "hipL": {
+    "bone": "pelvis",
+    "position": [
+     0.188861,
+     0.148163,
+     0.025393
+    ],
+    "rotation": [
+     -0.142364,
+     0,
+     0,
+     0.989814
+    ]
+   },
+   "waist": {
+    "bone": "pelvis",
+    "position": [
+     0,
+     0.185614,
+     0.152892
+    ],
+    "rotation": [
+     -0.142364,
+     0,
+     0,
+     0.989814
+    ]
+   }
+  },
+  "female": {
+   "head": {
+    "bone": "Head",
+    "position": [
+     0,
+     0.085259,
+     0.013461
+    ],
+    "rotation": [
+     -0.009041,
+     0,
+     0,
+     0.999959
+    ]
+   },
+   "chest": {
+    "bone": "spine_03",
+    "position": [
+     0,
+     -0.0103,
+     0.153329
+    ],
+    "rotation": [
+     0.098637,
+     0,
+     0,
+     0.995124
+    ]
+   },
+   "upperArmL": {
+    "bone": "upperarm_l",
+    "position": [
+     -0.055001,
+     0.084119,
+     0.000009
+    ],
+    "rotation": [
+     0.006677,
+     -0.006563,
+     0.707075,
+     0.707077
+    ]
+   },
+   "upperArmR": {
+    "bone": "upperarm_r",
+    "position": [
+     0.055001,
+     0.084119,
+     0.000009
+    ],
+    "rotation": [
+     0.006677,
+     0.006563,
+     -0.707075,
+     0.707077
+    ]
+   },
+   "handL": {
+    "bone": "hand_l",
+    "position": [
+     0.019044,
+     0.047488,
+     0.005868
+    ],
+    "rotation": [
+     0.005612,
+     -0.005611,
+     0.707084,
+     0.707085
+    ]
+   },
+   "handR": {
+    "bone": "hand_r",
+    "position": [
+     -0.019044,
+     0.047488,
+     0.005868
+    ],
+    "rotation": [
+     0.005612,
+     0.005611,
+     -0.707084,
+     0.707085
+    ]
+   },
+   "shinL": {
+    "bone": "calf_l",
+    "position": [
+     0,
+     0.18075,
+     -0.05973
+    ],
+    "rotation": [
+     -0.998873,
+     0,
+     0,
+     -0.047469
+    ]
+   },
+   "shinR": {
+    "bone": "calf_r",
+    "position": [
+     0,
+     0.18075,
+     -0.05973
+    ],
+    "rotation": [
+     -0.998873,
+     0,
+     0,
+     -0.047469
+    ]
+   },
+   "back": {
+    "bone": "spine_03",
+    "position": [
+     0,
+     0.072103,
+     -0.156377
+    ],
+    "rotation": [
+     0.098637,
+     0,
+     0,
+     0.995124
+    ]
+   },
+   "hipL": {
+    "bone": "pelvis",
+    "position": [
+     0.16831,
+     0.148279,
+     0.03662
+    ],
+    "rotation": [
+     -0.121803,
+     0,
+     0,
+     0.992554
+    ]
+   },
+   "waist": {
+    "bone": "pelvis",
+    "position": [
+     0,
+     0.174203,
+     0.140756
+    ],
+    "rotation": [
+     -0.121803,
+     0,
+     0,
+     0.992554
+    ]
+   }
+  }
+ },
+ "socketNote": "position in the bone's rest frame, rotation (x, y, z, w) = inverse of the bone's rest world rotation (the Penitent attach convention): a node parented to the joint with these values has model-space axes at rest",
+ "atlas": {
+  "tunic": [
+   0,
+   0,
+   0.5,
+   0.5
+  ],
+  "vest": [
+   0.5,
+   0,
+   1,
+   0.28125
+  ],
+  "trousers": [
+   0.5,
+   0.28125,
+   0.75,
+   0.625
+  ],
+  "boots": [
+   0.75,
+   0.28125,
+   1,
+   0.53125
+  ],
+  "sleeves": [
+   0.75,
+   0.53125,
+   1,
+   0.78125
+  ],
+  "belt": [
+   0,
+   0.5,
+   0.5,
+   0.53125
+  ],
+  "strap": [
+   0,
+   0.53125,
+   0.5,
+   0.554688
+  ],
+  "cuffs": [
+   0,
+   0.554688,
+   0.25,
+   0.617188
+  ],
+  "gloves": [
+   0.25,
+   0.554688,
+   0.5,
+   0.679688
+  ],
+  "pouch": [
+   0,
+   0.617188,
+   0.125,
+   0.742188
+  ],
+  "canteen": [
+   0.125,
+   0.617188,
+   0.25,
+   0.742188
+  ],
+  "canteenCap": [
+   0,
+   0.742188,
+   0.03125,
+   0.773438
+  ],
+  "buckle": [
+   0.03125,
+   0.742188,
+   0.0625,
+   0.773438
+  ],
+  "laces": [
+   0.0625,
+   0.742188,
+   0.125,
+   0.757813
+  ],
+  "vestEdge": [
+   0.5,
+   0.78125,
+   1,
+   0.796875
+  ],
+  "hem": [
+   0.5,
+   0.796875,
+   1,
+   0.8125
+  ],
+  "gusset": [
+   0.25,
+   0.679688,
+   0.5,
+   0.710938
+  ]
+ },
+ "uvRegions": {
+  "Wayfarer_Tunic": [
+   "tunic",
+   "hem"
+  ],
+  "Wayfarer_Vest": [
+   "vest",
+   "vestEdge",
+   "laces"
+  ],
+  "Wayfarer_Trousers": [
+   "trousers"
+  ],
+  "Wayfarer_Boots": [
+   "boots"
+  ],
+  "Wayfarer_Belt": [
+   "belt",
+   "strap",
+   "buckle",
+   "pouch",
+   "canteen",
+   "canteenCap"
+  ],
+  "Wayfarer_Gloves": [
+   "gloves"
+  ],
+  "Wayfarer_Sleeves": [
+   "sleeves",
+   "cuffs",
+   "gusset"
+  ]
+ },
+ "brandWindow": {
+  "from": 0.3,
+  "to": 0.95
+ },
+ "sleeveCut": 0.25,
+ "albedoRegions": {
+  "tunic": {
+   "uvRect": [
+    0,
+    0.027344,
+    0.5,
+    0.5
+   ],
+   "meanSrgb": [
+    66.04,
+    78.28,
+    92.64
+   ]
+  },
+  "undershirt": {
+   "uvRect": [
+    0,
+    0,
+    0.5,
+    0.017578
+   ],
+   "meanSrgb": [
+    161.85,
+    153.64,
+    135.59
+   ]
+  },
+  "vest": {
+   "uvRect": [
+    0.5,
+    0,
+    1,
+    0.28125
+   ],
+   "meanSrgb": [
+    83.59,
+    59.44,
+    44
+   ]
+  },
+  "belt": {
+   "uvRect": [
+    0,
+    0.5,
+    0.5,
+    0.53125
+   ],
+   "meanSrgb": [
+    47.32,
+    33.64,
+    24.77
+   ]
+  },
+  "strap": {
+   "uvRect": [
+    0,
+    0.53125,
+    0.5,
+    0.554688
+   ],
+   "meanSrgb": [
+    74.51,
+    54.15,
+    40.52
+   ]
+  },
+  "pouch": {
+   "uvRect": [
+    0,
+    0.617188,
+    0.125,
+    0.742188
+   ],
+   "meanSrgb": [
+    80.49,
+    60.26,
+    42.78
+   ]
+  },
+  "canteen": {
+   "uvRect": [
+    0.125,
+    0.617188,
+    0.25,
+    0.742188
+   ],
+   "meanSrgb": [
+    76.16,
+    57.98,
+    40.52
+   ]
+  },
+  "canteenCap": {
+   "uvRect": [
+    0,
+    0.742188,
+    0.03125,
+    0.773438
+   ],
+   "meanSrgb": [
+    120.54,
+    98.63,
+    47.84
+   ]
+  },
+  "buckle": {
+   "uvRect": [
+    0.03125,
+    0.742188,
+    0.0625,
+    0.773438
+   ],
+   "meanSrgb": [
+    100.04,
+    93.56,
+    83.2
+   ]
+  },
+  "gloves": {
+   "uvRect": [
+    0.25,
+    0.554688,
+    0.5,
+    0.679688
+   ],
+   "meanSrgb": [
+    71.3,
+    51.55,
+    36.71
+   ]
+  },
+  "trousers": {
+   "uvRect": [
+    0.5,
+    0.28125,
+    0.75,
+    0.625
+   ],
+   "meanSrgb": [
+    78.38,
+    70.48,
+    57.02
+   ]
+  },
+  "boots": {
+   "uvRect": [
+    0.75,
+    0.28125,
+    1,
+    0.53125
+   ],
+   "meanSrgb": [
+    56.34,
+    47.18,
+    41.19
+   ]
+  },
+  "sleeves": {
+   "uvRect": [
+    0.75,
+    0.53125,
+    1,
+    0.78125
+   ],
+   "meanSrgb": [
+    72.01,
+    81.85,
+    93.52
+   ]
+  }
+ },
+ "files": [
+  {
+   "path": "assets/wayfarer/Female_Wayfarer.glb",
+   "bytes": 219972,
+   "sha256": "c592947fe915ba7ebe665c1a602e0c0c94eb821d6a07feafbaee8c8d03530bd1"
+  },
+  {
+   "path": "assets/wayfarer/Male_Wayfarer.glb",
+   "bytes": 218892,
+   "sha256": "cb34e57b4cca3a86df8c433d1e0ba25c8b991ba6a02197753d51727ca04dc943"
+  },
+  {
+   "path": "assets/wayfarer/tex/T_Wayfarer_BaseColor.webp",
+   "bytes": 36468,
+   "sha256": "3289ed9574adeff7898e1bd73359ac49f9da6e6e5972a7e4ab4cc1590eeaf4f6"
+  },
+  {
+   "path": "assets/wayfarer/tex/T_Wayfarer_Mask.webp",
+   "bytes": 3320,
+   "sha256": "f2106e27c4b4306b8de316bcf397cfc5974ab079df4f779882d631084fe77dce"
+  },
+  {
+   "path": "assets/wayfarer/tex/T_Wayfarer_Normal.jpg",
+   "bytes": 168017,
+   "sha256": "e59642968c4d9d3079d3f2a7553a427dbca048011bb21bfb2c2566e562625bb8"
+  },
+  {
+   "path": "assets/wayfarer/tex/T_Wayfarer_ORM.jpg",
+   "bytes": 150663,
+   "sha256": "6d2faba53dd69b7cc66b53bd6bc0abaadbbe702374c4f0c69e92d27e63e52b80"
+  }
+ ],
+ "textures": [
+  {
+   "path": "assets/wayfarer/tex/T_Wayfarer_BaseColor.webp",
+   "width": 1024,
+   "height": 1024,
+   "bytes": 36468
+  },
+  {
+   "path": "assets/wayfarer/tex/T_Wayfarer_Normal.jpg",
+   "width": 1024,
+   "height": 1024,
+   "bytes": 168017
+  },
+  {
+   "path": "assets/wayfarer/tex/T_Wayfarer_ORM.jpg",
+   "width": 1024,
+   "height": 1024,
+   "bytes": 150663
+  },
+  {
+   "path": "assets/wayfarer/tex/T_Wayfarer_Mask.webp",
+   "width": 512,
+   "height": 512,
+   "bytes": 3320
+  }
+ ]
+}

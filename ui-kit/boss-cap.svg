@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" preserveAspectRatio="none">
+  <!-- original, FIRSTWAKE, 2026-10 -->
+  <!-- HUD boss bar arrow cap: a barbed iron arrowhead pointing outward (left) on an iron socket that clasps the bar,
+       a brass collar between them. The right cap is the same image mirrored in CSS. -->
+  <defs>
+    <linearGradient id="i" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7a8088"/>
+      <stop offset=".5" stop-color="#3f444b"/>
+      <stop offset="1" stop-color="#1c1f23"/>
+    </linearGradient>
+    <linearGradient id="b" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e3cc96"/>
+      <stop offset=".5" stop-color="#b08d4a"/>
+      <stop offset="1" stop-color="#5c4520"/>
+    </linearGradient>
+  </defs>
+  <path d="M.5 9 6.6 1h3.1L5.6 9l4.1 8H6.6Z" fill="url(#i)" stroke="#0d0e10" stroke-width=".6" stroke-linejoin="round"/>
+  <path d="M6.9 2.2 2 9" stroke="#b4bac2" stroke-opacity=".35" stroke-width=".5"/>
+  <path d="M9.4 4.4h4.2v9.2H9.4Z" fill="url(#i)" stroke="#0d0e10" stroke-width=".6"/>
+  <path d="M8.6 3.4h1.6v11.2H8.6Z" fill="url(#b)" stroke="#1a140a" stroke-width=".4"/>
+</svg>

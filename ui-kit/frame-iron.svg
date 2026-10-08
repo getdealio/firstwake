@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <!-- original, FIRSTWAKE, 2026-10 -->
+  <!-- HUD panel frame, 9-slice (border-image-slice 16). Dark weathered iron: a black outer edge, an iron band lit from
+       the top-left with stone grain worked into it (feTurbulence), an engraved dark cut and a faint inner rim. Brass
+       only at the corners: an L bracket and a rivet. Drawn over a plain 1px CSS border; the centre is never drawn. -->
+  <defs>
+    <linearGradient id="i" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="48" y2="48">
+      <stop offset="0" stop-color="#6a7078"/>
+      <stop offset=".45" stop-color="#3f444b"/>
+      <stop offset="1" stop-color="#1f2226"/>
+    </linearGradient>
+    <linearGradient id="b" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="14" y2="14">
+      <stop offset="0" stop-color="#e3cc96"/>
+      <stop offset=".45" stop-color="#b08d4a"/>
+      <stop offset="1" stop-color="#5c4520"/>
+    </linearGradient>
+    <filter id="g" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="11"/>
+      <feColorMatrix values="0 0 0 0 .8 0 0 0 0 .81 0 0 0 0 .83 0 0 0 -1.7 1.1"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+    <path id="k" d="M1.2 1.2h10.6v2H3.2v8.6h-2Z" fill="url(#b)" stroke="#1a140a" stroke-width=".5"/>
+    <circle id="r" cx="7.4" cy="7.4" r="1.5" fill="url(#b)" stroke="#1a140a" stroke-width=".5"/>
+  </defs>
+  <g fill="none">
+    <rect x=".5" y=".5" width="47" height="47" stroke="#121417" stroke-opacity=".9"/>
+    <rect x="2.1" y="2.1" width="43.8" height="43.8" stroke="url(#i)" stroke-width="2.2"/>
+    <rect x="2.1" y="2.1" width="43.8" height="43.8" stroke="#fff" stroke-width="2.2" filter="url(#g)" opacity=".24"/>
+    <rect x="3.7" y="3.7" width="40.6" height="40.6" stroke="#0b0c0e" stroke-opacity=".7"/>
+    <rect x="4.7" y="4.7" width="38.6" height="38.6" stroke="#a7adb5" stroke-opacity=".13"/>
+  </g>
+  <use href="#k"/>
+  <use href="#k" transform="rotate(90 24 24)"/>
+  <use href="#k" transform="rotate(180 24 24)"/>
+  <use href="#k" transform="rotate(270 24 24)"/>
+  <use href="#r"/>
+  <use href="#r" transform="rotate(90 24 24)"/>
+  <use href="#r" transform="rotate(180 24 24)"/>
+  <use href="#r" transform="rotate(270 24 24)"/>
+</svg>

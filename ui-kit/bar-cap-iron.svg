@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="8" height="16" viewBox="0 0 8 16" preserveAspectRatio="none">
+  <!-- original, FIRSTWAKE, 2026-10 -->
+  <!-- HUD bar end-cap: a pointed iron ferrule pointing left, with a brass rivet; the right cap is the same image
+       mirrored in CSS. Stretched to the height of the bar. -->
+  <defs>
+    <linearGradient id="i" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7a8088"/>
+      <stop offset=".5" stop-color="#3f444b"/>
+      <stop offset="1" stop-color="#1c1f23"/>
+    </linearGradient>
+  </defs>
+  <path d="M.4 8 4.2 1h3.4v14H4.2Z" fill="url(#i)" stroke="#0d0e10" stroke-width=".6" stroke-linejoin="round"/>
+  <path d="M4.6 2.2 1.6 8" stroke="#b4bac2" stroke-opacity=".35" stroke-width=".5"/>
+  <circle cx="5.8" cy="8" r="1" fill="#b08d4a" stroke="#1a140a" stroke-width=".35"/>
+</svg>

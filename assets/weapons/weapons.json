@@ -1,0 +1,297 @@
+{
+ "schema": 1,
+ "generator": "scripts/art/blender/weapons.mjs",
+ "frame": "runtime",
+ "provenance": "ORIGINAL: modelled and textured in code by this project (no third-party mesh or texture); docs/ASSET-PROVENANCE.md, weapons block",
+ "pathsRelativeTo": "public/ (at runtime: loadAssetContainer(scene, file))",
+ "pieces": {
+  "crossingBlade": {
+   "file": "assets/weapons/crossing_blade.glb",
+   "mesh": "crossing_blade",
+   "material": "weapon_trim",
+   "triangles": 1040,
+   "nodes": {
+    "guard": [
+     0,
+     0,
+     0.085
+    ],
+    "pommel": [
+     0,
+     0,
+     -0.06
+    ],
+    "tip": [
+     0,
+     0,
+     0.86
+    ]
+   },
+   "axes": "origin = fist centre (the rightHand grip); blade along +Z (tip 0.86 m); edges and crossguard along +-Y (the edge faces the knuckles); flats face +-X; 0.978 m overall"
+  },
+  "crossingScabbard": {
+   "file": "assets/weapons/crossing_scabbard.glb",
+   "mesh": "crossing_scabbard",
+   "material": "weapon_trim",
+   "triangles": 338,
+   "nodes": {
+    "chape": [
+     0,
+     0,
+     0.915
+    ],
+    "throat": [
+     0,
+     0,
+     0.09
+    ]
+   },
+   "axes": "the sword's own frame: parent it to the sheath node at identity and the sword at identity on the same node lies inside it (mouth/throat at z 0.09, closed chape end at z 0.92)"
+  },
+  "longrifle": {
+   "file": "assets/weapons/ironweather_longrifle.glb",
+   "mesh": "ironweather_longrifle",
+   "material": "weapon_trim",
+   "triangles": 1106,
+   "nodes": {
+    "breech": [
+     -0.03,
+     0.04,
+     0.1
+    ],
+    "foregrip": [
+     0,
+     -0.03,
+     0.27
+    ],
+    "muzzle": [
+     0,
+     0.02,
+     0.93
+    ]
+   },
+   "axes": "origin = the wrist grip (right fist); barrel along +Z (muzzle 0.93 m); top +Y; the loading gate (breech) on -X; foregrip under the forestock; butt plate at z -0.332"
+  },
+  "ironveilSpear": {
+   "file": "assets/weapons/ironveil_spear.glb",
+   "mesh": "ironveil_spear",
+   "material": "weapon_trim",
+   "triangles": 460,
+   "nodes": {
+    "butt": [
+     0,
+     0,
+     -0.7
+    ],
+    "grip": [
+     0,
+     0,
+     0
+    ],
+    "tip": [
+     0,
+     0,
+     1.42
+    ]
+   },
+   "axes": "origin = the grip (fist centre) 0.70 m from the butt; shaft along +Z (tip 1.42 m, butt -0.70 m: 2.12 m); leaf edges along +-Y, flats +-X"
+  },
+  "ironveilShield": {
+   "file": "assets/weapons/ironveil_shield.glb",
+   "mesh": "ironveil_shield",
+   "material": "weapon_trim",
+   "triangles": 762,
+   "nodes": {
+    "boss": [
+     -0.1177,
+     0,
+     0.15
+    ],
+    "grip": [
+     0,
+     0,
+     0
+    ]
+   },
+   "axes": "origin = the forearm strap centre: the forearm runs along +Z (elbow -> hand; the hand grip sits behind the boss at z 0.15); the painted face and boss look toward -X; the emblem's up is +Y (fingers up); diameter 0.6 m"
+  },
+  "veyraSword": {
+   "file": "assets/weapons/veyra_sword.glb",
+   "mesh": "veyra_sword",
+   "material": "weapon_trim",
+   "triangles": 924,
+   "nodes": {
+    "guard": [
+     0,
+     0,
+     0.08
+    ],
+    "pommel": [
+     0,
+     0,
+     -0.06
+    ],
+    "tip": [
+     0,
+     0,
+     0.885
+    ]
+   },
+   "axes": "same frame as the Crossing Blade: origin = fist centre, blade +Z (tip 0.885 m), edges +-Y, flats +-X"
+  }
+ },
+ "trim": {
+  "path": "assets/weapons/tex/weapon_trim_albedo.webp",
+  "note": "regions are horizontal bands of the shared trim sheet in glTF texture space (v 0 = the image's top row); meanSrgb = mean of the decoded sRGB texels (0..1) over the band's rows",
+  "regions": {
+   "steel": {
+    "v0": 0,
+    "v1": 0.125,
+    "meanSrgb": [
+     0.5458,
+     0.5692,
+     0.5888
+    ]
+   },
+   "darkSteel": {
+    "v0": 0.125,
+    "v1": 0.1875,
+    "meanSrgb": [
+     0.2152,
+     0.2373,
+     0.2723
+    ]
+   },
+   "iron": {
+    "v0": 0.1875,
+    "v1": 0.25,
+    "meanSrgb": [
+     0.3059,
+     0.3198,
+     0.3399
+    ]
+   },
+   "brass": {
+    "v0": 0.25,
+    "v1": 0.28125,
+    "meanSrgb": [
+     0.6195,
+     0.5013,
+     0.2506
+    ]
+   },
+   "leather": {
+    "v0": 0.28125,
+    "v1": 0.375,
+    "meanSrgb": [
+     0.2858,
+     0.2025,
+     0.1467
+    ]
+   },
+   "wood": {
+    "v0": 0.375,
+    "v1": 0.5,
+    "meanSrgb": [
+     0.2871,
+     0.1982,
+     0.1305
+    ]
+   },
+   "emblem": {
+    "v0": 0.5,
+    "v1": 0.5625,
+    "meanSrgb": [
+     0.5897,
+     0.6125,
+     0.6336
+    ]
+   },
+   "shieldFace": {
+    "v0": 0.5625,
+    "v1": 1,
+    "meanSrgb": [
+     0.1502,
+     0.1875,
+     0.2619
+    ]
+   }
+  }
+ },
+ "files": [
+  {
+   "path": "assets/weapons/crossing_blade.glb",
+   "bytes": 15416,
+   "sha256": "566904a98e2e1df75eda0f7fd5eb01697a0ead17e12fbc7465e345da5a0b94ec",
+   "triangles": 1040
+  },
+  {
+   "path": "assets/weapons/crossing_scabbard.glb",
+   "bytes": 9100,
+   "sha256": "30535185ebb9c5a29a578b40cbe485124277989d3c43451bb754047e42a10c71",
+   "triangles": 338
+  },
+  {
+   "path": "assets/weapons/ironveil_shield.glb",
+   "bytes": 15332,
+   "sha256": "86331369111dcfdc7604191d2555b6567398dae9aba56978682a6ae55e1e175c",
+   "triangles": 762
+  },
+  {
+   "path": "assets/weapons/ironveil_spear.glb",
+   "bytes": 10048,
+   "sha256": "b21f54c500e2658c9a05b88838f76e502c9616f9622ca414d1b4ca31312c02bb",
+   "triangles": 460
+  },
+  {
+   "path": "assets/weapons/ironweather_longrifle.glb",
+   "bytes": 22732,
+   "sha256": "4a000f5c8d5fe3020a1c667fc18bef235be5d9f1d01035e194fbd16680ff6a3d",
+   "triangles": 1106
+  },
+  {
+   "path": "assets/weapons/tex/weapon_trim_albedo.webp",
+   "bytes": 20276,
+   "sha256": "e2e02a5bae367377bc76acd40b63595b0cf296585686b217c3a3f6d980a9fcfa"
+  },
+  {
+   "path": "assets/weapons/tex/weapon_trim_normal.jpg",
+   "bytes": 39124,
+   "sha256": "e75ec2190e68f1bb31c4db589cad9466c74fe68e2b3fde353d2acfbdc2688dd4"
+  },
+  {
+   "path": "assets/weapons/tex/weapon_trim_orm.jpg",
+   "bytes": 64907,
+   "sha256": "4b9c03fa209f897e704fa700bd908947a35cac030f4fd8fdff265111acf408b4"
+  },
+  {
+   "path": "assets/weapons/veyra_sword.glb",
+   "bytes": 15000,
+   "sha256": "73e4a5eed533865167269b102328a942aff6b08fc3af80e421304673b9106dbe",
+   "triangles": 924
+  }
+ ],
+ "textures": [
+  {
+   "path": "assets/weapons/tex/weapon_trim_albedo.webp",
+   "width": 512,
+   "height": 512,
+   "bytes": 20276,
+   "slot": "color"
+  },
+  {
+   "path": "assets/weapons/tex/weapon_trim_normal.jpg",
+   "width": 512,
+   "height": 512,
+   "bytes": 39124,
+   "slot": "normal"
+  },
+  {
+   "path": "assets/weapons/tex/weapon_trim_orm.jpg",
+   "width": 512,
+   "height": 512,
+   "bytes": 64907,
+   "slot": "data"
+  }
+ ]
+}

@@ -1,0 +1,1052 @@
+{
+ "schema": 1,
+ "generator": "scripts/art/blender/ironveil.mjs",
+ "provenance": "ORIGINAL: modelled and textured in code by this project (no third-party mesh or texture); docs/ASSET-PROVENANCE.md, ironveil block",
+ "pathsRelativeTo": "public/ (at runtime: loadAssetContainer(scene, file))",
+ "space": "Armour files: skinned on the rank rig's 65 joints (manifest restLocal), vertices in glTF model space at REST (right-handed, +Y up, faces +Z, rig units = metres before the actor's root scale); every vertex weight 1.0 to one joint. Grips: ACTOR space (the runtime frame: glTF x -> -x), rig units, the rig at REST; the weapon frame of ART-SPEC-AVATAR §5.2 (+Z blade / shaft / forearm, +Y edge / up); attach with attachAtActorSpace(node, joint, compose(position, rotation)) on the rest-pose instance.",
+ "ranks": {
+  "soldier": {
+   "body": "assets/characters/Male_Peasant.glb",
+   "head": null,
+   "hair": null,
+   "dropBodyMeshes": [
+    "Male_Peasant_Body",
+    "Male_Peasant_Feet",
+    "Male_Peasant_Arms#1"
+   ],
+   "armour": "assets/ironveil/ironveil_soldier_armour.glb",
+   "rig": "regular-male",
+   "helmTopY": 1.850077,
+   "weapons": {
+    "right": "ironveilSpear",
+    "left": "ironveilShield"
+   },
+   "grips": {
+    "right": {
+     "bone": "hand_r",
+     "position": [
+      0.767231,
+      1.44814,
+      -0.069397
+     ],
+     "rotation": [
+      -0.092551,
+      0.090351,
+      -0.723331,
+      0.678279
+     ]
+    },
+    "left": {
+     "bone": "lowerarm_l",
+     "position": [
+      -0.611124,
+      1.510395,
+      -0.068408
+     ],
+     "rotation": [
+      0.488744,
+      -0.495302,
+      -0.504446,
+      0.511214
+     ]
+    }
+   },
+   "redNodes": [],
+   "height": 1.85,
+   "scale": 0.999958,
+   "plumeTopY": null,
+   "bodyTint": {
+    "material": "MI_Peasant",
+    "slots": {
+     "dark": "#2e3a52",
+     "leather": "#4a3a2c"
+    }
+   },
+   "steelBaseColorFactor": [
+    1,
+    1,
+    1
+   ],
+   "steelEffectiveSrgb": [
+    0.4248,
+    0.4531,
+    0.4874
+   ],
+   "nodes": {
+    "cuirass": {
+     "joints": [
+      "spine_03"
+     ],
+     "role": "breast- and backplate with a medial keel (spine_03)"
+    },
+    "plackart": {
+     "joints": [
+      "spine_02"
+     ],
+     "role": "the lower plate over the belly and the small of the back (spine_02), overlapping the cuirass from outside"
+    },
+    "belt": {
+     "joints": [
+      "spine_01"
+     ],
+     "role": "leather belt with a steel buckle (spine_01)"
+    },
+    "faulds": {
+     "joints": [
+      "pelvis"
+     ],
+     "role": "two hip lames (pelvis), the lower one open in front"
+    },
+    "gorget": {
+     "joints": [
+      "neck_01"
+     ],
+     "role": "three lames round the neck"
+    },
+    "helm": {
+     "joints": [
+      "Head"
+     ],
+     "role": "closed helm: skull with a medial ridge, riveted brow band, nasal, cheek plates, neck guard, dark lining (soldier) / open half-helm with short cheek guards, nape guard and the plume socket (Veyra)"
+    },
+    "tasset_l": {
+     "joints": [
+      "thigh_l"
+     ],
+     "role": "two lames over the front-outer left thigh"
+    },
+    "skirt_l": {
+     "joints": [
+      "thigh_l"
+     ],
+     "role": "the dark-blue tabard skirt, left half (front centre round the outside to back centre), on the thigh"
+    },
+    "pauldron_l": {
+     "joints": [
+      "upperarm_l"
+     ],
+     "role": "layered pauldron: dome with a raised neck flange + three lames (designed with the arm lowered 62 deg)"
+    },
+    "rerebrace_l": {
+     "joints": [
+      "upperarm_l"
+     ],
+     "role": "upper-arm tube under the pauldron lames"
+    },
+    "vambrace_l": {
+     "joints": [
+      "lowerarm_l"
+     ],
+     "role": "forearm tube with the elbow cop and its wing (the shield strap rides its back)"
+    },
+    "gauntlet_l": {
+     "joints": [
+      "hand_l",
+      "index_01_l",
+      "index_02_l",
+      "index_03_l",
+      "middle_01_l",
+      "middle_02_l",
+      "middle_03_l",
+      "ring_01_l",
+      "ring_02_l",
+      "ring_03_l",
+      "pinky_01_l",
+      "pinky_02_l",
+      "pinky_03_l",
+      "thumb_02_l",
+      "thumb_03_l",
+      "thumb_01_l"
+     ],
+     "role": "flared cuff, back-of-hand plate, leather palm (+ finger tubes on every finger joint and the thumb: the soldier)"
+    },
+    "greave_l": {
+     "joints": [
+      "calf_l"
+     ],
+     "role": "closed greave with the knee cop, its wing and a lame over the knee"
+    },
+    "sabaton_l": {
+     "joints": [
+      "foot_l",
+      "ball_l"
+     ],
+     "role": "closed armoured shoe: instep lames and the leather sole on foot, the toe cap on ball"
+    },
+    "tasset_r": {
+     "joints": [
+      "thigh_r"
+     ],
+     "role": "two lames over the front-outer right thigh"
+    },
+    "skirt_r": {
+     "joints": [
+      "thigh_r"
+     ],
+     "role": "the dark-blue tabard skirt, right half"
+    },
+    "pauldron_r": {
+     "joints": [
+      "upperarm_r"
+     ],
+     "role": "mirror of pauldron_l"
+    },
+    "rerebrace_r": {
+     "joints": [
+      "upperarm_r"
+     ],
+     "role": "mirror of rerebrace_l"
+    },
+    "vambrace_r": {
+     "joints": [
+      "lowerarm_r"
+     ],
+     "role": "mirror of vambrace_l"
+    },
+    "gauntlet_r": {
+     "joints": [
+      "hand_r",
+      "index_01_r",
+      "index_02_r",
+      "index_03_r",
+      "middle_01_r",
+      "middle_02_r",
+      "middle_03_r",
+      "ring_01_r",
+      "ring_02_r",
+      "ring_03_r",
+      "pinky_01_r",
+      "pinky_02_r",
+      "pinky_03_r",
+      "thumb_02_r",
+      "thumb_03_r",
+      "thumb_01_r"
+     ],
+     "role": "mirror of gauntlet_l"
+    },
+    "greave_r": {
+     "joints": [
+      "calf_r"
+     ],
+     "role": "mirror of greave_l"
+    },
+    "sabaton_r": {
+     "joints": [
+      "foot_r",
+      "ball_r"
+     ],
+     "role": "mirror of sabaton_l"
+    },
+    "tabard_front": {
+     "joints": [
+      "spine_03",
+      "spine_02"
+     ],
+     "role": "dark-blue tabard over breast (spine_03, the gauntlet emblem) and belly (spine_02)"
+    },
+    "cloak": {
+     "joints": [
+      "spine_03"
+     ],
+     "role": "the soldier's short dark cloak panel over the backplate (spine_03)"
+    }
+   },
+   "triangles": 5956
+  },
+  "captain": {
+   "body": "assets/characters/Female_Peasant.glb",
+   "head": "assets/characters/Superhero_Female_Head.glb",
+   "hair": null,
+   "dropBodyMeshes": [
+    "Female_Peasant_Body",
+    "Female_Peasant_Feet"
+   ],
+   "armour": "assets/ironveil/veyra_armour.glb",
+   "rig": "female",
+   "helmTopY": 1.832985,
+   "weapons": {
+    "right": "veyraSword",
+    "left": null
+   },
+   "grips": {
+    "right": {
+     "bone": "hand_r",
+     "position": [
+      0.704382,
+      1.414892,
+      -0.051716
+     ],
+     "rotation": [
+      -0.235748,
+      0.240732,
+      -0.673089,
+      0.658348
+     ]
+    },
+    "left": null
+   },
+   "redNodes": [
+    "veyra_plume",
+    "veyra_sash"
+   ],
+   "height": 1.9,
+   "scale": 1.036561,
+   "plumeTopY": 1.983088,
+   "bodyTint": {
+    "material": "MI_Peasant",
+    "slots": {
+     "dark": "#2e3a52",
+     "leather": "#4a3a2c"
+    }
+   },
+   "steelBaseColorFactor": [
+    0.2936,
+    0.3381,
+    0.4107
+   ],
+   "steelEffectiveSrgb": [
+    0.2329,
+    0.2684,
+    0.3194
+   ],
+   "nodes": {
+    "cuirass": {
+     "joints": [
+      "spine_03"
+     ],
+     "role": "breast- and backplate with a medial keel (spine_03)"
+    },
+    "plackart": {
+     "joints": [
+      "spine_02"
+     ],
+     "role": "the lower plate over the belly and the small of the back (spine_02), overlapping the cuirass from outside"
+    },
+    "belt": {
+     "joints": [
+      "spine_01"
+     ],
+     "role": "leather belt with a steel buckle (spine_01)"
+    },
+    "faulds": {
+     "joints": [
+      "pelvis"
+     ],
+     "role": "two hip lames (pelvis), the lower one open in front"
+    },
+    "gorget": {
+     "joints": [
+      "neck_01"
+     ],
+     "role": "three lames round the neck"
+    },
+    "helm": {
+     "joints": [
+      "Head"
+     ],
+     "role": "closed helm: skull with a medial ridge, riveted brow band, nasal, cheek plates, neck guard, dark lining (soldier) / open half-helm with short cheek guards, nape guard and the plume socket (Veyra)"
+    },
+    "tasset_l": {
+     "joints": [
+      "thigh_l"
+     ],
+     "role": "two lames over the front-outer left thigh"
+    },
+    "skirt_l": {
+     "joints": [
+      "thigh_l"
+     ],
+     "role": "the dark-blue tabard skirt, left half (front centre round the outside to back centre), on the thigh"
+    },
+    "pauldron_l": {
+     "joints": [
+      "upperarm_l"
+     ],
+     "role": "layered pauldron: dome with a raised neck flange + three lames (designed with the arm lowered 62 deg)"
+    },
+    "rerebrace_l": {
+     "joints": [
+      "upperarm_l"
+     ],
+     "role": "upper-arm tube under the pauldron lames"
+    },
+    "vambrace_l": {
+     "joints": [
+      "lowerarm_l"
+     ],
+     "role": "forearm tube with the elbow cop and its wing (the shield strap rides its back)"
+    },
+    "gauntlet_l": {
+     "joints": [
+      "hand_l"
+     ],
+     "role": "flared cuff, back-of-hand plate, leather palm (+ finger tubes on every finger joint and the thumb: the soldier)"
+    },
+    "greave_l": {
+     "joints": [
+      "calf_l"
+     ],
+     "role": "closed greave with the knee cop, its wing and a lame over the knee"
+    },
+    "sabaton_l": {
+     "joints": [
+      "foot_l",
+      "ball_l"
+     ],
+     "role": "closed armoured shoe: instep lames and the leather sole on foot, the toe cap on ball"
+    },
+    "tasset_r": {
+     "joints": [
+      "thigh_r"
+     ],
+     "role": "two lames over the front-outer right thigh"
+    },
+    "skirt_r": {
+     "joints": [
+      "thigh_r"
+     ],
+     "role": "the dark-blue tabard skirt, right half"
+    },
+    "pauldron_r": {
+     "joints": [
+      "upperarm_r"
+     ],
+     "role": "mirror of pauldron_l"
+    },
+    "rerebrace_r": {
+     "joints": [
+      "upperarm_r"
+     ],
+     "role": "mirror of rerebrace_l"
+    },
+    "vambrace_r": {
+     "joints": [
+      "lowerarm_r"
+     ],
+     "role": "mirror of vambrace_l"
+    },
+    "gauntlet_r": {
+     "joints": [
+      "hand_r"
+     ],
+     "role": "mirror of gauntlet_l"
+    },
+    "greave_r": {
+     "joints": [
+      "calf_r"
+     ],
+     "role": "mirror of greave_l"
+    },
+    "sabaton_r": {
+     "joints": [
+      "foot_r",
+      "ball_r"
+     ],
+     "role": "mirror of sabaton_l"
+    },
+    "tabard_front": {
+     "joints": [
+      "spine_03",
+      "spine_02"
+     ],
+     "role": "dark-blue tabard over breast (spine_03, the gauntlet emblem) and belly (spine_02)"
+    },
+    "tabard_back": {
+     "joints": [
+      "spine_03",
+      "spine_02"
+     ],
+     "role": "dark-blue tabard over the back (spine_03) and the small of the back (spine_02)"
+    },
+    "coif": {
+     "joints": [
+      "Head"
+     ],
+     "role": "Veyra's quilted arming coif round the face, under the half-helm"
+    },
+    "veyra_plume": {
+     "joints": [
+      "Head"
+     ],
+     "role": "Veyra's red horsehair plume: six rigid fan cards from the crown socket (C13 red, matte)"
+    },
+    "veyra_sash": {
+     "joints": [
+      "spine_03",
+      "pelvis"
+     ],
+     "role": "Veyra's crimson captain's sash: right shoulder to left hip (spine_03), knot and two tails on the pelvis (C13 red, matte)"
+    }
+   },
+   "triangles": 5692
+  }
+ },
+ "meshes": {
+  "assets/ironveil/ironveil_soldier_armour.glb": [
+   {
+    "node": "cuirass",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "plackart",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "belt",
+    "materials": [
+     "ironveil_steel",
+     "ironveil_soft"
+    ]
+   },
+   {
+    "node": "faulds",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "gorget",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "helm",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "tasset_l",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "skirt_l",
+    "materials": [
+     "ironveil_soft"
+    ]
+   },
+   {
+    "node": "pauldron_l",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "rerebrace_l",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "vambrace_l",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "gauntlet_l",
+    "materials": [
+     "ironveil_steel",
+     "ironveil_soft"
+    ]
+   },
+   {
+    "node": "greave_l",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "sabaton_l",
+    "materials": [
+     "ironveil_steel",
+     "ironveil_soft"
+    ]
+   },
+   {
+    "node": "tasset_r",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "skirt_r",
+    "materials": [
+     "ironveil_soft"
+    ]
+   },
+   {
+    "node": "pauldron_r",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "rerebrace_r",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "vambrace_r",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "gauntlet_r",
+    "materials": [
+     "ironveil_steel",
+     "ironveil_soft"
+    ]
+   },
+   {
+    "node": "greave_r",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "sabaton_r",
+    "materials": [
+     "ironveil_steel",
+     "ironveil_soft"
+    ]
+   },
+   {
+    "node": "tabard_front",
+    "materials": [
+     "ironveil_soft"
+    ]
+   },
+   {
+    "node": "cloak",
+    "materials": [
+     "ironveil_soft"
+    ]
+   }
+  ],
+  "assets/ironveil/veyra_armour.glb": [
+   {
+    "node": "cuirass",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "plackart",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "belt",
+    "materials": [
+     "ironveil_steel",
+     "ironveil_soft"
+    ]
+   },
+   {
+    "node": "faulds",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "gorget",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "helm",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "tasset_l",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "skirt_l",
+    "materials": [
+     "ironveil_soft"
+    ]
+   },
+   {
+    "node": "pauldron_l",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "rerebrace_l",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "vambrace_l",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "gauntlet_l",
+    "materials": [
+     "ironveil_steel",
+     "ironveil_soft"
+    ]
+   },
+   {
+    "node": "greave_l",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "sabaton_l",
+    "materials": [
+     "ironveil_steel",
+     "ironveil_soft"
+    ]
+   },
+   {
+    "node": "tasset_r",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "skirt_r",
+    "materials": [
+     "ironveil_soft"
+    ]
+   },
+   {
+    "node": "pauldron_r",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "rerebrace_r",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "vambrace_r",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "gauntlet_r",
+    "materials": [
+     "ironveil_steel",
+     "ironveil_soft"
+    ]
+   },
+   {
+    "node": "greave_r",
+    "materials": [
+     "ironveil_steel"
+    ]
+   },
+   {
+    "node": "sabaton_r",
+    "materials": [
+     "ironveil_steel",
+     "ironveil_soft"
+    ]
+   },
+   {
+    "node": "tabard_front",
+    "materials": [
+     "ironveil_soft"
+    ]
+   },
+   {
+    "node": "tabard_back",
+    "materials": [
+     "ironveil_soft"
+    ]
+   },
+   {
+    "node": "coif",
+    "materials": [
+     "ironveil_soft"
+    ]
+   },
+   {
+    "node": "veyra_plume",
+    "materials": [
+     "ironveil_soft"
+    ]
+   },
+   {
+    "node": "veyra_sash",
+    "materials": [
+     "ironveil_soft"
+    ]
+   }
+  ]
+ },
+ "materials": {
+  "ironveil_steel": {
+   "role": "the plate: brushed, dented steel trim sheet (worn rolled lips, an edge-wear band, a rivet line, the plate field, a dark inner band for linings, the helm's face void and undersides); per-rank baseColorFactor (Veyra: darker blued steel)",
+   "textures": {
+    "albedo": "assets/ironveil/tex/ironveil_steel_albedo.webp",
+    "normal": "assets/ironveil/tex/ironveil_steel_normal.jpg",
+    "orm": "assets/ironveil/tex/ironveil_steel_orm.jpg"
+   },
+   "orm": "R = ambient occlusion (bound as occlusionTexture), G = roughness, B = metallic",
+   "bands": {
+    "lip": [
+     0,
+     0.04
+    ],
+    "edge": [
+     0.04,
+     0.2
+    ],
+    "field": [
+     0.2,
+     0.8
+    ],
+    "rivet": [
+     0.82,
+     0.9
+    ],
+    "dark": [
+     0.91,
+     1
+    ]
+   },
+   "emissive": "none"
+  },
+  "ironveil_soft": {
+   "role": "ONE atlas for every soft surface: dark-blue tabard with the gauntlet emblem, gambeson quilting, leather, cloak, plume and sash red (matte, non-metallic, never emissive)",
+   "textures": {
+    "albedo": "assets/ironveil/tex/ironveil_soft_albedo.webp"
+   },
+   "roughness": 0.86,
+   "metallic": 0,
+   "emissive": "none"
+  }
+ },
+ "albedoRegions": {
+  "steel": {
+   "steel": {
+    "uvRect": [
+     0,
+     0,
+     1,
+     1
+    ],
+    "meanSrgb": [
+     0.4248,
+     0.4531,
+     0.4874
+    ]
+   }
+  },
+  "soft": {
+   "tabard": {
+    "uvRect": [
+     0.53,
+     0.03,
+     0.97,
+     0.42
+    ],
+    "meanSrgb": [
+     0.143,
+     0.1915,
+     0.282
+    ]
+   },
+   "emblem": {
+    "uvRect": [
+     0.17002,
+     0.095301,
+     0.355094,
+     0.432508
+    ],
+    "meanSrgb": [
+     0.3323,
+     0.3695,
+     0.4302
+    ]
+   },
+   "hem": {
+    "uvRect": [
+     0.53,
+     0.473,
+     0.97,
+     0.497
+    ],
+    "meanSrgb": [
+     0.2646,
+     0.3112,
+     0.4003
+    ]
+   },
+   "gambeson": {
+    "uvRect": [
+     0.51,
+     0.51,
+     0.74,
+     0.74
+    ],
+    "meanSrgb": [
+     0.1609,
+     0.2042,
+     0.2899
+    ]
+   },
+   "leather": {
+    "uvRect": [
+     0.52,
+     0.775,
+     0.98,
+     0.975
+    ],
+    "meanSrgb": [
+     0.2903,
+     0.2296,
+     0.1718
+    ]
+   },
+   "cloak": {
+    "uvRect": [
+     0.76,
+     0.51,
+     0.99,
+     0.74
+    ],
+    "meanSrgb": [
+     0.114,
+     0.1478,
+     0.2106
+    ]
+   },
+   "red": {
+    "uvRect": [
+     0.02,
+     0.77,
+     0.48,
+     0.98
+    ],
+    "meanSrgb": [
+     0.643,
+     0.1332,
+     0.1328
+    ]
+   }
+  }
+ },
+ "determinism": {
+  "note": "sha256 over every primitive's decoded POSITION floats and indices in node order (ironveil.mjs geometryHash); `secondBuild` = the same hashes from an independent second Blender + optimize pass of the same run (identical bytes required); `node scripts/art/blender/ironveil.mjs --verify` rebuilds into a temp folder and compares",
+  "geometry": {
+   "ironveil_soldier_armour.glb": "b2f344340c15e6453849834b4f36e8e0ed54f0c3530e347da4f6f505cc7aa3c1",
+   "veyra_armour.glb": "68ca4653109e53db6dd012243e2c63e6ef3159d49b7b77fc7ed4ac998b2c5f9b"
+  },
+  "secondBuild": {
+   "ironveil_soldier_armour.glb": "b2f344340c15e6453849834b4f36e8e0ed54f0c3530e347da4f6f505cc7aa3c1",
+   "veyra_armour.glb": "68ca4653109e53db6dd012243e2c63e6ef3159d49b7b77fc7ed4ac998b2c5f9b"
+  }
+ },
+ "validator": {
+  "assets/ironveil/ironveil_soldier_armour.glb": {
+   "errors": 0,
+   "warnings": 44
+  },
+  "assets/ironveil/veyra_armour.glb": {
+   "errors": 0,
+   "warnings": 47
+  }
+ },
+ "budgets": {
+  "triangles": {
+   "soldier": 6000,
+   "captain": 7000
+  },
+  "folderBytes": 520000,
+  "textureEdge": 512
+ },
+ "files": [
+  {
+   "path": "assets/ironveil/ironveil_soldier_armour.glb",
+   "bytes": 192192,
+   "sha256": "a90fd292a9c1781671ebddc11bb78fdb9626126bd8276943665021158fbcd685",
+   "triangles": 5956
+  },
+  {
+   "path": "assets/ironveil/tex/ironveil_soft_albedo.webp",
+   "bytes": 4932,
+   "sha256": "8e055032a787658444f0d9f3cc4748dd0e710c3f259a62d8f0bcbe9d4112b91b",
+   "triangles": 0
+  },
+  {
+   "path": "assets/ironveil/tex/ironveil_steel_albedo.webp",
+   "bytes": 8246,
+   "sha256": "21eebeebd673d8514b9401042ec947902fe708f7737f1027c3fc53a8dfb616e1",
+   "triangles": 0
+  },
+  {
+   "path": "assets/ironveil/tex/ironveil_steel_normal.jpg",
+   "bytes": 47146,
+   "sha256": "0cd0f55c1689ef842466a8ea28b65aff3e8e7fc78214c7ffcc791bb7dba10a9f",
+   "triangles": 0
+  },
+  {
+   "path": "assets/ironveil/tex/ironveil_steel_orm.jpg",
+   "bytes": 37959,
+   "sha256": "452c1127ccaa69a8158be930011477c1dac0c9194f393ada1e93bc126eb63ef3",
+   "triangles": 0
+  },
+  {
+   "path": "assets/ironveil/veyra_armour.glb",
+   "bytes": 187352,
+   "sha256": "c57eaffe4bf1bcf84ccb7da46f203fffa0442aa921249e139cefec880582e208",
+   "triangles": 5692
+  }
+ ],
+ "textures": [
+  {
+   "path": "assets/ironveil/tex/ironveil_soft_albedo.webp",
+   "width": 512,
+   "height": 512,
+   "bytes": 4932
+  },
+  {
+   "path": "assets/ironveil/tex/ironveil_steel_albedo.webp",
+   "width": 512,
+   "height": 512,
+   "bytes": 8246
+  },
+  {
+   "path": "assets/ironveil/tex/ironveil_steel_normal.jpg",
+   "width": 512,
+   "height": 512,
+   "bytes": 47146
+  },
+  {
+   "path": "assets/ironveil/tex/ironveil_steel_orm.jpg",
+   "width": 512,
+   "height": 512,
+   "bytes": 37959
+  }
+ ]
+}
