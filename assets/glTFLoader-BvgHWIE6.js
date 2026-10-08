@@ -1,1 +1,0 @@
-import"./instancedMesh-C9Xwm5eR.js";import{i as e,n as t,o as n,r,s as i,t as a}from"./glTFLoader.pure-hqu1bLdg.js";e(),i();export{a as ArrayItem,n as GLTFFileLoader,t as GLTFLoader,r as LoadBoundingInfoFromPositionAccessor,e as RegisterGLTF2Loader};

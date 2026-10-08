@@ -3,7 +3,8 @@ FIRSTWAKE - third-party software notices
 
 FIRSTWAKE's own code, procedural art, sound (synthesized at runtime) and text are original.
 The game also ships third-party 3D models, textures and an HDR sky released under CC0 1.0 (credited at the end;
-per-file list in docs/ASSET-PROVENANCE.md). It ships no fonts, music or sound files.
+per-file list in docs/ASSET-PROVENANCE.md), and recorded voice lines made with the Kokoro-82M speech model
+(Apache-2.0, credited at the end). It ships no fonts or music.
 
 The deployed site includes code from the open-source packages below. Each section reproduces that package's
 license (and NOTICE, where it has one) exactly as installed in node_modules. Generated from the package files;
@@ -556,3 +557,17 @@ Textures and HDRI from Poly Haven (https://polyhaven.com), CC0:
 
 Every shipped file, its source and its modifications: docs/ASSET-PROVENANCE.md in the source repository
 and assets/manifest.json on this site.
+
+
+==============================================================================
+Recorded voices: Kokoro-82M, Apache License 2.0
+https://huggingface.co/hexgrad/Kokoro-82M
+==============================================================================
+
+Voices generated with Kokoro-82M (hexgrad, Apache-2.0).
+
+The characters' and the narrator's recorded lines (assets/voice/, Ogg Vorbis) were generated for FIRSTWAKE with the
+Kokoro-82M text-to-speech model by hexgrad, released under the Apache License 2.0 (its text is reproduced above, in
+the @babylonjs/core section), run through kokoro-onnx by thewh1teagle (MIT). The model and the tools that ran it are
+not part of this site; only the generated audio is. The words spoken are FIRSTWAKE's own.
+Per-voice record: docs/ASSET-PROVENANCE.md in the source repository and assets/voice/manifest.json on this site.
