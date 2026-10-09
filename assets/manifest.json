@@ -13,11 +13,11 @@
  },
  "totals": {
   "characters": 6642408,
-  "natureProps": 6781478,
+  "natureProps": 7344652,
   "textures": 8965260,
   "env": 1339437,
   "vendor": 30859,
-  "assets": 23728583
+  "assets": 24291757
  },
  "babylon": {
   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
@@ -8431,6 +8431,72 @@
    ]
   },
   {
+   "path": "assets/props/Axe_Bronze.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/Axe_Bronze.gltf"
+   },
+   "bytes": 15428,
+   "sha256": "ca98b4e0b3760d063b607d7015a074d89d9879b56e86435ebbdc64cd055c25de",
+   "triangles": 826,
+   "vertices": 655,
+   "sourceTriangles": 826,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.1959,-0.3806,-0.023],
+    "max": [0.0986,0.4463,0.023]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "Axe_Bronze",
+     "mesh": "Cylinder.004",
+     "primitives": 1,
+     "triangles": 826,
+     "vertices": 655,
+     "materials": ["MI_Trim_Props_Vertex"],
+     "skinned": false,
+     "attributes": ["COLOR_0","NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": {
+      "min": [0.718,0.251,0.012,1],
+      "max": [1,1,1,1]
+     }
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Props_Vertex",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Props_BaseColor.webp",
+     "normal": "tex/T_Trim_Props_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Props_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Props_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ]
+  },
+  {
    "path": "assets/props/Bag.glb",
    "kind": "prop",
    "source": {
@@ -9261,6 +9327,914 @@
    "whiteVertexColorsRemoved": 1
   },
   {
+   "path": "assets/props/Book_5.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/Book_5.gltf"
+   },
+   "bytes": 5376,
+   "sha256": "fa70d4a636000c8226c7bfe28be56c66b47bcad951bf3a198add24ab4b060809",
+   "triangles": 96,
+   "vertices": 132,
+   "sourceTriangles": 96,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.1206,-0.0318,-0.1436],
+    "max": [0.0924,0.0318,0.1436]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "Book_5",
+     "mesh": "Cube.141",
+     "primitives": 1,
+     "triangles": 96,
+     "vertices": 132,
+     "materials": ["MI_Trim_Props_Vertex"],
+     "skinned": false,
+     "attributes": ["COLOR_0","NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": {
+      "min": [0.02,0.039,0.075,1],
+      "max": [1,1,1,1]
+     }
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Props_Vertex",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Props_BaseColor.webp",
+     "normal": "tex/T_Trim_Props_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Props_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Props_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ]
+  },
+  {
+   "path": "assets/props/Book_Stack_1.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/Book_Stack_1.gltf"
+   },
+   "bytes": 8516,
+   "sha256": "6f28275cf358e7b813273cd2315da623bdc11878ded2584d4260ca37968f6fa8",
+   "triangles": 208,
+   "vertices": 288,
+   "sourceTriangles": 208,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.1458,0.0012,-0.1071],
+    "max": [0.1391,0.2149,0.1192]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "Book_Stack_1",
+     "mesh": "Cube.153",
+     "primitives": 1,
+     "triangles": 208,
+     "vertices": 288,
+     "materials": ["MI_Trim_Props_Vertex"],
+     "skinned": false,
+     "attributes": ["COLOR_0","NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": {
+      "min": [0.051,0.027,0,1],
+      "max": [0.204,0.165,0.071,1]
+     }
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Props_Vertex",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Props_BaseColor.webp",
+     "normal": "tex/T_Trim_Props_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Props_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Props_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ]
+  },
+  {
+   "path": "assets/props/Book_Stack_2.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/Book_Stack_2.gltf"
+   },
+   "bytes": 14676,
+   "sha256": "8d6ba0b5fa690b33ed15cd19175edd6e966eff7caed199daa1345d3813326ff0",
+   "triangles": 446,
+   "vertices": 532,
+   "sourceTriangles": 446,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.1402,-0.0014,-0.1012],
+    "max": [0.1343,0.197,0.126]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "Book_Stack_2",
+     "mesh": "Cube.151",
+     "primitives": 2,
+     "triangles": 446,
+     "vertices": 532,
+     "materials": ["MI_Trim_Props_Vertex","MI_Trim_Metal"],
+     "skinned": false,
+     "attributes": ["COLOR_0","NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": {
+      "min": [0.02,0.012,0,1],
+      "max": [1,1,1,1]
+     }
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Props_Vertex",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Props_BaseColor.webp",
+     "normal": "tex/T_Trim_Props_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Props_ORM.jpg",
+     "occlusion": null
+    },
+    {
+     "name": "MI_Trim_Metal",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Metal_BaseColor.webp",
+     "normal": "tex/T_Trim_Metal_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Metal_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Props_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_ORM.jpg",
+     "width": 512,
+     "height": 512
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ],
+   "whiteVertexColorsRemoved": 1
+  },
+  {
+   "path": "assets/props/Bookcase_2.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/Bookcase_2.gltf"
+   },
+   "bytes": 34624,
+   "sha256": "c08a14e49bcdb20a7d9e98c31e5ab42c67fbacd201efb65958e379764c0cab3e",
+   "triangles": 2148,
+   "vertices": 2002,
+   "sourceTriangles": 2148,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.7306,-0.0174,-0.2145],
+    "max": [0.7306,2.5275,0.2145]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "Bookcase_2",
+     "mesh": "Cube.168",
+     "primitives": 2,
+     "triangles": 2148,
+     "vertices": 2002,
+     "materials": ["MI_Trim_Furniture","MI_Trim_Metal"],
+     "skinned": false,
+     "attributes": ["COLOR_0","NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": {
+      "min": [0.392,0.263,0.122,1],
+      "max": [1,1,1,1]
+     }
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Furniture",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Furniture_BaseColor.webp",
+     "normal": "tex/T_Trim_Furniture_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Furniture_ORM.jpg",
+     "occlusion": null
+    },
+    {
+     "name": "MI_Trim_Metal",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Metal_BaseColor.webp",
+     "normal": "tex/T_Trim_Metal_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Metal_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_ORM.jpg",
+     "width": 512,
+     "height": 512
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ],
+   "whiteVertexColorsRemoved": 1
+  },
+  {
+   "path": "assets/props/BookGroup_Medium_1.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/BookGroup_Medium_1.gltf"
+   },
+   "bytes": 13792,
+   "sha256": "f15951f974bee77213f85bcccbbea98253bbb81b966f01d537c9e09e7be72c9d",
+   "triangles": 416,
+   "vertices": 576,
+   "sourceTriangles": 416,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.5429,-0.0038,-0.1577],
+    "max": [0.5197,0.2944,0.0898]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "BookGroup_Medium_1",
+     "mesh": "Cube.024",
+     "primitives": 1,
+     "triangles": 416,
+     "vertices": 576,
+     "materials": ["MI_Trim_Props_Vertex"],
+     "skinned": false,
+     "attributes": ["COLOR_0","NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": {
+      "min": [0.02,0.012,0,1],
+      "max": [0.282,0.18,0.075,1]
+     }
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Props_Vertex",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Props_BaseColor.webp",
+     "normal": "tex/T_Trim_Props_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Props_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Props_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ]
+  },
+  {
+   "path": "assets/props/BookGroup_Medium_2.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/BookGroup_Medium_2.gltf"
+   },
+   "bytes": 15084,
+   "sha256": "2d1f050125b44981a0cd77a3085b9fd9e5680ad20c42ffbb49d98d147f201a86",
+   "triangles": 468,
+   "vertices": 648,
+   "sourceTriangles": 468,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.5523,-0.0004,-0.158],
+    "max": [0.5523,0.2945,0.0895]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "BookGroup_Medium_2",
+     "mesh": "Cube.092",
+     "primitives": 1,
+     "triangles": 468,
+     "vertices": 648,
+     "materials": ["MI_Trim_Props_Vertex"],
+     "skinned": false,
+     "attributes": ["COLOR_0","NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": {
+      "min": [0.02,0.012,0.004,1],
+      "max": [0.165,0.118,0.075,1]
+     }
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Props_Vertex",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Props_BaseColor.webp",
+     "normal": "tex/T_Trim_Props_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Props_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Props_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ]
+  },
+  {
+   "path": "assets/props/BookGroup_Medium_3.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/BookGroup_Medium_3.gltf"
+   },
+   "bytes": 15136,
+   "sha256": "0024e2f934eb109deb9b112da70cc313ac2b2bdc9a03d59ba20cc8d6b5f25640",
+   "triangles": 468,
+   "vertices": 648,
+   "sourceTriangles": 468,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.5283,-0.0005,-0.1586],
+    "max": [0.5136,0.2944,0.0889]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "BookGroup_Medium_3",
+     "mesh": "Cube.135",
+     "primitives": 1,
+     "triangles": 468,
+     "vertices": 648,
+     "materials": ["MI_Trim_Props_Vertex"],
+     "skinned": false,
+     "attributes": ["COLOR_0","NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": {
+      "min": [0.02,0.012,0.004,1],
+      "max": [0.165,0.118,0.075,1]
+     }
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Props_Vertex",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Props_BaseColor.webp",
+     "normal": "tex/T_Trim_Props_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Props_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Props_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ]
+  },
+  {
+   "path": "assets/props/BookGroup_Small_1.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/BookGroup_Small_1.gltf"
+   },
+   "bytes": 5844,
+   "sha256": "2a655447d173bb303eeb7c950bdae769a238f54086665eb0cd3fbde5e72b0736",
+   "triangles": 104,
+   "vertices": 144,
+   "sourceTriangles": 104,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.1729,-0.0045,-0.1209],
+    "max": [0.1164,0.2937,0.1047]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "BookGroup_Small_1",
+     "mesh": "Cube.146",
+     "primitives": 1,
+     "triangles": 104,
+     "vertices": 144,
+     "materials": ["MI_Trim_Props_Vertex"],
+     "skinned": false,
+     "attributes": ["COLOR_0","NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": {
+      "min": [0.02,0.012,0,1],
+      "max": [0.282,0.18,0.075,1]
+     }
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Props_Vertex",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Props_BaseColor.webp",
+     "normal": "tex/T_Trim_Props_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Props_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Props_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ]
+  },
+  {
+   "path": "assets/props/BookGroup_Small_2.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/BookGroup_Small_2.gltf"
+   },
+   "bytes": 5816,
+   "sha256": "43d3302a3e86718574383f357d0320aa6d227ad1733623b3fc8f2c01a3e32b02",
+   "triangles": 104,
+   "vertices": 144,
+   "sourceTriangles": 104,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.1039,-0.0011,-0.1325],
+    "max": [0.1236,0.282,0.1047]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "BookGroup_Small_2",
+     "mesh": "Cube.148",
+     "primitives": 1,
+     "triangles": 104,
+     "vertices": 144,
+     "materials": ["MI_Trim_Props_Vertex"],
+     "skinned": false,
+     "attributes": ["COLOR_0","NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": {
+      "min": [0.02,0.031,0.004,1],
+      "max": [0.165,0.118,0.075,1]
+     }
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Props_Vertex",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Props_BaseColor.webp",
+     "normal": "tex/T_Trim_Props_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Props_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Props_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ]
+  },
+  {
+   "path": "assets/props/BookGroup_Small_3.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/BookGroup_Small_3.gltf"
+   },
+   "bytes": 6564,
+   "sha256": "0b7834c5d8d2aeb8f507e99825117759d033988ec815a8ceb6a5c05dc5799ec6",
+   "triangles": 130,
+   "vertices": 180,
+   "sourceTriangles": 130,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.1039,-0.0011,-0.1325],
+    "max": [0.141,0.2762,0.1047]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "BookGroup_Small_3",
+     "mesh": "Cube.149",
+     "primitives": 1,
+     "triangles": 130,
+     "vertices": 180,
+     "materials": ["MI_Trim_Props_Vertex"],
+     "skinned": false,
+     "attributes": ["COLOR_0","NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": {
+      "min": [0.02,0.012,0.016,1],
+      "max": [0.137,0.118,0.075,1]
+     }
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Props_Vertex",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Props_BaseColor.webp",
+     "normal": "tex/T_Trim_Props_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Props_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Props_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ]
+  },
+  {
+   "path": "assets/props/BookStand.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/BookStand.gltf"
+   },
+   "bytes": 26524,
+   "sha256": "9ed14ef19f850b92337595161ce15b1677ba98150a74ee0219b73583f3331396",
+   "triangles": 1526,
+   "vertices": 1652,
+   "sourceTriangles": 1526,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.2535,-0.0025,-0.2555],
+    "max": [0.2536,1.4443,0.2557]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "BookStand",
+     "mesh": "Cube.169",
+     "primitives": 1,
+     "triangles": 1526,
+     "vertices": 1652,
+     "materials": ["MI_Trim_Furniture"],
+     "skinned": false,
+     "attributes": ["NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": null
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Furniture",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Furniture_BaseColor.webp",
+     "normal": "tex/T_Trim_Furniture_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Furniture_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ]
+  },
+  {
+   "path": "assets/props/Bottle_1.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/Bottle_1.gltf"
+   },
+   "bytes": 8028,
+   "sha256": "04d839ee3357255ac62e811ffc56d6fa2037187e0d225cdf90b7c49874534775",
+   "triangles": 312,
+   "vertices": 302,
+   "sourceTriangles": 312,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.0558,0.0016,-0.0564],
+    "max": [0.057,0.3662,0.0564]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "Bottle_1",
+     "mesh": "Cylinder.061",
+     "primitives": 1,
+     "triangles": 312,
+     "vertices": 302,
+     "materials": ["MI_Trim_Props_Vertex"],
+     "skinned": false,
+     "attributes": ["COLOR_0","NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": {
+      "min": [0.075,0.024,0.008,1],
+      "max": [0.11,0.059,0.012,1]
+     }
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Props_Vertex",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Props_BaseColor.webp",
+     "normal": "tex/T_Trim_Props_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Props_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Props_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ]
+  },
+  {
+   "path": "assets/props/Bucket_Metal.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/Bucket_Metal.gltf"
+   },
+   "bytes": 10724,
+   "sha256": "169d1e0ea49c3680e3f4ba02485d7c7d45300aab507b2c419d6693305ba2f229",
+   "triangles": 540,
+   "vertices": 487,
+   "sourceTriangles": 540,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.2427,-0.0052,-0.2068],
+    "max": [0.2427,0.3598,0.2423]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "Bucket_Metal",
+     "mesh": "BezierCurve.002",
+     "primitives": 1,
+     "triangles": 540,
+     "vertices": 487,
+     "materials": ["MI_Trim_Metal"],
+     "skinned": false,
+     "attributes": ["NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": null
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Metal",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Metal_BaseColor.webp",
+     "normal": "tex/T_Trim_Metal_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Metal_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Metal_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ]
+  },
+  {
    "path": "assets/props/Bucket_Wooden_1.glb",
    "kind": "prop",
    "source": {
@@ -9333,6 +10307,285 @@
      "width": 512,
      "height": 512
     },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ]
+  },
+  {
+   "path": "assets/props/Candle_1.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/Candle_1.gltf"
+   },
+   "bytes": 5460,
+   "sha256": "12bba9c2c7911a212f3637f18d0de5bf1e1c5472a2460467e3e9d61b627965e7",
+   "triangles": 212,
+   "vertices": 154,
+   "sourceTriangles": 212,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.047,0.0007,-0.0573],
+    "max": [0.0469,0.1327,0.0505]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "Candle_1",
+     "mesh": "Cylinder.047",
+     "primitives": 1,
+     "triangles": 212,
+     "vertices": 154,
+     "materials": ["MI_Trim_Props"],
+     "skinned": false,
+     "attributes": ["NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": null
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Props",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Props_BaseColor.webp",
+     "normal": "tex/T_Trim_Props_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Props_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Props_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ]
+  },
+  {
+   "path": "assets/props/Candle_2.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/Candle_2.gltf"
+   },
+   "bytes": 5428,
+   "sha256": "8786bb322e6cbd420f32ba68478d3f27983deaa1d7706e09eb66027be797f053",
+   "triangles": 210,
+   "vertices": 152,
+   "sourceTriangles": 210,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.0468,0.0023,-0.0499],
+    "max": [0.0476,0.2534,0.0477]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "Candle_2",
+     "mesh": "Cylinder.048",
+     "primitives": 1,
+     "triangles": 210,
+     "vertices": 152,
+     "materials": ["MI_Trim_Props"],
+     "skinned": false,
+     "attributes": ["NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": null
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Props",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Props_BaseColor.webp",
+     "normal": "tex/T_Trim_Props_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Props_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Props_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ]
+  },
+  {
+   "path": "assets/props/CandleStick_Triple.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/CandleStick_Triple.gltf"
+   },
+   "bytes": 31620,
+   "sha256": "6a4506183bb5e50de1b0af6e2dbb748a3fb4f3aa2d13e8fb58529756f817b3ff",
+   "triangles": 2528,
+   "vertices": 1850,
+   "sourceTriangles": 2528,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.2182,-0.0008,-0.066],
+    "max": [0.2241,0.4624,0.0704]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "CandleStick_Triple",
+     "mesh": "Cylinder.091",
+     "primitives": 2,
+     "triangles": 2528,
+     "vertices": 1850,
+     "materials": ["MI_Trim_Metal","MI_Trim_Props"],
+     "skinned": false,
+     "attributes": ["NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": null
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Metal",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Metal_BaseColor.webp",
+     "normal": "tex/T_Trim_Metal_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Metal_ORM.jpg",
+     "occlusion": null
+    },
+    {
+     "name": "MI_Trim_Props",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Props_BaseColor.webp",
+     "normal": "tex/T_Trim_Props_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Props_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Metal_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_ORM.jpg",
+     "width": 512,
+     "height": 512
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ]
+  },
+  {
+   "path": "assets/props/CandleStick.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/CandleStick.gltf"
+   },
+   "bytes": 10940,
+   "sha256": "10f505a1e7ef0a6820f81144965a62bce6fe3d89631070683be648c2e26d0371",
+   "triangles": 730,
+   "vertices": 533,
+   "sourceTriangles": 730,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.1763,0.0015,-0.0897],
+    "max": [0.0846,0.1567,0.0897]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "CandleStick",
+     "mesh": "Cylinder.081",
+     "primitives": 1,
+     "triangles": 730,
+     "vertices": 533,
+     "materials": ["MI_Trim_Metal"],
+     "skinned": false,
+     "attributes": ["NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": null
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Metal",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Metal_BaseColor.webp",
+     "normal": "tex/T_Trim_Metal_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Metal_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
     {
      "path": "assets/props/tex/T_Trim_Metal_Normal.jpg",
      "width": 1024,
@@ -9627,6 +10880,99 @@
      },
      "translationJoints": ["Root","Chest_Bottom","Chest_Top"],
      "loopByName": false
+    }
+   ]
+  },
+  {
+   "path": "assets/props/Crate_Metal.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/Crate_Metal.gltf"
+   },
+   "bytes": 51896,
+   "sha256": "c09b1e8983678adcb6178846c0500af1700fe806eff227817e3e314081e69b6b",
+   "triangles": 2738,
+   "vertices": 2760,
+   "sourceTriangles": 2738,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.4319,0.0026,-0.433],
+    "max": [0.4319,0.8705,0.433]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "Crate_Metal",
+     "mesh": "Cube.035",
+     "primitives": 2,
+     "triangles": 2738,
+     "vertices": 2760,
+     "materials": ["MI_Trim_Furniture","MI_Trim_Metal"],
+     "skinned": false,
+     "attributes": ["COLOR_0","NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": {
+      "min": [0.176,0.114,0.031,1],
+      "max": [1,1,1,1]
+     }
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Furniture",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Furniture_BaseColor.webp",
+     "normal": "tex/T_Trim_Furniture_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Furniture_ORM.jpg",
+     "occlusion": null
+    },
+    {
+     "name": "MI_Trim_Metal",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Metal_BaseColor.webp",
+     "normal": "tex/T_Trim_Metal_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Metal_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_ORM.jpg",
+     "width": 512,
+     "height": 512
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_ORM.jpg",
+     "width": 512,
+     "height": 512
     }
    ]
   },
@@ -10237,6 +11583,315 @@
    ]
   },
   {
+   "path": "assets/props/Mug.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/Mug.gltf"
+   },
+   "bytes": 10052,
+   "sha256": "a91493dd53bf6e8c8cc8edd00d011376648cc5f24b0558c2acc45ca3a6c0a8f9",
+   "triangles": 268,
+   "vertices": 340,
+   "sourceTriangles": 268,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.0704,-0.0046,-0.0747],
+    "max": [0.1217,0.1792,0.0721]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "Mug",
+     "mesh": "Cylinder.068",
+     "primitives": 2,
+     "triangles": 268,
+     "vertices": 340,
+     "materials": ["MI_Trim_Metal","MI_Trim_Furniture"],
+     "skinned": false,
+     "attributes": ["NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": null
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Metal",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Metal_BaseColor.webp",
+     "normal": "tex/T_Trim_Metal_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Metal_ORM.jpg",
+     "occlusion": null
+    },
+    {
+     "name": "MI_Trim_Furniture",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Furniture_BaseColor.webp",
+     "normal": "tex/T_Trim_Furniture_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Furniture_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Metal_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_ORM.jpg",
+     "width": 512,
+     "height": 512
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ]
+  },
+  {
+   "path": "assets/props/Peg_Rack.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/Peg_Rack.gltf"
+   },
+   "bytes": 14764,
+   "sha256": "588928544249c9387ec582a267692e6dc9a30581641bd64313f3544186f7d00e",
+   "triangles": 712,
+   "vertices": 700,
+   "sourceTriangles": 712,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.5919,-0.1739,0],
+    "max": [0.5919,0.1739,0.0957]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "Peg_Rack",
+     "mesh": "Cube.201",
+     "primitives": 2,
+     "triangles": 712,
+     "vertices": 700,
+     "materials": ["MI_Trim_Furniture","MI_Trim_Metal"],
+     "skinned": false,
+     "attributes": ["NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": null
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Furniture",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Furniture_BaseColor.webp",
+     "normal": "tex/T_Trim_Furniture_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Furniture_ORM.jpg",
+     "occlusion": null
+    },
+    {
+     "name": "MI_Trim_Metal",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Metal_BaseColor.webp",
+     "normal": "tex/T_Trim_Metal_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Metal_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_ORM.jpg",
+     "width": 512,
+     "height": 512
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ]
+  },
+  {
+   "path": "assets/props/Pickaxe_Bronze.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/Pickaxe_Bronze.gltf"
+   },
+   "bytes": 14936,
+   "sha256": "909f611eb731139000d1077523e07d03684127db9de42cf5d5ae63a56a4e4c9f",
+   "triangles": 776,
+   "vertices": 652,
+   "sourceTriangles": 776,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.4103,-0.4939,-0.0678],
+    "max": [0.4026,0.7038,0.0678]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "Pickaxe_Bronze",
+     "mesh": "Cylinder.005",
+     "primitives": 1,
+     "triangles": 776,
+     "vertices": 652,
+     "materials": ["MI_Trim_Props_Vertex"],
+     "skinned": false,
+     "attributes": ["COLOR_0","NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": {
+      "min": [0.333,0.137,0.012,1],
+      "max": [1,1,1,1]
+     }
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Props_Vertex",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Props_BaseColor.webp",
+     "normal": "tex/T_Trim_Props_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Props_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Props_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ]
+  },
+  {
+   "path": "assets/props/Pot_1.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/Pot_1.gltf"
+   },
+   "bytes": 18204,
+   "sha256": "4f799ecd2f503973faf7aff014c938ab8b488ccce775d47b8805e76308991225",
+   "triangles": 1068,
+   "vertices": 961,
+   "sourceTriangles": 1068,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.2697,-0.0226,-0.243],
+    "max": [0.2697,0.2012,0.243]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "Pot_1",
+     "mesh": "Cube.049",
+     "primitives": 1,
+     "triangles": 1068,
+     "vertices": 961,
+     "materials": ["MI_Trim_Metal"],
+     "skinned": false,
+     "attributes": ["NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": null
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Metal",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Metal_BaseColor.webp",
+     "normal": "tex/T_Trim_Metal_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Metal_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Metal_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ]
+  },
+  {
    "path": "assets/props/Pouch_Large.glb",
    "kind": "prop",
    "source": {
@@ -10352,6 +12007,455 @@
      "primitives": 1,
      "triangles": 1748,
      "vertices": 973,
+     "materials": ["MI_Trim_Furniture"],
+     "skinned": false,
+     "attributes": ["NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": null
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Furniture",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Furniture_BaseColor.webp",
+     "normal": "tex/T_Trim_Furniture_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Furniture_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ]
+  },
+  {
+   "path": "assets/props/Rope_2.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/Rope_2.gltf"
+   },
+   "bytes": 17180,
+   "sha256": "326151aa14ef7dea3d1baf37590a2119dd2a0ee5b25dfee6613f4da971c2b60f",
+   "triangles": 1460,
+   "vertices": 817,
+   "sourceTriangles": 1460,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.3833,-0.0033,-0.4455],
+    "max": [0.4245,0.1203,0.3995]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "Rope_2",
+     "mesh": "BezierCurve.003",
+     "primitives": 1,
+     "triangles": 1460,
+     "vertices": 817,
+     "materials": ["MI_Trim_Furniture"],
+     "skinned": false,
+     "attributes": ["NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": null
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Furniture",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Furniture_BaseColor.webp",
+     "normal": "tex/T_Trim_Furniture_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Furniture_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ]
+  },
+  {
+   "path": "assets/props/Rope_3.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/Rope_3.gltf"
+   },
+   "bytes": 18636,
+   "sha256": "6eeb7c0673e719ec6034cfd0552660cde80a4a6b5254ba0b9dbb048548e09962",
+   "triangles": 1748,
+   "vertices": 973,
+   "sourceTriangles": 1748,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.8296,-0.0271,-0.5127],
+    "max": [0.3984,0.0746,0.4381]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "Rope_3",
+     "mesh": "BezierCurve.005",
+     "primitives": 1,
+     "triangles": 1748,
+     "vertices": 973,
+     "materials": ["MI_Trim_Furniture"],
+     "skinned": false,
+     "attributes": ["NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": null
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Furniture",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Furniture_BaseColor.webp",
+     "normal": "tex/T_Trim_Furniture_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Furniture_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ]
+  },
+  {
+   "path": "assets/props/Scroll_1.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/Scroll_1.gltf"
+   },
+   "bytes": 11992,
+   "sha256": "5c536c64ceb02f2b43d8aa0a440d14638f947903efcb1874c32895f310fb23c8",
+   "triangles": 512,
+   "vertices": 426,
+   "sourceTriangles": 512,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.1207,0.001,-0.0254],
+    "max": [0.1232,0.0598,0.0377]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "Scroll_1",
+     "mesh": "Cube.152",
+     "primitives": 2,
+     "triangles": 512,
+     "vertices": 426,
+     "materials": ["MI_Page_Empty","MI_Trim_Props_Vertex"],
+     "skinned": false,
+     "attributes": ["COLOR_0","NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": {
+      "min": [0.063,0.176,0,1],
+      "max": [0.533,0.467,0.38,1]
+     }
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Page_Empty",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 0,
+     "roughnessFactor": 0.5,
+     "baseColor": "tex/T_Page_Noise.webp",
+     "normal": null,
+     "metallicRoughness": null,
+     "occlusion": null
+    },
+    {
+     "name": "MI_Trim_Props_Vertex",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Props_BaseColor.webp",
+     "normal": "tex/T_Trim_Props_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Props_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Page_Noise.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ]
+  },
+  {
+   "path": "assets/props/Scroll_2.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/Scroll_2.gltf"
+   },
+   "bytes": 14640,
+   "sha256": "8fabec92294875b52d177e8926dd30a995b882237880111babfe88961f1dea7c",
+   "triangles": 672,
+   "vertices": 609,
+   "sourceTriangles": 672,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.1127,0.0004,-0.0254],
+    "max": [0.1202,0.0591,0.0382]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "Scroll_2",
+     "mesh": "Cube.156",
+     "primitives": 2,
+     "triangles": 672,
+     "vertices": 609,
+     "materials": ["MI_Page_Empty","MI_Trim_Props_Vertex"],
+     "skinned": false,
+     "attributes": ["COLOR_0","NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": {
+      "min": [0.486,0.012,0,1],
+      "max": [0.533,0.467,0.38,1]
+     }
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Page_Empty",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 0,
+     "roughnessFactor": 0.5,
+     "baseColor": "tex/T_Page_Noise.webp",
+     "normal": null,
+     "metallicRoughness": null,
+     "occlusion": null
+    },
+    {
+     "name": "MI_Trim_Props_Vertex",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Props_BaseColor.webp",
+     "normal": "tex/T_Trim_Props_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Props_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Page_Noise.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ]
+  },
+  {
+   "path": "assets/props/Shelf_Arch.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/Shelf_Arch.gltf"
+   },
+   "bytes": 24400,
+   "sha256": "d2b4f7711829bf81c89bdb36fe3643a2ccbe3763f721e7a2ebb551c8fa86556e",
+   "triangles": 1286,
+   "vertices": 1428,
+   "sourceTriangles": 1286,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.6226,-0.6145,-0.0048],
+    "max": [0.6226,0.9747,0.3068]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "Shelf_Arch",
+     "mesh": "Cylinder.032",
+     "primitives": 2,
+     "triangles": 1286,
+     "vertices": 1428,
+     "materials": ["MI_Trim_Metal","MI_Trim_Furniture"],
+     "skinned": false,
+     "attributes": ["COLOR_0","NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": {
+      "min": [0.176,0.114,0.031,1],
+      "max": [1,1,1,1]
+     }
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Metal",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Metal_BaseColor.webp",
+     "normal": "tex/T_Trim_Metal_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Metal_ORM.jpg",
+     "occlusion": null
+    },
+    {
+     "name": "MI_Trim_Furniture",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Furniture_BaseColor.webp",
+     "normal": "tex/T_Trim_Furniture_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Furniture_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Metal_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_ORM.jpg",
+     "width": 512,
+     "height": 512
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ],
+   "whiteVertexColorsRemoved": 1
+  },
+  {
+   "path": "assets/props/Shelf_Simple.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/Shelf_Simple.gltf"
+   },
+   "bytes": 10960,
+   "sha256": "1a0f0874c80b20080443a98eeba901faca7666f89eca16f2e188fb3308a8b55a",
+   "triangles": 480,
+   "vertices": 598,
+   "sourceTriangles": 480,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.5925,-0.2011,0.0435],
+    "max": [0.5913,0.1077,0.3358]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "Shelf_Simple",
+     "mesh": "Cube.103",
+     "primitives": 1,
+     "triangles": 480,
+     "vertices": 598,
      "materials": ["MI_Trim_Furniture"],
      "skinned": false,
      "attributes": ["NORMAL","POSITION","TEXCOORD_0"],
@@ -10631,6 +12735,72 @@
    ]
   },
   {
+   "path": "assets/props/Stool.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/Stool.gltf"
+   },
+   "bytes": 7252,
+   "sha256": "a8457fadfd5a85b524d1943d37f0171eeb93dcb763e868a56ea003a94a504111",
+   "triangles": 152,
+   "vertices": 264,
+   "sourceTriangles": 152,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.2376,-0.0064,-0.2376],
+    "max": [0.237,0.5823,0.237]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "Stool",
+     "mesh": "Cube.097",
+     "primitives": 1,
+     "triangles": 152,
+     "vertices": 264,
+     "materials": ["MI_Trim_Furniture"],
+     "skinned": false,
+     "attributes": ["COLOR_0","NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": {
+      "min": [0.392,0.361,0.122,1],
+      "max": [1,1,1,1]
+     }
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Furniture",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Furniture_BaseColor.webp",
+     "normal": "tex/T_Trim_Furniture_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Furniture_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ]
+  },
+  {
    "path": "assets/props/Sword_Bronze.glb",
    "kind": "prop",
    "source": {
@@ -10791,6 +12961,23 @@
    "whiteVertexColorsRemoved": 1
   },
   {
+   "path": "assets/props/tex/T_Page_Noise.webp",
+   "kind": "texture",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/T_Page_Noise.png",
+    "size": [4096,4096]
+   },
+   "bytes": 38114,
+   "sha256": "3262bf9fbd3a50344bc755ed9f7319faad1710f6df75582aafc58420a7035d4f",
+   "width": 1024,
+   "height": 1024,
+   "format": "webp",
+   "slot": "color",
+   "colorSpace": "srgb",
+   "usedBy": ["assets/props/Scroll_1.glb","assets/props/Scroll_2.glb"]
+  },
+  {
    "path": "assets/props/tex/T_Trim_Cloth_BaseColor.webp",
    "kind": "texture",
    "source": {
@@ -10857,7 +13044,7 @@
    "format": "webp",
    "slot": "color",
    "colorSpace": "srgb",
-   "usedBy": ["assets/props/Anvil_Log.glb","assets/props/Bag.glb","assets/props/Banner_1.glb","assets/props/Banner_2.glb","assets/props/Barrel.glb","assets/props/Barrel_Apples.glb","assets/props/Bench.glb","assets/props/Bucket_Wooden_1.glb","assets/props/Chest_Wood.glb","assets/props/Crate_Wooden.glb","assets/props/Dummy.glb","assets/props/FarmCrate_Apple.glb","assets/props/FarmCrate_Carrot.glb","assets/props/FarmCrate_Empty.glb","assets/props/Rope_1.glb","assets/props/Stall_Cart_Empty.glb","assets/props/Stall_Empty.glb","assets/props/Table_Large.glb","assets/props/WeaponStand.glb","assets/props/Workbench.glb"]
+   "usedBy": ["assets/props/Anvil_Log.glb","assets/props/Bag.glb","assets/props/Banner_1.glb","assets/props/Banner_2.glb","assets/props/Barrel.glb","assets/props/Barrel_Apples.glb","assets/props/Bench.glb","assets/props/BookStand.glb","assets/props/Bookcase_2.glb","assets/props/Bucket_Wooden_1.glb","assets/props/Chest_Wood.glb","assets/props/Crate_Metal.glb","assets/props/Crate_Wooden.glb","assets/props/Dummy.glb","assets/props/FarmCrate_Apple.glb","assets/props/FarmCrate_Carrot.glb","assets/props/FarmCrate_Empty.glb","assets/props/Mug.glb","assets/props/Peg_Rack.glb","assets/props/Rope_1.glb","assets/props/Rope_2.glb","assets/props/Rope_3.glb","assets/props/Shelf_Arch.glb","assets/props/Shelf_Simple.glb","assets/props/Stall_Cart_Empty.glb","assets/props/Stall_Empty.glb","assets/props/Stool.glb","assets/props/Table_Large.glb","assets/props/WeaponStand.glb","assets/props/Whetstone.glb","assets/props/Workbench.glb","assets/props/Workbench_Drawers.glb"]
   },
   {
    "path": "assets/props/tex/T_Trim_Furniture_Normal.jpg",
@@ -10875,7 +13062,7 @@
    "slot": "normal",
    "colorSpace": "linear",
    "normalConvention": "OpenGL (+Y = image up), as glTF requires",
-   "usedBy": ["assets/props/Anvil_Log.glb","assets/props/Bag.glb","assets/props/Banner_1.glb","assets/props/Banner_2.glb","assets/props/Barrel.glb","assets/props/Barrel_Apples.glb","assets/props/Bench.glb","assets/props/Bucket_Wooden_1.glb","assets/props/Chest_Wood.glb","assets/props/Crate_Wooden.glb","assets/props/Dummy.glb","assets/props/FarmCrate_Apple.glb","assets/props/FarmCrate_Carrot.glb","assets/props/FarmCrate_Empty.glb","assets/props/Rope_1.glb","assets/props/Stall_Cart_Empty.glb","assets/props/Stall_Empty.glb","assets/props/Table_Large.glb","assets/props/WeaponStand.glb","assets/props/Workbench.glb"]
+   "usedBy": ["assets/props/Anvil_Log.glb","assets/props/Bag.glb","assets/props/Banner_1.glb","assets/props/Banner_2.glb","assets/props/Barrel.glb","assets/props/Barrel_Apples.glb","assets/props/Bench.glb","assets/props/BookStand.glb","assets/props/Bookcase_2.glb","assets/props/Bucket_Wooden_1.glb","assets/props/Chest_Wood.glb","assets/props/Crate_Metal.glb","assets/props/Crate_Wooden.glb","assets/props/Dummy.glb","assets/props/FarmCrate_Apple.glb","assets/props/FarmCrate_Carrot.glb","assets/props/FarmCrate_Empty.glb","assets/props/Mug.glb","assets/props/Peg_Rack.glb","assets/props/Rope_1.glb","assets/props/Rope_2.glb","assets/props/Rope_3.glb","assets/props/Shelf_Arch.glb","assets/props/Shelf_Simple.glb","assets/props/Stall_Cart_Empty.glb","assets/props/Stall_Empty.glb","assets/props/Stool.glb","assets/props/Table_Large.glb","assets/props/WeaponStand.glb","assets/props/Whetstone.glb","assets/props/Workbench.glb","assets/props/Workbench_Drawers.glb"]
   },
   {
    "path": "assets/props/tex/T_Trim_Furniture_ORM.jpg",
@@ -10892,7 +13079,7 @@
    "format": "jpg",
    "slot": "data",
    "colorSpace": "linear",
-   "usedBy": ["assets/props/Anvil_Log.glb","assets/props/Bag.glb","assets/props/Banner_1.glb","assets/props/Banner_2.glb","assets/props/Barrel.glb","assets/props/Barrel_Apples.glb","assets/props/Bench.glb","assets/props/Bucket_Wooden_1.glb","assets/props/Chest_Wood.glb","assets/props/Crate_Wooden.glb","assets/props/Dummy.glb","assets/props/FarmCrate_Apple.glb","assets/props/FarmCrate_Carrot.glb","assets/props/FarmCrate_Empty.glb","assets/props/Rope_1.glb","assets/props/Stall_Cart_Empty.glb","assets/props/Stall_Empty.glb","assets/props/Table_Large.glb","assets/props/WeaponStand.glb","assets/props/Workbench.glb"]
+   "usedBy": ["assets/props/Anvil_Log.glb","assets/props/Bag.glb","assets/props/Banner_1.glb","assets/props/Banner_2.glb","assets/props/Barrel.glb","assets/props/Barrel_Apples.glb","assets/props/Bench.glb","assets/props/BookStand.glb","assets/props/Bookcase_2.glb","assets/props/Bucket_Wooden_1.glb","assets/props/Chest_Wood.glb","assets/props/Crate_Metal.glb","assets/props/Crate_Wooden.glb","assets/props/Dummy.glb","assets/props/FarmCrate_Apple.glb","assets/props/FarmCrate_Carrot.glb","assets/props/FarmCrate_Empty.glb","assets/props/Mug.glb","assets/props/Peg_Rack.glb","assets/props/Rope_1.glb","assets/props/Rope_2.glb","assets/props/Rope_3.glb","assets/props/Shelf_Arch.glb","assets/props/Shelf_Simple.glb","assets/props/Stall_Cart_Empty.glb","assets/props/Stall_Empty.glb","assets/props/Stool.glb","assets/props/Table_Large.glb","assets/props/WeaponStand.glb","assets/props/Whetstone.glb","assets/props/Workbench.glb","assets/props/Workbench_Drawers.glb"]
   },
   {
    "path": "assets/props/tex/T_Trim_Metal_BaseColor.webp",
@@ -10909,7 +13096,7 @@
    "format": "webp",
    "slot": "color",
    "colorSpace": "srgb",
-   "usedBy": ["assets/props/Anvil.glb","assets/props/Anvil_Log.glb","assets/props/Banner_1.glb","assets/props/Banner_1_Cloth.glb","assets/props/Banner_2.glb","assets/props/Banner_2_Cloth.glb","assets/props/Barrel.glb","assets/props/Barrel_Apples.glb","assets/props/Bench.glb","assets/props/Bucket_Wooden_1.glb","assets/props/Cauldron.glb","assets/props/Chain_Coil.glb","assets/props/Chest_Wood.glb","assets/props/Crate_Wooden.glb","assets/props/Dummy.glb","assets/props/FarmCrate_Apple.glb","assets/props/FarmCrate_Carrot.glb","assets/props/FarmCrate_Empty.glb","assets/props/Lantern_Wall.glb","assets/props/Pouch_Large.glb","assets/props/Stall_Cart_Empty.glb","assets/props/Stall_Empty.glb","assets/props/Table_Large.glb","assets/props/Torch_Metal.glb","assets/props/WeaponStand.glb","assets/props/Workbench.glb"]
+   "usedBy": ["assets/props/Anvil.glb","assets/props/Anvil_Log.glb","assets/props/Banner_1.glb","assets/props/Banner_1_Cloth.glb","assets/props/Banner_2.glb","assets/props/Banner_2_Cloth.glb","assets/props/Barrel.glb","assets/props/Barrel_Apples.glb","assets/props/Bench.glb","assets/props/Book_Stack_2.glb","assets/props/Bookcase_2.glb","assets/props/Bucket_Metal.glb","assets/props/Bucket_Wooden_1.glb","assets/props/CandleStick.glb","assets/props/CandleStick_Triple.glb","assets/props/Cauldron.glb","assets/props/Chain_Coil.glb","assets/props/Chest_Wood.glb","assets/props/Crate_Metal.glb","assets/props/Crate_Wooden.glb","assets/props/Dummy.glb","assets/props/FarmCrate_Apple.glb","assets/props/FarmCrate_Carrot.glb","assets/props/FarmCrate_Empty.glb","assets/props/Lantern_Wall.glb","assets/props/Mug.glb","assets/props/Peg_Rack.glb","assets/props/Pot_1.glb","assets/props/Pouch_Large.glb","assets/props/Shelf_Arch.glb","assets/props/Stall_Cart_Empty.glb","assets/props/Stall_Empty.glb","assets/props/Table_Large.glb","assets/props/Torch_Metal.glb","assets/props/WeaponStand.glb","assets/props/Whetstone.glb","assets/props/Workbench.glb","assets/props/Workbench_Drawers.glb"]
   },
   {
    "path": "assets/props/tex/T_Trim_Metal_Normal.jpg",
@@ -10927,7 +13114,7 @@
    "slot": "normal",
    "colorSpace": "linear",
    "normalConvention": "OpenGL (+Y = image up), as glTF requires",
-   "usedBy": ["assets/props/Anvil.glb","assets/props/Anvil_Log.glb","assets/props/Banner_1.glb","assets/props/Banner_1_Cloth.glb","assets/props/Banner_2.glb","assets/props/Banner_2_Cloth.glb","assets/props/Barrel.glb","assets/props/Barrel_Apples.glb","assets/props/Bench.glb","assets/props/Bucket_Wooden_1.glb","assets/props/Cauldron.glb","assets/props/Chain_Coil.glb","assets/props/Chest_Wood.glb","assets/props/Crate_Wooden.glb","assets/props/Dummy.glb","assets/props/FarmCrate_Apple.glb","assets/props/FarmCrate_Carrot.glb","assets/props/FarmCrate_Empty.glb","assets/props/Lantern_Wall.glb","assets/props/Pouch_Large.glb","assets/props/Stall_Cart_Empty.glb","assets/props/Stall_Empty.glb","assets/props/Table_Large.glb","assets/props/Torch_Metal.glb","assets/props/WeaponStand.glb","assets/props/Workbench.glb"]
+   "usedBy": ["assets/props/Anvil.glb","assets/props/Anvil_Log.glb","assets/props/Banner_1.glb","assets/props/Banner_1_Cloth.glb","assets/props/Banner_2.glb","assets/props/Banner_2_Cloth.glb","assets/props/Barrel.glb","assets/props/Barrel_Apples.glb","assets/props/Bench.glb","assets/props/Book_Stack_2.glb","assets/props/Bookcase_2.glb","assets/props/Bucket_Metal.glb","assets/props/Bucket_Wooden_1.glb","assets/props/CandleStick.glb","assets/props/CandleStick_Triple.glb","assets/props/Cauldron.glb","assets/props/Chain_Coil.glb","assets/props/Chest_Wood.glb","assets/props/Crate_Metal.glb","assets/props/Crate_Wooden.glb","assets/props/Dummy.glb","assets/props/FarmCrate_Apple.glb","assets/props/FarmCrate_Carrot.glb","assets/props/FarmCrate_Empty.glb","assets/props/Lantern_Wall.glb","assets/props/Mug.glb","assets/props/Peg_Rack.glb","assets/props/Pot_1.glb","assets/props/Pouch_Large.glb","assets/props/Shelf_Arch.glb","assets/props/Stall_Cart_Empty.glb","assets/props/Stall_Empty.glb","assets/props/Table_Large.glb","assets/props/Torch_Metal.glb","assets/props/WeaponStand.glb","assets/props/Whetstone.glb","assets/props/Workbench.glb","assets/props/Workbench_Drawers.glb"]
   },
   {
    "path": "assets/props/tex/T_Trim_Metal_ORM.jpg",
@@ -10944,7 +13131,7 @@
    "format": "jpg",
    "slot": "data",
    "colorSpace": "linear",
-   "usedBy": ["assets/props/Anvil.glb","assets/props/Anvil_Log.glb","assets/props/Banner_1.glb","assets/props/Banner_1_Cloth.glb","assets/props/Banner_2.glb","assets/props/Banner_2_Cloth.glb","assets/props/Barrel.glb","assets/props/Barrel_Apples.glb","assets/props/Bench.glb","assets/props/Bucket_Wooden_1.glb","assets/props/Cauldron.glb","assets/props/Chain_Coil.glb","assets/props/Chest_Wood.glb","assets/props/Crate_Wooden.glb","assets/props/Dummy.glb","assets/props/FarmCrate_Apple.glb","assets/props/FarmCrate_Carrot.glb","assets/props/FarmCrate_Empty.glb","assets/props/Lantern_Wall.glb","assets/props/Pouch_Large.glb","assets/props/Stall_Cart_Empty.glb","assets/props/Stall_Empty.glb","assets/props/Table_Large.glb","assets/props/Torch_Metal.glb","assets/props/WeaponStand.glb","assets/props/Workbench.glb"]
+   "usedBy": ["assets/props/Anvil.glb","assets/props/Anvil_Log.glb","assets/props/Banner_1.glb","assets/props/Banner_1_Cloth.glb","assets/props/Banner_2.glb","assets/props/Banner_2_Cloth.glb","assets/props/Barrel.glb","assets/props/Barrel_Apples.glb","assets/props/Bench.glb","assets/props/Book_Stack_2.glb","assets/props/Bookcase_2.glb","assets/props/Bucket_Metal.glb","assets/props/Bucket_Wooden_1.glb","assets/props/CandleStick.glb","assets/props/CandleStick_Triple.glb","assets/props/Cauldron.glb","assets/props/Chain_Coil.glb","assets/props/Chest_Wood.glb","assets/props/Crate_Metal.glb","assets/props/Crate_Wooden.glb","assets/props/Dummy.glb","assets/props/FarmCrate_Apple.glb","assets/props/FarmCrate_Carrot.glb","assets/props/FarmCrate_Empty.glb","assets/props/Lantern_Wall.glb","assets/props/Mug.glb","assets/props/Peg_Rack.glb","assets/props/Pot_1.glb","assets/props/Pouch_Large.glb","assets/props/Shelf_Arch.glb","assets/props/Stall_Cart_Empty.glb","assets/props/Stall_Empty.glb","assets/props/Table_Large.glb","assets/props/Torch_Metal.glb","assets/props/WeaponStand.glb","assets/props/Whetstone.glb","assets/props/Workbench.glb","assets/props/Workbench_Drawers.glb"]
   },
   {
    "path": "assets/props/tex/T_Trim_Props_BaseColor.webp",
@@ -10961,7 +13148,7 @@
    "format": "webp",
    "slot": "color",
    "colorSpace": "srgb",
-   "usedBy": ["assets/props/Anvil_Log.glb","assets/props/Barrel_Apples.glb","assets/props/FarmCrate_Apple.glb","assets/props/FarmCrate_Carrot.glb","assets/props/Pouch_Large.glb","assets/props/Sword_Bronze.glb"]
+   "usedBy": ["assets/props/Anvil_Log.glb","assets/props/Axe_Bronze.glb","assets/props/Barrel_Apples.glb","assets/props/BookGroup_Medium_1.glb","assets/props/BookGroup_Medium_2.glb","assets/props/BookGroup_Medium_3.glb","assets/props/BookGroup_Small_1.glb","assets/props/BookGroup_Small_2.glb","assets/props/BookGroup_Small_3.glb","assets/props/Book_5.glb","assets/props/Book_Stack_1.glb","assets/props/Book_Stack_2.glb","assets/props/Bottle_1.glb","assets/props/CandleStick_Triple.glb","assets/props/Candle_1.glb","assets/props/Candle_2.glb","assets/props/FarmCrate_Apple.glb","assets/props/FarmCrate_Carrot.glb","assets/props/Pickaxe_Bronze.glb","assets/props/Pouch_Large.glb","assets/props/Scroll_1.glb","assets/props/Scroll_2.glb","assets/props/Sword_Bronze.glb","assets/props/Vase_Rubble_Medium.glb","assets/props/Whetstone.glb"]
   },
   {
    "path": "assets/props/tex/T_Trim_Props_Normal.jpg",
@@ -10979,7 +13166,7 @@
    "slot": "normal",
    "colorSpace": "linear",
    "normalConvention": "OpenGL (+Y = image up), as glTF requires",
-   "usedBy": ["assets/props/Anvil_Log.glb","assets/props/Barrel_Apples.glb","assets/props/FarmCrate_Apple.glb","assets/props/FarmCrate_Carrot.glb","assets/props/Pouch_Large.glb","assets/props/Sword_Bronze.glb"]
+   "usedBy": ["assets/props/Anvil_Log.glb","assets/props/Axe_Bronze.glb","assets/props/Barrel_Apples.glb","assets/props/BookGroup_Medium_1.glb","assets/props/BookGroup_Medium_2.glb","assets/props/BookGroup_Medium_3.glb","assets/props/BookGroup_Small_1.glb","assets/props/BookGroup_Small_2.glb","assets/props/BookGroup_Small_3.glb","assets/props/Book_5.glb","assets/props/Book_Stack_1.glb","assets/props/Book_Stack_2.glb","assets/props/Bottle_1.glb","assets/props/CandleStick_Triple.glb","assets/props/Candle_1.glb","assets/props/Candle_2.glb","assets/props/FarmCrate_Apple.glb","assets/props/FarmCrate_Carrot.glb","assets/props/Pickaxe_Bronze.glb","assets/props/Pouch_Large.glb","assets/props/Scroll_1.glb","assets/props/Scroll_2.glb","assets/props/Sword_Bronze.glb","assets/props/Vase_Rubble_Medium.glb","assets/props/Whetstone.glb"]
   },
   {
    "path": "assets/props/tex/T_Trim_Props_ORM.jpg",
@@ -10996,7 +13183,7 @@
    "format": "jpg",
    "slot": "data",
    "colorSpace": "linear",
-   "usedBy": ["assets/props/Anvil_Log.glb","assets/props/Barrel_Apples.glb","assets/props/FarmCrate_Apple.glb","assets/props/FarmCrate_Carrot.glb","assets/props/Pouch_Large.glb","assets/props/Sword_Bronze.glb"]
+   "usedBy": ["assets/props/Anvil_Log.glb","assets/props/Axe_Bronze.glb","assets/props/Barrel_Apples.glb","assets/props/BookGroup_Medium_1.glb","assets/props/BookGroup_Medium_2.glb","assets/props/BookGroup_Medium_3.glb","assets/props/BookGroup_Small_1.glb","assets/props/BookGroup_Small_2.glb","assets/props/BookGroup_Small_3.glb","assets/props/Book_5.glb","assets/props/Book_Stack_1.glb","assets/props/Book_Stack_2.glb","assets/props/Bottle_1.glb","assets/props/CandleStick_Triple.glb","assets/props/Candle_1.glb","assets/props/Candle_2.glb","assets/props/FarmCrate_Apple.glb","assets/props/FarmCrate_Carrot.glb","assets/props/Pickaxe_Bronze.glb","assets/props/Pouch_Large.glb","assets/props/Scroll_1.glb","assets/props/Scroll_2.glb","assets/props/Sword_Bronze.glb","assets/props/Vase_Rubble_Medium.glb","assets/props/Whetstone.glb"]
   },
   {
    "path": "assets/props/Torch_Metal.glb",
@@ -11056,6 +13243,72 @@
     },
     {
      "path": "assets/props/tex/T_Trim_Metal_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ]
+  },
+  {
+   "path": "assets/props/Vase_Rubble_Medium.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/Vase_Rubble_Medium.gltf"
+   },
+   "bytes": 33000,
+   "sha256": "440e43d5bafda7105873e03fd3efc62c62b83c68db460d2018e52f1d94dd16b4",
+   "triangles": 1113,
+   "vertices": 1982,
+   "sourceTriangles": 1113,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.3796,0.0032,-0.278],
+    "max": [0.4173,0.1778,0.3205]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "Vase_Rubble_Medium",
+     "mesh": "Vase_1.001_cell.099",
+     "primitives": 1,
+     "triangles": 1113,
+     "vertices": 1982,
+     "materials": ["MI_Trim_Props_Vertex"],
+     "skinned": false,
+     "attributes": ["COLOR_0","NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": {
+      "min": [0.106,0.039,0.008,1],
+      "max": [0.125,0.043,0.016,1]
+     }
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Props_Vertex",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Props_BaseColor.webp",
+     "normal": "tex/T_Trim_Props_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Props_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Props_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_ORM.jpg",
      "width": 512,
      "height": 512
     }
@@ -11150,6 +13403,221 @@
      "height": 512
     }
    ]
+  },
+  {
+   "path": "assets/props/Whetstone.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/Whetstone.gltf"
+   },
+   "bytes": 27616,
+   "sha256": "9544f1c6dd17a18b735b1304de7d9c5e8931389976c358064098abd4b9628e88",
+   "triangles": 1100,
+   "vertices": 1317,
+   "sourceTriangles": 1100,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [-0.5627,0.0029,-0.3748],
+    "max": [0.5781,1.1728,0.5269]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "Whetstone",
+     "mesh": "Cube.125",
+     "primitives": 3,
+     "triangles": 1100,
+     "vertices": 1317,
+     "materials": ["MI_Trim_Furniture","MI_Trim_Metal","MI_Trim_Props_Vertex"],
+     "skinned": false,
+     "attributes": ["COLOR_0","NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": {
+      "min": [0.247,0.161,0.082,1],
+      "max": [1,1,1,1]
+     }
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Furniture",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Furniture_BaseColor.webp",
+     "normal": "tex/T_Trim_Furniture_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Furniture_ORM.jpg",
+     "occlusion": null
+    },
+    {
+     "name": "MI_Trim_Metal",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Metal_BaseColor.webp",
+     "normal": "tex/T_Trim_Metal_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Metal_ORM.jpg",
+     "occlusion": null
+    },
+    {
+     "name": "MI_Trim_Props_Vertex",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Props_BaseColor.webp",
+     "normal": "tex/T_Trim_Props_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Props_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_ORM.jpg",
+     "width": 512,
+     "height": 512
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_ORM.jpg",
+     "width": 512,
+     "height": 512
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Props_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ],
+   "whiteVertexColorsRemoved": 1
+  },
+  {
+   "path": "assets/props/Workbench_Drawers.glb",
+   "kind": "prop",
+   "source": {
+    "id": "PROPS",
+    "file": "Exports/glTF/Workbench_Drawers.gltf"
+   },
+   "bytes": 9952,
+   "sha256": "731c55bfdf9620c27e0aa5d9a25aa421f0118a4c5f27d6086822adf44492d03a",
+   "triangles": 364,
+   "vertices": 366,
+   "sourceTriangles": 364,
+   "extensionsRequired": ["EXT_meshopt_compression","EXT_texture_webp","KHR_mesh_quantization"],
+   "bounds": {
+    "min": [0.3044,0.8842,-0.495],
+    "max": [0.7275,1.1265,-0.196]
+   },
+   "nodes": 1,
+   "meshes": [
+    {
+     "node": "Workbench_Drawers",
+     "mesh": "Cube.028",
+     "primitives": 2,
+     "triangles": 364,
+     "vertices": 366,
+     "materials": ["MI_Trim_Furniture","MI_Trim_Metal"],
+     "skinned": false,
+     "attributes": ["COLOR_0","NORMAL","POSITION","TEXCOORD_0"],
+     "vertexColor": {
+      "min": [0.392,0.263,0.153,1],
+      "max": [1,1,1,1]
+     }
+    }
+   ],
+   "materials": [
+    {
+     "name": "MI_Trim_Furniture",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Furniture_BaseColor.webp",
+     "normal": "tex/T_Trim_Furniture_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Furniture_ORM.jpg",
+     "occlusion": null
+    },
+    {
+     "name": "MI_Trim_Metal",
+     "alphaMode": "OPAQUE",
+     "doubleSided": true,
+     "baseColorFactor": [1,1,1,1],
+     "metallicFactor": 1,
+     "roughnessFactor": 1,
+     "baseColor": "tex/T_Trim_Metal_BaseColor.webp",
+     "normal": "tex/T_Trim_Metal_Normal.jpg",
+     "metallicRoughness": "tex/T_Trim_Metal_ORM.jpg",
+     "occlusion": null
+    }
+   ],
+   "textures": [
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Furniture_ORM.jpg",
+     "width": 512,
+     "height": 512
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_Normal.jpg",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_BaseColor.webp",
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "assets/props/tex/T_Trim_Metal_ORM.jpg",
+     "width": 512,
+     "height": 512
+    }
+   ],
+   "whiteVertexColorsRemoved": 1
   },
   {
    "path": "assets/props/Workbench.glb",
