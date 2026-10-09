@@ -1,0 +1,168 @@
+{
+ "schema": 1,
+ "generator": "scripts/art/blender/bell.mjs",
+ "blender": "4.2.3",
+ "rigVersion": 1,
+ "rigFingerprint": "38c23d50",
+ "glb": "assets/bell/bell_beast.glb",
+ "textures": {
+  "albedo": "assets/bell/tex/bell_albedo.webp",
+  "normal": "assets/bell/tex/bell_normal.jpg",
+  "orm": "assets/bell/tex/bell_orm.jpg"
+ },
+ "files": [
+  {
+   "path": "assets/bell/bell_beast.glb",
+   "bytes": 414484,
+   "sha256": "7ba929ada019aba31a92d2ac5fa2667c47a3001d0a8f75e81892faf3af8e73c2"
+  },
+  {
+   "path": "assets/bell/tex/bell_albedo.webp",
+   "bytes": 105744,
+   "sha256": "f9c0b22d994d992125723b1c44e5212d3056ecff826f72d4a2bc33ce759cfc95"
+  },
+  {
+   "path": "assets/bell/tex/bell_normal.jpg",
+   "bytes": 243727,
+   "sha256": "07cfae5f3acb5b85490f3691b0db56501ee66d4a73a4aaf13b84c6fa581fcbb1"
+  },
+  {
+   "path": "assets/bell/tex/bell_orm.jpg",
+   "bytes": 98221,
+   "sha256": "88f3579b3caf68377ee7442e307847ca61c0156a0e87f7d729559cdf7fa644db"
+  }
+ ],
+ "triangles": {
+  "bell_body": 13658,
+  "bell_shed": 2058,
+  "bell_crack": 60,
+  "bell_body_lod1": 4104,
+  "bell_shed_lod1": 580,
+  "bell_far": 1070,
+  "lod0": 15776,
+  "lod1": 4684,
+  "far": 1070
+ },
+ "lodDistances": [
+  38,
+  95
+ ],
+ "restBounds": {
+  "min": [
+   -2.5167,
+   0,
+   -4.5823
+  ],
+  "max": [
+   2.503,
+   8.8,
+   5.5687
+  ]
+ },
+ "proportions": {
+  "bellTop": 8.8,
+  "top": 8.8,
+  "headTop": 4.3,
+  "nose": 5.5687,
+  "tail": -4.5823,
+  "noseToRump": 10.151,
+  "halfWidth": 2.5167,
+  "lowest": 0
+ },
+ "frame": "Babylon / procedural rig frame: +Z forward, +Y up, the Bell's left at -X; glTF positions read back with x -> -x",
+ "meshes": {
+  "bell_body": "LOD0: hide, jaw, teeth, mouth, eyes, lids, horn nubs, claws, the bell (BELL_SHAPE lathe), the clapper, the chains (material bell_hide)",
+  "bell_shed": "LOD0 phase one only: the moss mantle, moss cards and fieldstones (material bell_moss; hidden in phase two)",
+  "bell_crack": "LOD0 phase two only: the opened crack seam on the bell (material bell_hide)",
+  "bell_body_lod1": "LOD1 of bell_body (decimated copies, the lathe regenerated, cut-out chain cards)",
+  "bell_shed_lod1": "LOD1 of bell_shed (no cards)",
+  "bell_far": "the far fog silhouette: hide, bell, mantle in one mesh"
+ },
+ "skin": "joints in BELL_RIG_ROWS order (glTF joint index = rig row index; the procedural skeleton's bone index = joint index - 1); <= 4 weights per vertex; `body` has no weight; the bell and the crack are 100% on `bell`, the clapper on `clapper`, jaw parts on `jaw`, lids on the brows, the loose chain ends on chainX1/chainX2",
+ "materials": {
+  "bell_hide": "albedo, normal (OpenGL/glTF convention), ORM (R occlusion, G roughness, B metal: the bronze and the clapper are metal, the hide is not); opaque",
+  "bell_moss": "the same textures; alpha MASK cutoff 0.5 (the mantle's ragged edge, the moss cards)"
+ },
+ "eyes": "milky BELL_PALETTE.eye, matte, never emissive (no emissive term anywhere)",
+ "uv": {
+  "calibration": [
+   1008,
+   1008
+  ],
+  "cells": {
+   "chain": [
+    0.294,
+    0.384
+   ],
+   "chaincard": [
+    0.39,
+    0.52
+   ],
+   "claw": [
+    0.816,
+    0.848
+   ],
+   "crack": [
+    0.888,
+    0.92
+   ],
+   "eye": [
+    0.924,
+    0.958
+   ],
+   "moss0": [
+    0.004,
+    0.072
+   ],
+   "moss1": [
+    0.076,
+    0.144
+   ],
+   "moss2": [
+    0.148,
+    0.216
+   ],
+   "moss3": [
+    0.22,
+    0.288
+   ],
+   "mouth": [
+    0.852,
+    0.884
+   ],
+   "stone0": [
+    0.526,
+    0.606
+   ],
+   "stone1": [
+    0.61,
+    0.69
+   ],
+   "stone2": [
+    0.694,
+    0.774
+   ],
+   "tooth": [
+    0.78,
+    0.812
+   ]
+  },
+  "mainV": 0.868,
+  "stripV0": 0.876,
+  "used": 0.96
+ },
+ "budgets": {
+  "lod0": 16000,
+  "lod1": 6000,
+  "far": 1200,
+  "bytes": {
+   "glb": 573440,
+   "albedo": 430080,
+   "normal": 430080,
+   "orm": 122880,
+   "json": 16384
+  },
+  "folder": 1572864,
+  "textureEdge": 1024
+ }
+}
