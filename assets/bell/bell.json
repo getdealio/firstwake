@@ -13,33 +13,33 @@
  "files": [
   {
    "path": "assets/bell/bell_beast.glb",
-   "bytes": 414484,
-   "sha256": "7ba929ada019aba31a92d2ac5fa2667c47a3001d0a8f75e81892faf3af8e73c2"
+   "bytes": 415532,
+   "sha256": "3bd89392fdd401898117aa6d98ff00299d949823ad53675e9e14a9b26cca9cf9"
   },
   {
    "path": "assets/bell/tex/bell_albedo.webp",
-   "bytes": 105744,
-   "sha256": "f9c0b22d994d992125723b1c44e5212d3056ecff826f72d4a2bc33ce759cfc95"
+   "bytes": 109570,
+   "sha256": "f8254e45658ef38641566e026687be3eb98e4de485ce06e737ff8ba8867e32d2"
   },
   {
    "path": "assets/bell/tex/bell_normal.jpg",
-   "bytes": 243727,
-   "sha256": "07cfae5f3acb5b85490f3691b0db56501ee66d4a73a4aaf13b84c6fa581fcbb1"
+   "bytes": 248689,
+   "sha256": "4a5d2698eadff7066292b66189d5a827d9df9cfa0f30a545d048bed8aa32f217"
   },
   {
    "path": "assets/bell/tex/bell_orm.jpg",
-   "bytes": 98221,
-   "sha256": "88f3579b3caf68377ee7442e307847ca61c0156a0e87f7d729559cdf7fa644db"
+   "bytes": 101333,
+   "sha256": "14ecd53404c66ed356d082b09ee8da3ee56f47d292ff1aba2c244dc136f578c3"
   }
  ],
  "triangles": {
-  "bell_body": 13658,
-  "bell_shed": 2058,
+  "bell_body": 13838,
+  "bell_shed": 2050,
   "bell_crack": 60,
   "bell_body_lod1": 4104,
   "bell_shed_lod1": 580,
   "bell_far": 1070,
-  "lod0": 15776,
+  "lod0": 15948,
   "lod1": 4684,
   "far": 1070
  },
@@ -49,12 +49,12 @@
  ],
  "restBounds": {
   "min": [
-   -2.5167,
+   -2.5025,
    0,
-   -4.5823
+   -4.58
   ],
   "max": [
-   2.503,
+   2.5007,
    8.8,
    5.5687
   ]
@@ -64,9 +64,9 @@
   "top": 8.8,
   "headTop": 4.3,
   "nose": 5.5687,
-  "tail": -4.5823,
-  "noseToRump": 10.151,
-  "halfWidth": 2.5167,
+  "tail": -4.58,
+  "noseToRump": 10.1487,
+  "halfWidth": 2.5025,
   "lowest": 0
  },
  "frame": "Babylon / procedural rig frame: +Z forward, +Y up, the Bell's left at -X; glTF positions read back with x -> -x",
@@ -78,7 +78,7 @@
   "bell_shed_lod1": "LOD1 of bell_shed (no cards)",
   "bell_far": "the far fog silhouette: hide, bell, mantle in one mesh"
  },
- "skin": "joints in BELL_RIG_ROWS order (glTF joint index = rig row index; the procedural skeleton's bone index = joint index - 1); <= 4 weights per vertex; `body` has no weight; the bell and the crack are 100% on `bell`, the clapper on `clapper`, jaw parts on `jaw`, lids on the brows, the loose chain ends on chainX1/chainX2",
+ "skin": "joints in BELL_RIG_ROWS order (glTF joint index = rig row index; the procedural skeleton's bone index = joint index - 1); <= 4 weights per vertex; `body` has no weight; the bell and the crack are 100% on `bell`, the clapper on `clapper`, jaw parts on `jaw`, lids on the brows, the fist talons on fKnuckX; the chains take the hide's weights per vertex (no rigid links) and the loose ends hand over from the flesh at the anchor to chainX1, chainX2 taking at most half the tail",
  "materials": {
   "bell_hide": "albedo, normal (OpenGL/glTF convention), ORM (R occlusion, G roughness, B metal: the bronze and the clapper are metal, the hide is not); opaque",
   "bell_moss": "the same textures; alpha MASK cutoff 0.5 (the mantle's ragged edge, the moss cards)"
